@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:41:41 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/01 16:52:25 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:51:05 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-	size_t 	total_size = count * size;
+	size_t	total_size;
+
+	total_size = count * size;
 	ptr = malloc(total_size);
-	if (ptr == NULL) 
+	if (ptr == NULL)
 	{
 		return (NULL);
-    }
+	}
 	for (size_t i = 0; i < total_size; i++) 
 	{
 		*((char*)ptr + i) = 0;
