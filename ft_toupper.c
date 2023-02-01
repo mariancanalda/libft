@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 10:35:04 by macanald          #+#    #+#             */
-/*   Updated: 2023/01/26 10:52:26 by macanald         ###   ########.fr       */
+/*   Created: 2023/01/27 13:30:36 by macanald          #+#    #+#             */
+/*   Updated: 2023/01/27 17:52:19 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 /*#include "libft.h"*/
+#include <stdio.h>
 
-size_t	ft_strlen(const char *str)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
 
 int	main(void)
 {
-	char	str[100];
+	char	input;
+	int		output;
 
-	printf("Introduce una cadena: ");
-	scanf("%s", str);
-	printf("La longitud de la cadena es: %lu \n", ft_strlen(str));
-	return (0);
+	input = 'a';
+	output = ft_toupper(input);
+	if (output == 'A')
+	{
+		printf("La función es correcta para el carácter '%c'\n", input);
+	}
+	else
+	{
+		printf("La función no es correcta para el carácter '%c'\n", input);
+	}
 }
