@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macanald <macanald@student.42madrid>       +#+  +:+       +#+        */
+/*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 13:30:36 by macanald          #+#    #+#             */
-/*   Updated: 2023/01/27 17:52:19 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:42:39 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-int	main(void)
-{
-	char	input;
-	int		output;
+// int	main(void)
+// {
+// 	char	input;
+// 	int		output;
 
-	input = 'a';
-	output = ft_toupper(input);
-	if (output == 'A')
-	{
-		printf("La función es correcta para el carácter '%c'\n", input);
-	}
-	else
-	{
-		printf("La función no es correcta para el carácter '%c'\n", input);
-	}
-}
+// 	input = 'a';
+// 	output = ft_toupper(input);
+// 	if (output == 'A')
+// 	{
+// 		printf("La función es correcta para el carácter '%c'\n", input);
+// 	}
+// 	else
+// 	{
+// 		printf("La función no es correcta para el carácter '%c'\n", input);
+// 	}
+// }

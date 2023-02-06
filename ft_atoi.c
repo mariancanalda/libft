@@ -6,11 +6,11 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/01 16:38:36 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:30:42 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 #include <stdlib.h>
 /*#include "libft.h"*/
 
@@ -41,13 +41,13 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-int	main(void)
-{
-	const char	*str;
-	int			value;
+// int	main(void)
+// {
+// 	const char	*str;
+// 	int			value;
 
-	str = "42";
-	value = ft_atoi(str);
-	printf("%d\n", value);
-	return (0);
-}
+// 	str = "42";
+// 	value = ft_atoi(str);
+// 	printf("%d\n", value);
+// 	return (0);
+// }

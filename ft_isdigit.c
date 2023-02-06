@@ -6,11 +6,11 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/01/25 14:23:47 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:32:15 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>      
+/*#include <stdio.h>*/      
 /*#include "libft.h"*/
 
 int	ft_isdigit(int c)
@@ -20,18 +20,18 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-int	main(void)
-{
-	char	c;
+// int	main(void)
+// {
+// 	char	c;
 
-	c = '5';
-	if (ft_isdigit(c))
-	{
-		printf("El caracter '%c' es un dígito numérico\n", c);
-	}
-	else
-	{
-		printf("El caracter '%c' no es un dígito numérico\n", c);
-	}
-	return (0);
-}
+// 	c = '5';
+// 	if (ft_isdigit(c))
+// 	{
+// 		printf("El caracter '%c' es un dígito numérico\n", c);
+// 	}
+// 	else
+// 	{
+// 		printf("El caracter '%c' no es un dígito numérico\n", c);
+// 	}
+// 	return (0);
+// }

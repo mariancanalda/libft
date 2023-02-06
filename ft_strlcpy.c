@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: macanald <macanald@student.42madrid>       +#+  +:+       +#+        */
+/*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:49:46 by macanald          #+#    #+#             */
-/*   Updated: 2023/01/27 12:37:38 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/06 18:33:56 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 #include <string.h>
+/*#include "libft.h"*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -36,17 +37,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (len);
 }
 
-int	main(void)
-{
-	char	dst[20];
-	char	*src;
-	size_t	dstsize;
-	size_t	copied_lenght;
+// int	main(void)
+// {
+// 	char	dst[20];
+// 	char	*src;
+// 	size_t	dstsize;
+// 	size_t	copied_lenght;
 
-	src = "Hello, World!";
-	dstsize = sizeof(dst);
-	copied_lenght = ft_strlcpy(dst, src, dstsize);
-	printf("Copied string: %s\n", dst);
-	printf("Lenght of source string: %ld\n", copied_lenght);
-	return (0);
-}
+// 	src = "Hello, World!";
+// 	dstsize = sizeof(dst);
+// 	copied_lenght = ft_strlcpy(dst, src, dstsize);
+// 	printf("Copied string: %s\n", dst);
+// 	printf("Lenght of source string: %ld\n", copied_lenght);
+// 	return (0);
+// }
