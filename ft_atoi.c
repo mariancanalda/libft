@@ -6,13 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:30:42 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:04:42 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
 #include <stdlib.h>
-/*#include "libft.h"*/
+// include "libft.h"
+
+/**
+ * It takes a string, and returns the integer value of that string.
+ * 
+ * @param str This is the string that we are converting to an integer.
+ * 
+ * @return the integer value of the string.
+ */
 
 int	ft_atoi(const char *str)
 {

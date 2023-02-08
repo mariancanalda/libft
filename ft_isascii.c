@@ -6,12 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:00:30 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:31:48 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 13:12:08 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-/*#include "libft.h"*/
+// #include <stdio.h>
+// #include "libft.h"
+
+/**
+ * If the integer passed to the function is between 0 and 127, 
+ * return 1, otherwise return 0
+ * 
+ * @param c The character to be checked.
+ * 
+ * @return 1 if c is between 0 and 127, 0 otherwise.
+ */
 
 int	ft_isascii(int c)
 {
@@ -24,15 +33,15 @@ int	ft_isascii(int c)
 // {
 // 	char	c;
 
-// 	printf("Introduce un caracter: ");
+// 	printf("Enter a character: ");
 // 	scanf("%c", &c);
 // 	if (ft_isascii(c))
 // 	{
-// 		printf("El caracter %c es un caracter ASCII\n", c);
+// 		printf(" %c is an ASCII character.\n", c);
 // 	}
 // 	else
 // 	{
-// 		printf("El caracter %c no es un caracter ASCII\n", c);
+// 		printf("%c is not an ASCII character.\n", c);
 // 	}
 // 	return (0);
 // }

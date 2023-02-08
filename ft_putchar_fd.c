@@ -1,45 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 12:12:04 by macanald         ###   ########.fr       */
+/*   Created: 2023/02/08 18:31:50 by macanald          #+#    #+#             */
+/*   Updated: 2023/02/08 19:36:49 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>    
+#include <unistd.h>
+// #include <fcntl.h>
 // #include "libft.h"
 
 /**
- * If the character is a digit, return 1, otherwise return 0
+ * Write the character c to the file descriptor fd
  * 
- * @param c The character to be checked.
- * 
- * @return 1 if the character is a digit, 0 if not.
+ * @param c the character to print
+ * @param fd file descriptor
  */
 
-int	ft_isdigit(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	write(fd, &c, 1);
 }
 
 // int	main(void)
 // {
+// 	int		fd;
 // 	char	c;
 
-// 	c = '5';
-// 	if (ft_isdigit(c))
-// 	{
-// 		printf("'%c' is a digit.\n", c);
-// 	}
-// 	else
-// 	{
-// 		printf("'%c' is not a digit.\n", c);
-// 	}
+// 	c = 'A';
+// 	fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+// 	ft_putchar_fd(c, fd);
+// 	close(fd);
 // 	return (0);
 // }

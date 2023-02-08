@@ -6,13 +6,25 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:38:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:33:46 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:26:56 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
 #include <string.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * The function strlcat() appends the NUL-terminated string 
+ * src to the end of dst. It will append at most dstsize 
+ * - strlen(dst) - 1 bytes, NUL-terminating the result.
+ * 
+ * @param dst This is the destination string.
+ * @param src The string to be appended.
+ * @param dstsize The size of the destination buffer.
+ * 
+ * @return The length of the string it tried to create.
+ */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

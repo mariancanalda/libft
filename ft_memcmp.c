@@ -6,42 +6,54 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:43:32 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:32:41 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:20:12 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-/*#include "libft.h"*/
+// #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+/**
+ * The function ft_memcmp() compares the first n bytes 
+ * of memory area str1 and memory area str2
+ * 
+ * @param dst This is the destination string.
+ * @param str This is the pointer to the block of memory to fill.
+ * @param n The number of bytes to compare.
+ * 
+ * @return The difference between the two strings.
+ */
+
+int	ft_memcmp(const void *dst, const void *str, size_t n)
 {
-	const unsigned char	*p;
-	void				*ptr;
+	size_t			i;
+	int				diff;
+	unsigned char	*str2;
+	unsigned char	*dst2;
 
-	p = s;
-	ptr = (void *)p;
-	while (n--)
-	{
-		if (*p == (unsigned char)c)
-			return (ptr);
-		p++;
-	}
-	return (NULL);
+	dst2 = (unsigned char *)dst;
+	str2 = (unsigned char *)str;
+	i = 0;
+	diff = 0;
+	if (n)
+		while (n--)
+			if (*dst2++ != *str2++)
+				return (*(--dst2) - *(--str2));
+	return (0);
 }
 
 // int	main(void)
 // {
-// 	char	str[15];
-// 	char	c;
-// 	char	*result;
+// 	char	dst[6];
+// 	char	str[6];
+// 	int		n;	
 
-// 	strcpy(str, "Hello, World!");
-// 	c = 'W';
-// 	result = ft_memchr(str, c, strlen(str));
-// 	if (result == NULL)
-// 		printf("Character '%c' not found in the string.\n", c);
-// 	else
-// 		printf("Character '%c' found at position %ld\n", c, result - str);
+// 	strcpy(dst, "Hello");
+// 	strcpy(str, "Hello");
+// 	n = 5;
+// 	printf("ft_memcmp result: %d\n", ft_memcmp(dst, str, n));
+// 	printf("memcmp result: %d\n", memcmp(dst, str, n));
 // 	return (0);
 // }

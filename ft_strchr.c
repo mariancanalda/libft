@@ -6,12 +6,22 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:05:18 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:39:45 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:34:01 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * The function ft_strchr() locates the first occurrence of c 
+ * (converted to a char) in the string pointed to by s.
+ * 
+ * @param s The string to search.
+ * @param c The character to search for.
+ * 
+ * @return A pointer to the first occurrence of the character c in the string s.
+ */
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -21,7 +31,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0' && s[i] != c)
 		i++;
 	if (s[i] == c)
-	return ((char *)&s[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }
 

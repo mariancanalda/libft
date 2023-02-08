@@ -6,13 +6,27 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:20:16 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:33:08 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:10:51 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
 #include <string.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * If the destination is less than the source, 
+ * copy the source to the destination,
+ * otherwise copy the source to the destination in reverse
+ * 
+ * @param dst This is the pointer to the destination array 
+ * where the content is to be copied,
+ * type-casted to a void*.
+ * @param src The source string.
+ * @param len The number of bytes to be moved.
+ * 
+ * @return A pointer to the destination string.
+ */
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

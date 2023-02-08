@@ -1,45 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 12:12:04 by macanald         ###   ########.fr       */
+/*   Created: 2023/02/08 19:22:53 by macanald          #+#    #+#             */
+/*   Updated: 2023/02/08 19:36:52 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>    
+#include <unistd.h>
+// #include <fcntl.h>
 // #include "libft.h"
 
 /**
- * If the character is a digit, return 1, otherwise return 0
+ * Write the string s to the file descriptor fd, followed by a newline
  * 
- * @param c The character to be checked.
- * 
- * @return 1 if the character is a digit, 0 if not.
+ * @param s The string to output.
+ * @param fd file descriptor
  */
 
-int	ft_isdigit(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+			i++;
+	}
+	write(fd, "\n", 1);
 }
 
 // int	main(void)
 // {
-// 	char	c;
+// 	int		fd;
+// 	char	*str;
 
-// 	c = '5';
-// 	if (ft_isdigit(c))
-// 	{
-// 		printf("'%c' is a digit.\n", c);
-// 	}
-// 	else
-// 	{
-// 		printf("'%c' is not a digit.\n", c);
-// 	}
+// 	str = "Hello, world";
+// 	fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+// 	ft_putendl_fd(str, fd);
+// 	close(fd);
 // 	return (0);
 // }

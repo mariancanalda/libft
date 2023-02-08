@@ -6,12 +6,23 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:18:43 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:36:22 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:33:33 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * Ft_memset() takes a pointer to a memory area, a byte value, 
+ * and a size, and fills the memory area with the given byte value
+ * 
+ * @param b This is the pointer to the memory area to be filled.
+ * @param c the character to fill the memory with
+ * @param len The number of bytes to be set to the value c.
+ * 
+ * @return The address of the first byte of the memory area b.
+ */
 
 void	*ft_memset(void *b, int c, size_t len)
 {

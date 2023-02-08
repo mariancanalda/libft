@@ -6,13 +6,24 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:49:46 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:33:56 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:29:39 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
 #include <string.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * Copy the string pointed to by src, including the terminating 
+ * null byte ('\0'), to the buffer pointed to by dst.
+ * 
+ * @param dst The destination string.
+ * @param src The string to be copied.
+ * @param dstsize The size of the destination buffer.
+ * 
+ * @return The length of the string src.
+ */
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

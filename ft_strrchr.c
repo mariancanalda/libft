@@ -6,12 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:42:07 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:42:12 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 18:21:53 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-/*#include "libft.h"*/
+#include <string.h>
+// #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -35,11 +36,11 @@ char	*ft_strrchr(const char *s, int c)
 
 // int	main(void)
 // {
-// 	char	str[];
+// 	char	str[12];
 // 	char	c;
 // 	char	*result;
 
-// 	str[] = "Hello World";
+// 	strcpy(str, "Hello World");
 // 	c = 'l';
 // 	result = ft_strrchr(str, c);
 // 	if (result == NULL)

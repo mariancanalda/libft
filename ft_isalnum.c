@@ -6,12 +6,20 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:44:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:31:31 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:10:50 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-/*#include "libft.h"*/
+// #include <stdio.h>
+// #include "libft.h"
+
+/**
+ * If the character is a letter or a number, return 1, otherwise return 0
+ * 
+ * @param c The character to be checked.
+ * 
+ * @return 1 if the character is alphanumeric, 0 if not.
+ */
 
 int	ft_isalnum(int c)
 {
@@ -25,11 +33,11 @@ int	ft_isalnum(int c)
 // {
 // 	char	input;
 
-// 	printf("Ingresa un caracter: ");
+// 	printf("Enter a character: ");
 // 	scanf("%c", &input);
 // 	if (ft_isalnum(input))
-// 		printf("El caracter ingresado es alfanumérico.\n");
+// 		printf("Character entered is alphanumeric.\n");
 // 	else
-// 		printf("El caracter ingresado no es alfanumérico.\n");
+// 		printf("Character entered is not alphanumeric.\n");
 // 	return (0);
 // }

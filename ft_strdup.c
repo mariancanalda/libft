@@ -6,14 +6,22 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:33:10 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:33:37 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:10:24 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * It duplicates a string.
+ * 
+ * @param s1 The string to be copied.
+ * 
+ * @return A pointer to a new string that is a duplicate of the string s1.
+ */
 
 char	*ft_strdup(const char *s1)
 {
@@ -24,8 +32,7 @@ char	*ft_strdup(const char *s1)
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
-	for (int i = 0; i <= len; i++) /*REVISAR ESTO*/
-		result[i] = s1[i];
+	memcpy(result, s1, len + 1);
 	return (result);
 }
 

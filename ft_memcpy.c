@@ -6,13 +6,24 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/06 18:32:49 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/08 16:59:13 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+// #include <stdio.h>
 #include <string.h>
-/*#include "libft.h"*/
+// #include "libft.h"
+
+/**
+ * Copy n bytes from memory area src to memory area dst
+ * 
+ * @param dst This is the pointer to the destination array 
+ * where the content is to be copied, type-casted to a pointer of type void*.
+ * @param src The source string.
+ * @param n The number of bytes to copy.
+ * 
+ * @return a pointer to the destination.
+ */
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -45,11 +56,16 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 // int	main(void)
 // {
-// 	char	c_array [];
+// 	char	dst[7];
+// 	char	src[7];
 
-// 	c_array[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-// 	print_elements(c_array, sizeof(c_array));
-// 	printf("After ft_memcpy()\n");
-// 	ft_memcpy((void *)&c_array[1], (void *)&c_array[3], 5);
-// 	print_elements(c_array, sizeof(c_array));
+// 	strcpy(src, "abcdef");
+
+// 	ft_memcpy(dst, src, 6);
+// 	printf("ft_memcpy dst: %s\n", dst);
+
+// 	memcpy(dst, src, 6);
+// 	printf("memcpy dst: %s\n", dst);
+
+// 	return (0);
 // }
