@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:34:11 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 19:43:55 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/09 11:49:04 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
  * @return the number of characters printed.
  */
 
-void    ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
-	
+
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
@@ -46,8 +46,9 @@ void    ft_putnbr_fd(int n, int fd)
 // int	main(void)
 // {
 // 	int	fd;
+
 // 	fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
 // 	ft_putnbr_fd(42, fd);
 // 	close(fd);
-// 	return (0); 
+// 	return (0);
 // }
