@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:13:52 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 18:25:33 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/11 12:56:17 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-// #include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
+#include "libft.h"
 
 /**
  * It returns a pointer to the first occurrence of the string needle 
