@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 16:59:13 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:02:01 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <string.h>
-// #include "libft.h"
+// #include <string.h>
+#include "libft.h"
 
 /**
  * Copy n bytes from memory area src to memory area dst

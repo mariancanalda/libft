@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:18:43 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 17:33:33 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:03:16 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-// #include "libft.h"
+// #include <stdio.h>
+#include "libft.h"
 
 /**
  * Ft_memset() takes a pointer to a memory area, a byte value, 
@@ -27,10 +27,8 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*p;
-	size_t			i;
 
 	p = b;
-	i = 0;
 	while (len--)
 	{
 		*p++ = (unsigned char)c;

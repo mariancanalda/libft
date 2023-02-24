@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:49:46 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 17:29:39 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:07:21 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <string.h>
-// #include "libft.h"
+// #include <string.h>
+#include "libft.h"
 
 /**
  * Copy the string pointed to by src, including the terminating 

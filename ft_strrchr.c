@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:42:07 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 18:21:53 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:08:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-// #include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

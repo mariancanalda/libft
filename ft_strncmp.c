@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:54:55 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 17:53:42 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:08:14 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-//#include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
+#include "libft.h"
 
 /**
  * The function ft_strncmp() compares the first 
@@ -31,13 +31,12 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
-	{
-		if (s1[i] != s2[i])
-			break ;
+	while (i < n && s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 		i++;
-	}
-	return (s1[i] - s2[i]);
+	if (i == n)
+		return (0);
+	else
+		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 // int	main(void)

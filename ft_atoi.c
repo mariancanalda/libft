@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/13 13:48:15 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 13:31:09 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <stdlib.h>
-// include "libft.h"
+// #include <stdlib.h>
+#include "libft.h"
 
 /**
  * It takes a string, and returns the integer value of that string.

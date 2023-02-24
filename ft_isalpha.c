@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:22:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 13:11:12 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:00:39 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <ctype.h>
-// #include "libft.h"
+// #include <ctype.h>
+#include "libft.h"
 
 /**
  * The function ft_isalpha() returns 1 if the character passed 

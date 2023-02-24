@@ -1,45 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:00:46 by macanald         ###   ########.fr       */
+/*   Created: 2023/02/15 07:57:10 by macanald          #+#    #+#             */
+/*   Updated: 2023/02/22 19:00:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>    
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-/**
- * If the character is a digit, return 1, otherwise return 0
- * 
- * @param c The character to be checked.
- * 
- * @return 1 if the character is a digit, 0 if not.
- */
-
-int	ft_isdigit(int c)
+t_list	*ft_lstnew(void *content)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	t_list	*new;
+
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
 
 // int	main(void)
 // {
-// 	char	c;
+// 	char	*str;
+// 	t_list	*node;
 
-// 	c = '5';
-// 	if (ft_isdigit(c))
+// 	str = "Hello world";
+// 	node = ft_lstnew(str);
+// 	if (node)
 // 	{
-// 		printf("'%c' is a digit.\n", c);
+// 		printf("Node created with content: %s\n", (char *)node->content);
+// 		printf("Next node is: %p\n", node->next);
 // 	}
 // 	else
 // 	{
-// 		printf("'%c' is not a digit.\n", c);
+// 		printf("Error: Failed to create new node.\n");
 // 	}
 // 	return (0);
 // }

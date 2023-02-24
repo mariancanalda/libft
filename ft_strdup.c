@@ -6,14 +6,14 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:33:10 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 17:10:24 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 13:29:25 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-// #include "libft.h"
+// #include <stdlib.h>
+// #include <string.h>
+#include "libft.h"
 
 /**
  * It duplicates a string.

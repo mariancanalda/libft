@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:40:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 13:14:34 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:01:17 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <string.h>
-// #include "libft.h"
+// #include <string.h>
+#include "libft.h"
 
 /**
  * The function ft_memchr() locates the first occurrence of c 

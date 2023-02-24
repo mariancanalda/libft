@@ -6,96 +6,109 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 22:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/14 15:34:27 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:05:47 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
-static int	count_words(const char *s, char c)
+static int	count_words(char const *s, char c);
+static char	*get_word(char const *s, char c);
+void		free_split(char **split);
+
+static int	count_words(char const *s, char c)
 {
-	int		count;
+	int	count;
 
 	count = 0;
 	while (*s)
 	{
-		if (*s != c)
-		{
-			count++;
-			while (*s && *s != c)
-				s++;
-		}
+		if (*s == c)
+		s++;
 		else
+		{
+		count++;
+			while (*s && *s != c)
 			s++;
+		}
 	}
 	return (count);
 }
 
-static char	*get_next_word(const char *s, char c, size_t *start)
+static char	*get_word(char const *s, char c)
 {
-	const char	*end;
-	char		*word;
+	int		len;
+	char	*word;
 
-	while (s[*start] == c)
-		(*start)++;
-	end = s + *start;
-	while (*end && *end != c)
-		end++;
-	word = ft_substr(s, *start, end - s - *start);
-	*start = end - s;
+	len = 0;
+	while (s[len] && s[len] != c)
+	len++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	ft_strlcpy(word, s, len + 1);
 	return (word);
 }
 
-char	**ft_split(const char *s, char c)
+void	free_split(char **split)
 {
-	size_t	i;
-	size_t	word_count;
-	size_t	word_index;
-	size_t	word_start;
-	char	**words;
+	int	i;
 
+	i = 0;
+	if (split)
+	{
+		while (split[i])
+		{	
+			free(split[i]);
+		i++;
+		}	
+		free(split);
+	}
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		count;
+
+	count = count_words(s, c);
 	if (!s)
 		return (NULL);
-	word_count = count_words(s, c);
-	words = (char **)malloc(sizeof(char *) * (word_count + 1));
-	if (!words)
+	result = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!result)
 		return (NULL);
-	i = 0;
-	word_index = 0;
-	word_start = 0;
-	while (word_index < word_count)
+	while (*s)
 	{
-		words[word_index] = get_next_word(s, c, &word_start);
-		if (!words[word_index])
+		if (*s == c)
+	s++;
+		else
 		{
-			while (i < word_index)
-				free(words[i++]);
-			free(words);
-			return (NULL);
+		result[count - (count_words(s, c))] = get_word(s, c);
+			while (*s && *s != c)
+		s++;
 		}
-		word_index++;
 	}
-	words[word_index] = NULL;
-	return (words);
+	result[count] = NULL;
+	return (result);
 }
 
-int main()
-{
-char *s;
-char c;
-char **res;
-int i;
+// int	main(void)
+// {
+// 	char	**words;
+// 	int		i;
 
-s = "Hello, World!";
-c = ' ';
-res = ft_split(s, c);
-i = 0;
-while (res[i])
-{
-printf("%s\n", res[i]);
-i++;
-}
-return (0);
-}
+// 	words = ft_split("Hola,este,es,un,ejemplo", ',');
+// 	i = 0;
+// 	if (!words)
+// 	{
+// 		printf("Error al separar la cadena.\n");
+// 		return (1);
+// 	}
+// 	while (words[i])
+// 	{
+// 		printf("%s\n", words[i]);
+// 		i++;
+// 	}
+// 	free_split(words);
+// 	return (0);
+// }

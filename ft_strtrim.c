@@ -6,36 +6,45 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 21:08:00 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/11 17:49:36 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/22 23:26:20 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-//#include "libft.h"
+// #include <string.h>
+// #include <stdlib.h>
+#include "libft.h"
+
+#include "libft.h"
+
+static int	is_set(char c, char const *set)
+{
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	int		k;
-	char	*trimmed_str;
+	size_t	start;
+	size_t	end;
 
-	i = 0;
-	while (s1[i] && strchr(set, s1[i]))
-		i++;
-	j = strlen(s1) - 1;
-	while (j > 0 && strchr(set, s1[j]))
-		j--;
-	trimmed_str = (char *)malloc(sizeof(char) * (j - i + 2));
-	if (!trimmed_str)
+	if (!s1)
 		return (NULL);
-	k = 0;
-	while (i <= j)
-		trimmed_str[k++] = s1[i++];
-	trimmed_str[k] = '\0';
-	return (trimmed_str);
+	start = 0;
+	while (s1[start] && is_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1 + start);
+	if (end)
+	{
+		while (is_set(s1[start + end - 1], set))
+			end--;
+	}
+	return (ft_substr(s1, start, end));
 }
 
 // int	main(void)

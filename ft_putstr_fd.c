@@ -6,12 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:44:34 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/09 12:18:13 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:05:34 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
 // #include <fcntl.h>
+#include "libft.h"
 
 /**
  * Ft_putstr_fd() writes the string s to the file descriptor fd.

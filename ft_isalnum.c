@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:44:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 12:10:50 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:00:02 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include "libft.h"
+#include "libft.h"
 
 /**
  * If the character is a letter or a number, return 1, otherwise return 0

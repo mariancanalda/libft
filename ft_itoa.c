@@ -6,71 +6,63 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 00:38:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/14 11:34:15 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 14:57:07 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-#include <stdlib.h>
-// #include "libft.h"
+#include "libft.h"
 
-int	get_string_length(int n)
+static int	ft_get_len(int n)
 {
 	int	len;
-	int	temp;
 
+	if (n == 0)
+		return (1);
 	len = 0;
-	temp = n;
-	if (n == -2147483648)
-		return (11);
-	if (n <= 0)
-	{
+	if (n < 0)
 		len++;
-		n = -n;
-	}
-	while (temp)
+	while (n)
 	{
+		n /= 10;
 		len++;
-		temp /= 10;
 	}
 	return (len);
 }
 
 char	*ft_itoa(int n)
 {
+	char	*str;
 	int		len;
-	char	*result;
+	int		sign;
 
-	len = get_string_length(n);
-	result = malloc((len + 1) * sizeof(char));
-	if (!result)
+	sign = (n < 0);
+	len = ft_get_len(n);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (str == NULL)
 		return (NULL);
-	result[len] = '\0';
-	if (n == -2147483648)
-		return ("-2147483648");
+	if (sign)
+		str[0] = '-';
 	if (n == 0)
-		return ("0");
-	if (n < 0)
-	{
-		result[0] = '-';
-		n = -n;
-	}
+		str[0] = '0';
 	while (n)
 	{
-		result[--len] = (n % 10) + '0';
+		if (n > 0)
+			str[--len] = '0' + n % 10;
+		else
+			str[--len] = '0' - n % 10;
 		n /= 10;
 	}
-	return (result);
+	return (str);
 }
 
 // int	main(void)
 // {
 // 	int		n;
-// 	char	*result;
+// 	char	*str;
 
-// 	n = 42;
-// 	result = ft_itoa(n);
-// 	printf("The string representation of %d is %s\n", n, result);
-// 	free(result);
+// 	n = 123;
+// 	str = ft_itoa(n);
+// 	printf("El entero n es %d y su representación en cadena es %s\n", n, str);
+// 	free(str);
 // 	return (0);
 // }

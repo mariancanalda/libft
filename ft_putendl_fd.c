@@ -6,13 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:22:53 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/09 11:36:12 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:04:15 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
 // #include <fcntl.h>
-// #include "libft.h"
+#include "libft.h"
 
 /**
  * Write the string s to the file descriptor fd, followed by a newline

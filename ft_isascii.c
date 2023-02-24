@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:00:30 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 13:12:08 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:00:42 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-// #include "libft.h"
+#include "libft.h"
 
 /**
  * If the integer passed to the function is between 0 and 127, 

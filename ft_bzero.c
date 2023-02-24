@@ -6,14 +6,14 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:17:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/08 17:32:24 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 13:31:27 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-// #include "libft.h"
+// #include <string.h>
+// #include <stdlib.h>
+#include "libft.h"
 
 /**
  * It sets the first n bytes of the memory area pointed to by str to zero

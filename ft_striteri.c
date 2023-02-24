@@ -6,19 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:45:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/09 14:41:46 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:10:36 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <stdlib.h>
-#include <string.h>
+// #include <string.h>
+#include "libft.h"
 
 /**
- * Iterate through the string s, passing the index and the address of each character to the function f
+ * Iterate through the string s, passing the index and the address 
+ * of each character to the function f
  * 
  * @param s The string to iterate through
- * @param f The function to be applied to each character of the string.
+ * @param f The function to be applied to each character.
  */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))

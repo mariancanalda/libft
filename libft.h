@@ -6,14 +6,17 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:49:41 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/11 15:37:33 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 17:42:38 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <unistd.h>
+# include <ctype.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <string.h>
 
 int			ft_isalpha(int c);
@@ -33,14 +36,16 @@ int			ft_tolower(int c);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-const char	*my_strnstr(const char *haystack, const char *needle, size_t len);
+void		*ft_memchr(const void *s, int c, size_t n);
+int			ft_memcmp(const void *dst, const void *str, size_t n);
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int			ft_atoi(const char *str);
 void		*ft_calloc(size_t count, size_t size);
 char		*ft_strdup(const char *s1);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
-int			count_words(char const *s, char c);
+char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));

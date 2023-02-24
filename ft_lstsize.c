@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 18:31:50 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:03:38 by macanald         ###   ########.fr       */
+/*   Created: 2023/02/15 07:59:29 by macanald          #+#    #+#             */
+/*   Updated: 2023/02/22 19:00:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
-// #include <fcntl.h>
 #include "libft.h"
+#include <stdio.h>
 
-/**
- * Write the character c to the file descriptor fd
- * 
- * @param c the character to print
- * @param fd file descriptor
- */
-
-void	ft_putchar_fd(char c, int fd)
+int	ft_lstsize(t_list *lst)
 {
-	write(fd, &c, 1);
+	int		count;
+
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
 
 // int	main(void)
 // {
-// 	int		fd;
-// 	char	c;
+// 	t_list	*head;
+// 	int		count;
 
-// 	c = 'A';
-// 	fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
-// 	ft_putchar_fd(c, fd);
-// 	close(fd);
+// 	head = ft_lstnew("Hello");
+// 	count = ft_lstsize(head);
+// 	ft_lstadd_front(&head, ft_lstnew("World"));
+// 	ft_lstadd_front(&head, ft_lstnew("42"));
+// 	printf("List size: %d\n", count);
 // 	return (0);
 // }

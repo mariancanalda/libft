@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:13:52 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/11 12:56:17 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/23 00:26:43 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 // #include <string.h>
 #include "libft.h"
 
-/**
- * It returns a pointer to the first occurrence of the string needle 
- * in the string haystack, or a null pointer if needle is not part of haystack.
- * 
- * @param haystack The string to search in
- * @param needle The string to search for.
- * @param len The maximum number of characters to search in haystack.
- */
-
-const char	*my_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	const size_t	needle_len = strlen(needle);
+	size_t	needle_len;
+	char	*match;
 
-	while (len-- >= needle_len)
+	if (*needle == '\0')
+		return ((char *)haystack);
+	needle_len = ft_strlen(needle);
+	while (*haystack && len >= needle_len)
 	{
-		if ((strncmp(haystack++, needle, needle_len) == 0))
-			return (--haystack);
+		if (ft_strncmp(haystack, needle, needle_len) == 0)
+		{
+			match = (char *)haystack;
+			return (match);
+		}
+		haystack++;
+		len--;
 	}
 	return (NULL);
 }
@@ -39,20 +39,14 @@ const char	*my_strnstr(const char *haystack, const char *needle, size_t len)
 // {
 // 	const char	*haystack;
 // 	const char	*needle;
-// 	const char	*result;
-// 	size_t		len;
+// 	char		*result;
 
-// 	haystack = "Hello, world!";
-// 	needle = "world";
-// 	len = strlen(haystack);
-// 	result = my_strnstr(haystack, needle, len);
-// 	if (result)
-// 	{
-// 		printf("Substring found at: %s\n", result);
-// 	}
+// 	haystack = "Esta es una cadena de prueba";
+// 	needle = "prueba";
+// 	result = ft_strnstr(haystack, needle, strlen(haystack));
+// 	if (result != NULL)
+// 		printf("Substring '%s' found in '%s'\n", needle, haystack);
 // 	else
-// 	{
-// 		printf("Substring not found.\n");
-// 	}
+// 		printf("Substring '%s' not found in '%s'\n", needle, haystack);
 // 	return (0);
 // }

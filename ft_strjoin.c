@@ -1,38 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/27 13:30:36 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:09:51 by macanald         ###   ########.fr       */
+/*   Created: 2023/02/10 20:20:36 by macanald          #+#    #+#             */
+/*   Updated: 2023/02/23 15:06:30 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-	return (c);
+	char	*result;
+	int		i;
+	int		j;
+
+	if (!s1 || !s2)
+		return (NULL);
+	result = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		result[i] = s1[i];
+		i++;
+	}
+	j = 0;
+	while (s2[j])
+	{
+		result[i + j] = s2[j];
+		j++;
+	}
+	result[i + j] = '\0';
+	return (result);
 }
-
-// int	main(void)
-// {
-// 	char	input;
-// 	int		output;
-
-// 	input = 'a';
-// 	output = ft_toupper(input);
-// 	if (output == 'A')
-// 	{
-// 		printf("La función es correcta para el carácter '%c'\n", input);
-// 	}
-// 	else
-// 	{
-// 		printf("La función no es correcta para el carácter '%c'\n", input);
-// 	}
-// }

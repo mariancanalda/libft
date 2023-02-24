@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 18:31:50 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:03:38 by macanald         ###   ########.fr       */
+/*   Created: 2023/02/15 07:58:17 by macanald          #+#    #+#             */
+/*   Updated: 2023/02/22 19:00:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <unistd.h>
-// #include <fcntl.h>
 #include "libft.h"
 
-/**
- * Write the character c to the file descriptor fd
- * 
- * @param c the character to print
- * @param fd file descriptor
- */
-
-void	ft_putchar_fd(char c, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	write(fd, &c, 1);
+	new->next = *lst;
+	*lst = new;
 }
 
 // int	main(void)
 // {
-// 	int		fd;
-// 	char	c;
+// 	t_list	*head;
+// 	t_list	*node;
 
-// 	c = 'A';
-// 	fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
-// 	ft_putchar_fd(c, fd);
-// 	close(fd);
+// 	head = ft_lstnew("Node 1");
+// 	ft_lstadd_front(&head, ft_lstnew("Node 2"));
+// 	ft_lstadd_front(&head, ft_lstnew("Node 3"));
+// 	node = head;
+// 	while (node)
+// 	{
+// 		printf("%s\n", (char *)node->content);
+// 		node = node->next;
+// 	}
 // 	return (0);
 // }
