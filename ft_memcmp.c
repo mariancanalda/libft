@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:43:32 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:01:40 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 17:36:42 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,9 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 // 	char	str[6];
 // 	int		n;	
 
-// 	strcpy(dst, "Hello");
-// 	strcpy(str, "Hello");
+// 	ft_strlcpy(dst, "Hello", 6);
+// 	ft_strlcpy(str, "Hello", 6);
 // 	n = 5;
 // 	printf("ft_memcmp result: %d\n", ft_memcmp(dst, str, n));
-// 	printf("memcmp result: %d\n", memcmp(dst, str, n));
 // 	return (0);
 // }

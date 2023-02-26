@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:38:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:07:26 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 16:52:03 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len = i;
 	if (dstsize <= len)
 	{
-		return (dstsize + strlen(src));
+		return (dstsize + ft_strlen(src));
 	}
 	j = 0;
 	while (src[j] != '\0' && i < dstsize - 1)
@@ -50,7 +50,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		j++;
 	}
 	dst[i] = '\0';
-	return (len + strlen(src));
+	return (len + ft_strlen(src));
 }
 
 // int	main(void)

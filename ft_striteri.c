@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:45:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:10:36 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 19:31:31 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-// void	print_and_upper(unsigned int index, char *c)
-// {
-// 	printf("index: %d, character: %c\n", index, *c);
-// 	if (*c >= 'a' && *c <= 'z')
-// 		*c = *c - 32;
-// }
+void	print_and_upper(unsigned int index, char *c)
+{
+	printf("index: %d, character: %c\n", index, *c);
+	if (*c >= 'a' && *c <= 'z')
+		*c = *c - 32;
+}
 
 // int	main(void)
 // {
 // 	char	*s;
 // 	char	*copy;
 
-// 	*s = "hello, world";
-// 	copy = strdup(s);
+// 	s = "hello, world";
+// 	copy = ft_strdup(s);
 // 	ft_striteri(copy, &print_and_upper);
 // 	printf("Result: %s\n", copy);
 // 	free(copy);

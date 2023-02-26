@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:13:52 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 00:26:43 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 16:44:04 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // 	const char	*needle;
 // 	char		*result;
 
-// 	haystack = "Esta es una cadena de prueba";
-// 	needle = "prueba";
-// 	result = ft_strnstr(haystack, needle, strlen(haystack));
+// 	haystack = "This is a test string";
+// 	needle = "test";
+// 	result = ft_strnstr(haystack, needle, ft_strlen(haystack));
 // 	if (result != NULL)
 // 		printf("Substring '%s' found in '%s'\n", needle, haystack);
 // 	else

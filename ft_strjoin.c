@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 20:20:36 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:06:30 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 19:34:14 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	result = (char *)malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	result = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -41,3 +41,20 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[i + j] = '\0';
 	return (result);
 }
+
+// int main(void)
+// {
+//     char *s1 = "Hello";
+//     char *s2 = " World!";
+//     char *result = ft_strjoin(s1, s2);
+//     if (!result)
+//     {
+//         printf("Error: failed to allocate memory for result.\n");
+//         return (1);
+//     }
+//     printf("s1 = %s\n", s1);
+//     printf("s2 = %s\n", s2);
+//     printf("result = %s\n", result);
+//     free(result);
+//     return (0);
+// }

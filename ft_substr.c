@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:51:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 17:24:01 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 19:28:27 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start >= strlen(s))
+	if (start >= ft_strlen(s))
 	{
 		substr = (char *)malloc(1 * sizeof(char));
 		if (!substr)
@@ -29,13 +29,12 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		*substr = '\0';
 		return (substr);
 	}
-	if (len > strlen(s) - start)
-		len = strlen(s) - start;
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	substr = (char *)malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
-	memcpy(substr, s + start, len);
-	substr[len] = '\0';
+	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }
 
@@ -60,7 +59,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 // 	else
 // 	{
 // 		bullshit = &strsub[3];
-// 		strcpy(bullshit, "bullshit");
+// 		ft_strlcpy(bullshit, "bullshit", ft_strlen("bullshit")+1);
 // 		ft_print_result(strsub);
 // 	}
 // 	free(strsub);

@@ -6,21 +6,26 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 13:31:09 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 15:55:41 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <stdlib.h>
-#include "libft.h"
 
 /**
  * It takes a string, and returns the integer value of that string.
+ * Toma una cadena y devuelve el valor entero de esa cadena.
  * 
  * @param str This is the string that we are converting to an integer.
+ * @param str Es la cadena que estamos convirtiendo en un entero.
  * 
  * @return the integer value of the string.
- */
+ * @return devuelve el valor entero de la cadena.
+ * 
+ * */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

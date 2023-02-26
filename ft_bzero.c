@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:17:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 13:31:27 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 18:35:21 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_bzero(void *str, size_t n)
 // 	char	*str;
 
 // 	str = strdup("Hello, World!");
-// 	ft_bzero(str, strlen(str));
+// 	ft_bzero(str, ft_strlen(str));
 // 	printf("Cadena con valores nulos: %s\n", str);
 // 	free(str);
 // 	return (0);

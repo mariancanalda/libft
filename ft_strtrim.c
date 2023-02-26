@@ -6,15 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 21:08:00 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/22 23:26:20 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 16:33:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
 // #include <stdlib.h>
-#include "libft.h"
-
 #include "libft.h"
 
 static int	is_set(char c, char const *set)

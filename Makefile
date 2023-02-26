@@ -1,7 +1,7 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+LIB = ar rcs
 
 NAME = libft.a
+
 SRCS = 	ft_isalpha.c	\
 		ft_isdigit.c	\
 		ft_isalnum.c	\
@@ -39,11 +39,13 @@ SRCS = 	ft_isalpha.c	\
 
 OBJS = $(SRCS:.c=.o)
 
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar r $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

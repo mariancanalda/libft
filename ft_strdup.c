@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:33:10 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 13:29:25 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/25 18:53:49 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ char	*ft_strdup(const char *s1)
 	int		len;
 	char	*result;
 
-	len = strlen(s1);
+	len = ft_strlen(s1);
 	result = (char *)malloc((len + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
-	memcpy(result, s1, len + 1);
+	ft_memcpy(result, s1, len + 1);
 	return (result);
 }
 
