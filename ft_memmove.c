@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:20:16 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 13:05:37 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 13:19:22 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,63 +150,28 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	// 7) La función retorna un puntero a la memoria de 
 	// destino actualizada.
 
-// int main(void)
+// int	main(void)
 // {
-// 	int size;
-// 	char *dst;
-// 	char *data;
+// 	char *str;
+// 	char *res;
+// 	char c;
+// 	
+// 	str = "hello world";
+// 	c = 'o';
+// 	res = ft_strrchr(str, c);
+// 	if (res)
+// 		printf("The last occurrence of '%c' in \"%s\" is at position %ld.\n", 
+// 		c, str, res - str);
+// 	else
+// 		printf("'%c' not found in \"%s\".\n", c, str);
 
-// 	size = 10;
-// 	dst = malloc(size);
-// 	data = malloc(size);
+// 	c = 'z';
+// 	res = ft_strrchr(str, c);
+// 	if (res)
+// 		printf("The last occurrence of '%c' in \"%s\" is at position %ld.\n",
+//  	c, str, res - str);
+// 	else
+// 		printf("'%c' not found in \"%s\".\n", c, str);
 
-// 	if (!dst || !data)
-// 	{
-// 		printf("Error: memory allocation failed\n");
-// 		return (1);
-// 	}
-// 	ft_memset(dst, 'B', size);
-// 	ft_memset(data, 'A', size);
-// 	printf("Before memmove: dst=%s, data=%s\n", dst, data);
-// 	ft_memmove(dst, data, size);
-// 	printf("After memmove: dst=%s, data=%s\n", dst, data);
-// 	free(dst);
-// 	free(data);
 // 	return (0);
 // }
-
-	// 1) Declaro las variables size, dst y data. 
-
-	// 2) Asigno un tamaño de 10 bytes a la variable 'size' 
-	// y se reserva la memoria necesaria para las variables
-	// 'dst' y 'data' utilizando la función malloc.
-
-	// 3) Verifico si se han producido errores en la asignación 
-	// de memoria: utilizo el operador de negación (!) para 
-	// verificar si los punteros 'dst' y 'data' son nulos. 
-
-		// Si alguno de los dos es nulo, se imprime un mensaje 
-		// de error y se devuelve un valor diferente de cero 
-		// (1 en este caso) para indicar que el programa 
-		// terminó con errores.
-
-	// 4) Inicializo la memoria asignada para las variables 
-	// 'dst' y 'data' utilizando la función 'ft_memset', 
-	// que llena un bloque de memoria con un valor dado. 
-	// En este caso, se utilizan los valores 'B' y 'A',
-	// respectivamente.
-
-	// 5) Imprimo el contenido de las variables 'dst' y 
-	// 'data' utilizando la función 'printf'. 
-
-	// 6) Llamo a la función 'ft_memmove', que mueve una 
-	// cantidad determinada de bytes de memoria de 
-	// 'data' a 'dst'.
-
-	// 7) Imprimo de nuevo el contenido de las variables 'dst' y 
-	// 'data' utilizando la función 'printf' para verificar que 
-	// el movimiento de memoria se haya realizado correctamente. 
-
-	// 8) Se libera la memoria asignada utilizando la función 
-	// 'free' y se devuelve un valor cero para indicar que 
-	// el programa terminó correctamente.
