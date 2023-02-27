@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:49:41 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/26 13:47:48 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 12:28:45 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <stddef.h>
 
 typedef struct s_list
 {
