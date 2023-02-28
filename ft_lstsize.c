@@ -6,12 +6,20 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 07:59:29 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/22 19:00:10 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:34:08 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+/**
+ * Counts the number of elements in a linked list.
+ * 
+ * @param lst The list to be counted.
+ * 
+ * @return The number of elements in the linked list.
+ */
 
 int	ft_lstsize(t_list *lst)
 {

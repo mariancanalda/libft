@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 20:19:50 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:02:12 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,10 @@ int	ft_atoi(const char *str)
 	// - 'i' se utilizará como índice para iterar sobre los caracteres 
 	// de la cadena. Se inicializa en 0 (primer carácter de la cadena)
 
-	// Bucle 'while' para detectar espacios en blanco. Si el carácter actual 
+	// // while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+	// 	|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	// 		++i;
+	// Bucle para detectar espacios en blanco. Si el carácter actual 
 	// es uno de esos caracteres, se incrementa el valor de "i" para avanzar 
 	// al siguiente carácter en la cadena y seguir evaluando. La iteración 
 	// se  detiene cuando se encuentra un carácter que no es un espacio en 

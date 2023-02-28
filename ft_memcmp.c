@@ -6,36 +6,36 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:43:32 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 00:34:20 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:44:13 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-			/**
-			 * memcmp = "memory compare" 
-			 * 
-			 * The function ft_memcmp() compares the first n bytes 
-			 * of memory area str1 and memory area str2
-			 * La función ft_memcmp() compara los primeros n bytes 
-			 * del área de memoria str1 y el área de memoria str2
-			 * 
-			 * @param dst This is the destination string.
-			 * Es la cadena de destino.
-			 * 
-			 * @param str This is the pointer to the block 
-			 * of memory to fill.
-			 * Este es el puntero al bloque de memoria a rellenar.
-			 * 
-			 * @param n The number of bytes to compare.
-			 * Número de bytes a comparar.
-			 * 
-			 * @return The difference between the two strings.
-			 * Devuelve la diferencia entre ambas cadenas.
-			 * 
-			 * Required libraries. Librerías necesarias:
-			 * #include <stdio.h>
-			 * #include <stdlib.h>
-			 * #include <string.h>
-			 **/
+	/**
+	 * memcmp = "memory compare" 
+	 * 
+	 * The function ft_memcmp() compares the first n bytes 
+	 * of memory area str1 and memory area str2
+	 * La función ft_memcmp() compara los primeros n bytes 
+	 * del área de memoria str1 y el área de memoria str2
+	 * 
+	 * @param dst This is the destination string.
+	 * Es la cadena de destino.
+	 * 
+	 * @param str This is the pointer to the block 
+	 * of memory to fill.
+	 * Este es el puntero al bloque de memoria a rellenar.
+	 * 
+	 * @param n The number of bytes to compare.
+	 * Número de bytes a comparar.
+	 * 
+	 * @return The difference between the two strings.
+	 * Devuelve la diferencia entre ambas cadenas.
+	 * 
+	 * Required libraries. Librerías necesarias:
+	 * #include <stdio.h>
+	 * #include <stdlib.h>
+	 * #include <string.h>
+	 **/
 
 #include "libft.h"
 
@@ -53,16 +53,15 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 	return (0);
 }
 
-			// Esta función compara los primeros "n" bytes de 
-			// las áreas de memoria apuntadas por "dst" y "str". 
-			// Los argumentos "dst" y "str" son punteros genéricos 
-			// a las áreas de memoria que se van a comparar. 
-			// La función devuelve un número entero que indica 
-			// la relación entre los primeros "n" bytes de las 
-			// áreas de memoria. La función devuelve un valor 
-			// negativo si el primer byte que difiere en "dst" 
-			// es menor que el byte correspondiente en "str", 
-			// devuelve un valor positivo si el primer byte 
+	// Esta función compara los primeros "n" bytes de las áreas de 
+	// memoria apuntadas por "dst" y "str". 
+
+	// La función devuelve un número entero que indica la relación 
+	// entre los primeros "n" bytes de las áreas de memoria. 
+	
+	// La función devuelve un valor negativo si el primer byte 
+	// que difiere en "dst" es menor que el byte correspondiente 
+	// en "str", devuelve un valor positivo si el primer byte 
 			// que difiere en "dst" es mayor que el byte 
 			// correspondiente en "str" y devuelve cero 
 			// si las áreas de memoria son iguales.

@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:51:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/25 19:28:27 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:37:15 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 // #include <string.h>
 #include "libft.h"
 
+/**
+ * If the string is NULL, return NULL. If the start index is greater than the length of the string,
+ * return an empty string. If the length is greater than the length of the string minus the start
+ * index, set the length to the length of the string minus the start index. Allocate memory for the
+ * substring, copy the substring into the allocated memory, and return the substring.
+ * 
+ * @param s The string to be split.
+ * @param start the index of the first character to include in the substring.
+ * @param len the length of the substring to be returned
+ * 
+ * @return A pointer to a new string.
+ */
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*substr;

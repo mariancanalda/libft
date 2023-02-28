@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 21:08:00 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/25 16:33:10 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:37:05 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 // #include <string.h>
 // #include <stdlib.h>
 #include "libft.h"
+
+/**
+ * It returns 1 if the character c is in the string set, and 0 otherwise
+ * 
+ * @param c The character to check.
+ * @param set The set of characters to be searched.
+ * 
+ * @return The number of words in the string.
+ */
 
 static int	is_set(char c, char const *set)
 {

@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 20:20:36 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/25 19:34:14 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:36:15 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 // #include <stdlib.h>
 // #include <string.h>
 #include "libft.h"
+
+/**
+ * It takes two strings and returns a new string that is the concatenation of the two strings
+ * 
+ * @param s1 The first string to be joined.
+ * @param s2 the string to be appended to s1
+ * 
+ * @return A pointer to a new string that is the result of the concatenation of s1 and s2.
+ */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,13 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 07:57:10 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/22 19:00:10 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:33:54 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
+
+/**
+ * Create a new list node with the given content
+ * 
+ * @param content the content of the new element
+ * 
+ * @return A pointer to a new t_list element.
+ */
 
 t_list	*ft_lstnew(void *content)
 {

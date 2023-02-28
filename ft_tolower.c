@@ -6,12 +6,20 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:40:56 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/23 15:09:09 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 18:37:24 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 #include "libft.h"
+
+/**
+ * If the character is uppercase, add 32 to it
+ * 
+ * @param c The character to be converted.
+ * 
+ * @return The lowercase version of the character.
+ */
 
 int	ft_tolower(int c)
 {

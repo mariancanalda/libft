@@ -6,18 +6,17 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:40:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 23:42:41 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 17:59:58 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
 	 * 'memchr' = "memory character"
 	 * 
-	 * The function ft_memchr() locates the first occurrence
-	 *  of 'c' (converted to an 'unsigned char') in string 's'.
-	 * * La función ft_memchr() localiza la primera aparición 
-	 * de 'c' (convertido a un 'char sin signo') en la 
-	 * cadena 's'.
+	 * The function ft_memchr() locates the first occurrence of 'c' (converted
+	 *  to an 'unsigned char') in string 's'.
+	 * * La función ft_memchr() localiza la primera aparición de 'c' 
+	 * (convertido a un 'char sin signo') en la cadena 's'.
 	 * 
 	 * @param s The string to search. Cadena a buscar.
 	 * @param c The character to search for. Carácter a buscar.
@@ -56,13 +55,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	//Se declaran dos variables:
 
-		// 'const unsigned char *str' que se utiliza para almacenar 
-		// la dirección de memoria del primer byte del bloque de 
-		// memoria al que apunta el puntero 's' de entrada. 
-			// Es importante utilizar un puntero a caracteres sin 
-			// signo para evitar problemas con caracteres de signo
-			// negativo. Además, se declara como 'const' porque 
-			// no se modificará la memoria a la que apunta.
+		// 'const unsigned char *str' que se utiliza para almacenar la 
+		// dirección de memoria del primer byte del bloque de memoria al 
+		// que apunta el puntero 's' de entrada. 
+			// Es importante utilizar un puntero a caracteres sin signo 
+			// para evitar problemas con caracteres de signo negativo. 
+			// Además, se declara como 'const' porque no se modificará 
+			// la memoria a la que apunta.
 
 		// 'size_t i': Se utiliza como contador. Se inicializa en 
 		// cero y se incrementa en cada iteración del bucle. 
@@ -74,9 +73,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	// Se inicializa la variable 'i' en cero y se inicia 
 	// un bucle while que itera desde 'i = 0' hasta 'i < n'.
 
-		// En cada iteración, la función comprueba 
-		// si el carácter en la posición 'i' de 'str' es 
-		// igual al carácter sin signo 'c'. 
+		// En cada iteración, la función comprueba si el carácter 
+		// en la posición 'i' de 'str' es igual al carácter sin 
+		// signo 'c'. 
 			// Si es así, la función devuelve un puntero de 
 			// tipo void * que apunta a la dirección de 
 			// memoria &str[i] (lugar donde se encontró la 
@@ -85,11 +84,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			// puntero a void *, se puede asignar este 
 			// puntero a cualquier tipo de puntero en C. 
 
-			// Si no, la función incrementa 'i' y 
-			// continúa el bucle.Si el bucle se completa sin 
-			// encontrar una coincidencia, la función 
-			// devuelve NULL, lo que indica que el carácter 'c' 
-			// no se encontró en la cadena 's'.
+			// Si no, la función incrementa 'i' y continúa 
+			// el bucle.Si el bucle se completa sin encontrar 
+			// una coincidencia, la función devuelve NULL, 
+			// lo que indica que el carácter 'c' no se encontró 
+			// en la cadena 's'.
 
 // int	main(void)
 // {
