@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:22:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 10:36:29 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 20:29:33 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,10 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-	// La función toma un carácter como argumento y devuelve 
-	// un entero. Si el carácter es una letra alfabética, 
-	// la función devuelve 1, de lo contrario devuelve 0.
-
-	// Verifico si el carácter está en el rango de los 
-	// caracteres mayúsculos y minúsculos del alfabeto 
-	// (A a Z y a a z, respectivamente). Si el carácter 
-	// está en este rango, se devuelve 1 para indicar 
-	// que es una letra alfabética. 
-	// De lo contrario, se devuelve 0 para indicar 
-	// que no es una letra alfabética.
+	// Con una estructura de control if-else, se verifica si
+	//  el carácter está en el rango de los caracteres alfabéticos 
+	//  (A a Z y a a z). Si está en este rango, se devuelve 1. 
+	// De lo contrario, se devuelve 0.
 
 // int	main(void)
 // {
@@ -68,9 +61,9 @@ int	ft_isalpha(int c)
 // 	return (0);
 // }
 
-	// El programa pide al usuario que ingrese un carácter 
-	// y luego usa la función ft_isalpha para determinar si es una 
-	// letra o no. Si el carácter es una letra, se imprimirá un 
+	// Se pide al usuario que ingrese un carácter y luego usa 
+	// la función ft_isalpha para determinar si es una letra o no. 
+	// Si el carácter es una letra, se imprimirá un 
 	// mensaje que indica que es una letra, de lo contrario, 
 	// se imprimirá un mensaje que indica que no es una letra. 
 

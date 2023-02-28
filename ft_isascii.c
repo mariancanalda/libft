@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:00:30 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 10:39:00 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 20:29:57 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,9 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-	// La función toma un parámetro c que es el carácter 
-	// que se va a verificar. Si el valor entero de c está 
-	// dentro del rango ASCII válido, entonces la función 
-	// devuelve 1 (verdadero), lo que indica que c es un carácter 
-	// ASCII válido. De lo contrario, devuelve 0 (falso).
-
-	// La implementación de la función es sencilla. 
-	// Primero verifica si c está en el rango de 0 a 127, 
-	// que son los valores ASCII válidos. Si c está en ese rango,
+	// Con una estructura de control if-else, se verifica si 'c' 
+	// está en el rango de 0 a 127, que son los 
+	// valores ASCII válidos. Si c está en ese rango, 
 	// entonces devuelve 1, de lo contrario, devuelve 0.
 
 // int	main(void)
@@ -65,17 +59,9 @@ int	ft_isascii(int c)
 // 	return (0);
 // }
 
-	// El programa solicita al usuario que ingrese un carácter 
-	// y luego utiliza la función 'ft_isascii()' para determinar 
-	// si el carácter es un carácter ASCII o no. Si el carácter
-	// es un carácter ASCII, se imprime un mensaje que indica 
-	// que el carácter es un carácter ASCII, de lo contrario e 
-	// imprime un mensaje que indica que el carácter no es un 
-	// carácter ASCII.
-
-	// El programa comienza solicitando al usuario que ingrese 
-	// un carácter utilizando la función 'scanf()'. Luego, se 
-	// llama a la función 'ft_isascii()' con el carácter 
+	// Se pide al usuario que ingrese un carácter 
+	// utilizando la función 'scanf()'. Luego, se llama 
+	// a la función 'ft_isascii()' con el carácter 
 	// ingresado como argumento. Si 'ft_isascii()' devuelve 
 	// un valor verdadero, el programa imprime un mensaje 
 	// que indica que el carácter es un carácter ASCII. 
@@ -83,5 +69,4 @@ int	ft_isascii(int c)
 	// falso, el programa imprime un mensaje que indica que el 
 	// carácter no es un carácter ASCII. 
 
-	// Por último, el programa devuelve 0 para 
-	// indicar que se ha completado con éxito.
+	// Devuelve 0 para indicar que fue completado con éxito.

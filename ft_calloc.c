@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:41:41 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 10:41:07 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 22:32:49 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,35 +54,20 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
-	// 1) Declaro tres variables para asignar una cantidad 
-	// de memoria dinámica determinada por 'count' y 'size' 
-	// e inicializar su contenido a cero.
-	// 	void *ptr: Es un puntero de tipo void, que 
-	// 	se utiliza para almacenar la dirección de memoria 
-	// 	del bloque de memoria que se asignará.
-	// 	size_t total_size: Es una variable de tipo size_t 
-	// 	que se utiliza para almacenar el tamaño total de 
-	// 	memoria que se debe asignar.
-	// 	size_t i: Es una variable de tipo size_t que 
-	// 	se utiliza como contador en el bucle que inicializa 
+	// Se declaran tres variables:
+	// 	void *ptr: Puntero que se utiliza para almacenar la 
+	// dirección de memoria del bloque de memoria a asignar.
+	// 	size_t total_size: Se utiliza para almacenar el tamaño 
+	// total de memoria que se debe asignar.
+	// 	size_t i: Contador en el bucle que inicializa 
 	// 	a cero el contenido del bloque de memoria asignado.
 
-	// 2) 'total_size = count * size;' calcula el tamaño 
+	// 'total_size = count * size;' calcula el tamaño 
 	// total de la memoria que se debe asignar para la matriz 
-	// requerida.
+	// requerida. 'total_size' almacena ese valor para su uso 
+	// posterior
 
-		// La función 'ft_calloc' se utiliza para asignar un 
-		// bloque de memoria de tamaño 'count * size' y devuelve 
-		// un puntero al primer byte de la memoria asignada. 
-		// Por lo tanto, 'count' es el número de elementos que 
-		// se quieren almacenar en la memoria y 'size' es el
-		// tamaño en bytes de cada elemento. La variable 
-		// 'total_size' almacena este valor para su uso 
-		// posterior en el programa.
-
-	// 3) Calculo el tamaño total de la memoria que se va 
-	// a reservar, y se reserva esa cantidad de memoria 
-	// utilizando 'malloc'. 
+	// El tamaño total de la memoria se reserva haciendo 'malloc'. 
 
 		// Si 'malloc' devuelve NULL, la función 'ft_calloc' 
 		// devuelve NULL inmediatamente, indicando que no se pudo 
@@ -93,18 +78,16 @@ void	*ft_calloc(size_t count, size_t size)
 		// al inicio de la memoria asignada, que se almacena en 
 		// la variable ptr.
 
-	// 4) Utilizo un bucle while para inicializar los bytes de 
-	// memoria asignados por 'malloc' a cero. En cada iteración, 
-	// el valor cero se escribe en el byte correspondiente en la 
-	// memoria apuntada por 'ptr'.
+	// Bucle while para inicializar los bytes de memoria asignados 
+	// por 'malloc' a cero. En cada iteración, el valor cero 
+	// se escribe en el byte correspondiente en la memoria apuntada 
+	// por 'ptr'.
 
-		// Convierto el puntero genérico 'ptr' a un puntero de tipo 
-		// unsigned char utilizando un casteo. Se utiliza unsigned 
-		// char en lugar de char para asegurarse de que los valores 
-		// almacenados sean siempre positivos (en el rango de 0 a 255). 
+		// Casteo de 'ptr' a unsigned char para asegurar que los 
+		// valores almacenados sean siempre positivos 
+		// (en el rango de 0 a 255). 
 
-	// 5) Finalmente, la función devuelve un puntero al inicio 
-	// de la memoria reservada.
+	// La función devuelve un puntero al inicio de la memoria reservada.
 
 // int	main(void)
 // {
@@ -125,16 +108,20 @@ void	*ft_calloc(size_t count, size_t size)
 // 	return (0);
 // }
 
-	// 1) Declaro las variables 'ptr', 'count' y 'size'. 
-	// 'count' y 'size' son utilizados para reservar memoria 
-	// para el puntero 'ptr' utilizando la función 'ft_calloc'.
+	// 'count' es el número de elementos que se desean reservar 
+	// en el array (5), y 'size' es el tamaño en bytes de 
+	// cada elemento del array (el tamaño de un int, es 
+	// generalmente 4 bytes).
 
-	// 2) Después de llamar a ft_calloc, verifico si la 
-	// reserva de memoria fue exitosa. Si no lo fue, 
-	// se muestra un mensaje de error y se devuelve un 
-	// valor diferente de cero para indicar un error. 
+	// Se llama a 'f't_calloc' para reservar el espacio en memoria. 
+	// La función asigna la memoria y la inicializa a cero 
+	// (coloca el carácter nulo '\0' en todos los bytes). 
+	// El resultado de la función se almacena en el puntero ptr.
 
-	// 3) De lo contrario, se muestra la dirección de 
-	// memoria reservada y se libera la memoria 
-	// utilizando la función free() antes de 
-	// salir del programa.
+	// Se verifica si la reserva de memoria fue exitosa. Si lo fue,
+	// se muestra la dirección de memoria reservada y se libera 
+	// la memoria utilizando la función free() antes de salir 
+	// del programa. 
+
+	// Si no lo fue, se muestra un mensaje de error y 
+	// se devuelve un valor diferente de cero para indicar error. 

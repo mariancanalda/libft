@@ -6,35 +6,35 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:40:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/26 23:41:04 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 23:42:41 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-				/**
-				 * 'memchr' = "memory character"
-				 * 
-				 * The function ft_memchr() locates the first occurrence
-				 *  of 'c' (converted to an 'unsigned char') in string 's'.
-				 * * La función ft_memchr() localiza la primera aparición 
-				 * de 'c' (convertido a un 'char sin signo') en la 
-				 * cadena 's'.
-				 * 
-				 * @param s The string to search. Cadena a buscar.
-				 * @param c The character to search for. Carácter a buscar.
-				 * @param n The number of bytes to be searched. Número de 
-				 * bytes a buscar.
-				 * 
-				 * @return A pointer to the first occurrence of the 
-				 * character 'c' in the first 'n' bytes of the string 
-				 * pointed to, by the argument'str'.
-				 * @return devuelve un puntero a la primera aparición 
-				 * del carácter 'c' en los primeros 'n' bytes de la 
-				 * cadena apuntada por el argumento 'str'.
-				 * 
-				 * Required libraries. Librerías necesarias:
-				 * #include <stdio.h>
-				 * #include <string.h>
-				 **/
+	/**
+	 * 'memchr' = "memory character"
+	 * 
+	 * The function ft_memchr() locates the first occurrence
+	 *  of 'c' (converted to an 'unsigned char') in string 's'.
+	 * * La función ft_memchr() localiza la primera aparición 
+	 * de 'c' (convertido a un 'char sin signo') en la 
+	 * cadena 's'.
+	 * 
+	 * @param s The string to search. Cadena a buscar.
+	 * @param c The character to search for. Carácter a buscar.
+	 * @param n The number of bytes to be searched. Número de 
+	 * bytes a buscar.
+	 * 
+	 * @return A pointer to the first occurrence of the 
+	 * character 'c' in the first 'n' bytes of the string 
+	 * pointed to, by the argument'str'.
+	 * @return devuelve un puntero a la primera aparición 
+	 * del carácter 'c' en los primeros 'n' bytes de la 
+	 * cadena apuntada por el argumento 'str'.
+	 * 
+	 * Required libraries. Librerías necesarias:
+	 * #include <stdio.h>
+	 * #include <string.h>
+	 **/
 
 #include "libft.h"
 
@@ -54,43 +54,42 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-			// Declaro dos variables:
-			// 'const unsigned char *str': Un puntero a un carácter 
-			// constante sin signo. Se utiliza para almacenar la 
-			// dirección de memoria del primer byte del bloque de 
-			// memoria al que apunta el puntero 's' de entrada. 
-			// Dado que esta función busca caracteres en un 
-			// bloque de memoria, es importante utilizar 
-			// n puntero a caracteres sin signo para evitar 
-			// problemas con caracteres de signo negativo. 
-			// Además, se declara como 'const' porque no se 
-			// modificará la memoria a la que apunta.
-			// 'size_t i': Esta variable se utiliza como un
-			// contador de bucle. Se inicializa en cero y se 
-			// incrementa en cada iteración del bucle 'while'. 
-			// La variable 'i' se utiliza para realizar un 
-			// seguimiento de la posición actual dentro del 
-			// bloque de memoria y para controlar la cantidad 
-			// de bytes que se han recorrido.
+	//Se declaran dos variables:
 
-			// Convierto el puntero 's' a un puntero constante de 
-			// caracteres sin signo, 'str', para poder trabajar 
-			// con los valores de los caracteres en su forma 
-			// numérica sin signo. 
+		// 'const unsigned char *str' que se utiliza para almacenar 
+		// la dirección de memoria del primer byte del bloque de 
+		// memoria al que apunta el puntero 's' de entrada. 
+			// Es importante utilizar un puntero a caracteres sin 
+			// signo para evitar problemas con caracteres de signo
+			// negativo. Además, se declara como 'const' porque 
+			// no se modificará la memoria a la que apunta.
 
-			// Se inicializa la variable 'i' en cero y se inicia 
-			// un bucle while que itera desde 'i = 0' hasta 'i < n'.
+		// 'size_t i': Se utiliza como contador. Se inicializa en 
+		// cero y se incrementa en cada iteración del bucle. 
 
-			// En cada iteración, la función comprueba 
-			// si el carácter en la posición 'i' de 'str' es 
-			// igual al carácter sin signo 'c'. Si es así, 
-			// la función devuelve un puntero al elemento 
-			// correspondiente en 's'. Si no, la función incrementa 
-			// 'i' y continúa el bucle.
+	// La función convierte el puntero 's' a un puntero const 
+	// unsigned char (que garantiza que se manejarán valores de 
+	// 0 a 255, sin problemas de signo) y lo asigna a 'str'. 
 
-			// Si el bucle se completa sin encontrar una coincidencia, 
-			// la función devuelve NULL, lo que indica que el 
-			// carácter 'c' no se encontró en la cadena 's'.
+	// Se inicializa la variable 'i' en cero y se inicia 
+	// un bucle while que itera desde 'i = 0' hasta 'i < n'.
+
+		// En cada iteración, la función comprueba 
+		// si el carácter en la posición 'i' de 'str' es 
+		// igual al carácter sin signo 'c'. 
+			// Si es así, la función devuelve un puntero de 
+			// tipo void * que apunta a la dirección de 
+			// memoria &str[i] (lugar donde se encontró la 
+			// primera ocurrencia del carácter 'c' en la 
+			// memoria apuntada por 's'). Al convertir el 
+			// puntero a void *, se puede asignar este 
+			// puntero a cualquier tipo de puntero en C. 
+
+			// Si no, la función incrementa 'i' y 
+			// continúa el bucle.Si el bucle se completa sin 
+			// encontrar una coincidencia, la función 
+			// devuelve NULL, lo que indica que el carácter 'c' 
+			// no se encontró en la cadena 's'.
 
 // int	main(void)
 // {
@@ -108,37 +107,35 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	return (0);
 // }
 
-			// 1) Defino tres variables:
-			// 	'str': un array de caracteres (una cadena de caracteres) 
-			// 	con capacidad para 15 caracteres.
-			// 	'c': un carácter que se va a buscar en str.
-			// 	'result': un puntero a un carácter que apuntará a la 
-			// 	posición en la cadena str donde se encuentre c.
-			// 	La función 'ft_memchr' se usará para buscar el 
-			// 	carácter 'c' en la cadena 'str', y el resultado 
-			// 	se almacenará en 'result'.
+	// Se definen tres variables:
+	// 	'str': un array de caracteres con capacidad para 15 caracteres.
+	// 	'c': un carácter que se va a buscar en str.
+	// 	'result': un puntero a un carácter que apuntará a la 
+	// 	posición en la cadena str donde se encuentre c.
 
-			// 2) Inicializo la cadena 'str' con "Hello, World!" utilizando 
-			// la función 'ft_strlcpy'. para asegurarme de que hay 
-			// caracteres en la cadena que pueden ser buscados con ft_memchr.
+	// Se copia la cadena "Hello, World!" en el array 'str' utilizando 
+	// 'ft_strlcpy' que copia una cadena de origen en una cadena 
+	// de destino sin que se produzca un desbordamiento de búfer. 
+	// 'sizeof(str)' especifica el tamaño máximo del arreglo de 
+	// destino, asegurando que no se escriba más allá del espacio 
+	// asignado para él. 
+		// El resultado de 'ft_strlcpy' es el tamaño de la cadena 
+		// de origen que se copió. Será 13, que es la longitud de 
+		// "Hello, World!" (incluyendo el carácter nulo final).
 
-			// 3) Defino un carácter c (en este caso 'o') 
-			// que se desea buscar en la cadena.
+	// Se define 'c' como 'o'. Lo que se desea buscar en la cadena.
 
-			// 4) Se llama a la función 'ft_memchr' pasando como argumentos 
-			// la cadena 'str', el carácter 'c', y la longitud de la cadena 
-			// (calculada con ft_strlcpy(NULL, str, 0)). 
+	// Se llama a la función 'ft_memchr' pasando como argumentos 
+	// la cadena 'str', el carácter 'c', y la longitud de la cadena 
+	// (calculada con ft_strlcpy(NULL, str, 0)).
+				// Al pasar NULL como argumento 'dst' y 0 como argumento 
+				// 'size', 'ft_strlcpy' realiza ninguna operación de copia 
+				// y devuelve la longitud de la cadena fuente 
+				// ("Hello, World!")
 
-			// 5) La función busca el carácter en la cadena 
-			// y retorna un puntero al primer byte donde se encontró 
-			// el carácter o NULL si no se encontró.
-
-			// 6)El programa verifica si el resultado es NULL, 
-			// en cuyo caso se imprime un mensaje indicando 
-			// que el carácter no se encontró. 
-
-			// 7) De lo contrario, se imprime un mensaje 
-			// indicando la posición donde se encontró 
-			// el carácter, que se calcula restando el puntero 
-			// devuelto por la función de la dirección de 
-			// inicio de la cadena 'str'.
+	// El programa verifica si el resultado es NULL, en cuyo caso se 
+	// imprime un mensaje indicando que el carácter no se encontró. 
+	// De lo contrario, se imprime un mensaje indicando la 
+	// posición donde se encontró el carácter, que se calcula 
+	// restando el puntero devuelto por la función de la dirección 
+	// de inicio de la cadena 'str'.

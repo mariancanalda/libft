@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:17:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 08:40:46 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 22:33:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,10 @@ void	ft_bzero(void *str, size_t n)
 	}
 }
 
-	// 1) Se inicializa un contador 'i' en cero.
-
-	// 2) Mientras 'i' sea menor que 'n' (el número de 
+	// Mientras 'i' sea menor que 'n' (el número de 
 	// bytes que se van a borrar), se establece el byte 
 	// actual en cero mediante la asignación 
-	// ((char *)str)[i] = 0 y se incrementa i en uno 
+	// ((char *)str)[i] = 0 y se incrementa 'i' en uno 
 	// mediante i++.
 
 		// La conversión el puntero 'void *str' a 
@@ -75,16 +73,17 @@ void	ft_bzero(void *str, size_t n)
 // 	return (0);
 // }
 
-	//  1) Declaro un puntero a una cadena de caracteres y 
-	//  se le asigna la dirección de una cadena duplicada 
-	//  "Hello, World!" utilizando la función ft_strdup. 
+	// Se declara un puntero a una cadena de caracteres y 
+	// se le asigna la dirección de una cadena duplicada 
+	// "Hello, World!" utilizando la función ft_strdup. 
+	// Se hace para poder manipular la cadena sin alterar 
+	// la cadena original.
 
-	//  2) Llamo a la función 'ft_bzero' con los argumentos 
-	//  'str' (el puntero a la cadena) y 'ft_strlen(str)' 
-	//  (la longitud de la cadena) para establecer todos 
-	//  los bytes de la cadena en cero. 
+	// Se llama a la función 'ft_bzero' con los argumentos 
+	// 'str' (el puntero a la cadena) y 'ft_strlen(str)' 
+	// (la longitud de la cadena) para establecer todos 
+	// los bytes de la cadena en cero. 
 
-	//  3)Se imprime la cadena modificada, 
-	//  que debería ser una cadena vacía, 
-	//  y se libera la memoria asignada a la 
-	//  cadena duplicada utilizando la función 'free'.
+	// Se imprime la cadena modificada (cadena vacía), 
+	// y se libera la memoria asignada a la cadena 
+	// duplicada con 'free'.

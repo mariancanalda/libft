@@ -6,40 +6,42 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 22:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 02:47:49 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/28 07:49:18 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-			/**
-			 * It takes a string and a character, and returns 
-			 * an array of strings, each of which is a word from the
-			 * original string, separated by the character.
-			 * Toma una cadena y un carácter, y devuelve 
-			 * una matriz de cadenas, cada una de las cuales es 
-			 * una palabra de la cadena original, separada por 
-			 * el carácter.
-			 * 
-			 * @param s The string to be split.
-			 * La cadena a dividir.
-			 * 
-			 * @param c the character to split the string by
-			 * el carácter por el que dividir la cadena.
-			 * 
-			 * @return A pointer to a pointer to a char.
-			 * Devuelve un puntero a un puntero a un char.
-			 * 
-			 * Required libraries. Librerías necesarias:
-			 * #include <stdlib.h>
-			 * #include <unistd.h>
-			 * #include "libft.h"
-			 * #include <stdio.h>
-			 * 
-			 */
+	/**
+	 * It takes a string and a character, and returns 
+	 * an array of strings, each of which is a word from the
+	 * original string, separated by the character.
+	 * Toma una cadena y un carácter, y devuelve 
+	 * una matriz de cadenas, cada una de las cuales es 
+	 * una palabra de la cadena original, separada por 
+	 * el carácter.
+	 * 
+	 * @param s The string to be split.
+	 * La cadena a dividir.
+	 * 
+	 * @param c the character to split the string by
+	 * el carácter por el que dividir la cadena.
+	 * 
+	 *  @return A pointer to a pointer to a char.
+	 * Devuelve un puntero a un puntero a un char.
+	 * 
+	 * Required libraries. Librerías necesarias:
+	 * #include <stdlib.h>
+	 * #include <unistd.h>
+	 * #include "libft.h"
+	 * #include <stdio.h>
+	 * 
+	 **/
 
 #include "libft.h"
 
 static int	count_words(char const *s, char c);
 static char	*get_word(char const *s, char c);
+static char	**divide_string(char const *s, char c,
+				const int total_words, char **result);
 void		free_split(char **split);
 
 static int	count_words(char const *s, char c)
@@ -50,41 +52,41 @@ static int	count_words(char const *s, char c)
 	while (*s)
 	{
 		if (*s == c)
-		s++;
+			s++;
 		else
 		{
-		count++;
+			count++;
 			while (*s && *s != c)
-			s++;
+				s++;
 		}
 	}
 	return (count);
 }
 
-			// La función count_words recorre la cadena 's' y 
-			// cuenta el número de palabras que hay en ella, 
-			// separadas por el delimitador 'c'. Se define como 
-			// estática porque su alcance está limitado al 
-			// archivo donde se encuentra definida, y no puede 
-			// ser utilizada en otros archivos del programa.
+	// La función count_words toma dos argumentos: una cadena de 
+	// caracteres (char const *s) y un carácter 'c'. La función 
+	// cuenta el número de palabras en la cadena 's' que están separadas 
+	// por el carácter 'c' y devuelve el recuento. 
+		// Se define como estática porque su alcance está limitado al 
+		// archivo donde se encuentra definida, y no puede ser utilizada 
+		// en otros archivos del programa.
 
-			// En primer lugar, se inicializa la variable 'count' 
-			// a 0. Luego, se recorre la cadena 's' mientras no 
-			// se llegue al final de la misma (es decir, mientras 
-			// el carácter apuntado por el puntero 's' no sea '\0'). 
-			// En cada iteración del bucle 'while', se verifica si el 
-			// carácter apuntado por s es el delimitador 'c'. 
-
+	// Se inicializa la variable 'count' a 0. 
+	// Se recorre la cadena 's' mientras no se llegue al final de la misma 
+	// (mientras el carácter apuntado por el puntero 's' no sea '\0'). 
+		// En cada iteración del bucle 'while', se verifica si el 
+		// carácter apuntado por 's' es el delimitador 'c'. 
 			// Si es así, se incrementa 's' para apuntar al 
-			// siguiente carácter. Si no es así, significa 
-			// que se ha encontrado una palabra, por lo que 
-			// se incrementa el contador 'count' y se recorre 
-			// la palabra hasta llegar al final de la misma 
-			// o hasta encontrar el delimitador 'c'.
+			// siguiente carácter. 
+			// Si no es así, significa 
+		// que se ha encontrado una palabra, por lo que 
+		// se incrementa el contador 'count' y se recorre 
+		// la palabra hasta llegar al final de la misma 
+		// o hasta encontrar el delimitador 'c'.
 
-			// Finalmente, se devuelve el valor de 'count', 
-			// que corresponde al número de palabras encontradas 
-			// en la cadena 's'.
+		// Finalmente, se devuelve el valor de 'count', 
+		// que corresponde al número de palabras encontradas 
+		// en la cadena 's'.
 
 static char	*get_word(char const *s, char c)
 {
@@ -93,7 +95,7 @@ static char	*get_word(char const *s, char c)
 
 	len = 0;
 	while (s[len] && s[len] != c)
-	len++;
+		len++;
 	word = (char *)malloc(sizeof(char) * (len + 1));
 	if (!word)
 		return (NULL);
@@ -136,7 +138,7 @@ void	free_split(char **split)
 		while (split[i])
 		{	
 			free(split[i]);
-		i++;
+				i++;
 		}	
 		free(split);
 	}
@@ -154,29 +156,44 @@ void	free_split(char **split)
 			// de la matriz, se libera la memoria asignada 
 			// a la matriz en sí mediante la función free().
 
-char	**ft_split(char const *s, char c)
+static char	**divide_string(char const *s, char c, const int total_words,
+							char **result)
 {
-	char	**result;
-	int		count;
+	int	i;
 
-	count = count_words(s, c);
-	if (!s)
-		return (NULL);
-	result = (char **)malloc(sizeof(char *) * (count + 1));
-	if (!result)
-		return (NULL);
-	while (*s)
+	i = 0;
+	while (*s && i < total_words)
 	{
 		if (*s == c)
-	s++;
+			s++;
 		else
 		{
-		result[count - (count_words(s, c))] = get_word(s, c);
+			result[i] = get_word(s, c);
+			if (!result[i])
+			{
+				free_split(result);
+				return (NULL);
+			}	
 			while (*s && *s != c)
-		s++;
+				s++;
+			i++;
 		}
 	}
-	result[count] = NULL;
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char		**result;
+	const int	total_words = count_words(s, c);
+
+	if (!s)
+		return (NULL);
+	result = (char **)malloc(sizeof(char *) * (total_words + 1));
+	if (!result)
+		return (NULL);
+	result[total_words] = NULL;
+	result = divide_string(s, c, total_words, result);
 	return (result);
 }
 
@@ -206,11 +223,11 @@ char	**ft_split(char const *s, char c)
 // 	char	**words;
 // 	int		i;
 
-// 	words = ft_split("Hola,este,es,un,ejemplo", ',');
+// 	words = ft_split("Hello,this,is,an,example", ',');
 // 	i = 0;
 // 	if (!words)
 // 	{
-// 		printf("Error al separar la cadena.\n");
+// 		printf("Error separating the string.\n");
 // 		return (1);
 // 	}
 // 	while (words[i])

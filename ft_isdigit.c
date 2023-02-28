@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 10:44:07 by macanald         ###   ########.fr       */
+/*   Updated: 2023/02/27 20:33:40 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,9 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-	// La función toma un argumento de carácter c y
-	// devuelve un valor entero. Si el valor del 
-	// carácter está en el rango decimal del carácter '0' 
-	// al carácter '9', la función devuelve 1, lo que indica 
+	// Con una estructura de control if-else, se verifica 
+	// si el valor del carácter está en el rango decimal del  
+	// '0' al '9', la función devuelve 1, lo que indica 
 	// que es un dígito decimal. Si no está en ese rango, 
 	// devuelve 0, lo que significa que no es un dígito decimal.
 
@@ -57,19 +56,9 @@ int	ft_isdigit(int c)
 // 	return (0);
 // }
 
-	// 1) Se declara una variable c de tipo char 
-	// y se inicializa con el valor '5'. 
-
-	// 2) Se llama a la función ft_isdigit() 
-	// pasando como argumento el valor de c.
-
-	// 3) La función ft_isdigit() verifica 
-	// si el valor pasado como argumento es 
-	// un dígito decimal, devolviendo 1 
-	// si lo es y 0 si no lo es. En este caso, 
-	// como el valor de c es el carácter '5', 
-	// que es un dígito decimal, la función devuelve 1.
-
-	// En consecuencia, el programa imprime el mensaje '5' 
-	// is a digit. en la salida estándar y luego 
-	// retorna 0 indicando que finalizó sin errores.
+	// Se declara una variable c de tipo char y se inicializa en '5'. 
+	// Se llama a la función ft_isdigit() pasando como argumento 
+	// el valor de c. La función ft_isdigit() verifica si el valor 
+	// pasado como argumento es un dígito decimal, devolviendo 1 
+	// si lo es y 0 si no lo es. El programa imprime el mensaje '5' 
+	// is a digit y devuelve 0 indicando que finalizó sin errores.
