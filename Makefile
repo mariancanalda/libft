@@ -1,5 +1,3 @@
-LIB = ar rcs
-
 NAME = libft.a
 
 SRCS = 	ft_isalpha.c	\
@@ -50,6 +48,8 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+bonus:
+	
 clean:
 	rm -f $(OBJS)
 

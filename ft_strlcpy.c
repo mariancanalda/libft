@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:49:46 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:42:08 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:02:53 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
+	
 	// Se inicializa el contador 'i' a cero. 
 
 	// 'if (dstsize == 0) return (ft_strlen(src))' 

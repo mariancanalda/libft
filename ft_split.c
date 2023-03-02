@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 22:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 00:16:24 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/02 12:34:54 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@
 	 **/
 
 #include "libft.h"
-
-static int	count_words(char const *s, char c);
-static char	*get_word(char const *s, char c);
-static char	**divide_string(char const *s, char c, \
-				const int total_words, char **result);
-void		free_split(char **split);
 
 static int	count_words(char const *s, char c)
 {
@@ -169,7 +163,7 @@ void	free_split(char **split)
 	// El tipo de retorno es "void", lo que significa que la función 
 	// no devuelve ningún valor.
 
-static char	**divide_string(char const *s, char c, const int total_words, \
+static char	**divide_string(char const *s, char c, int total_words, \
 						char **result)
 {
 	int	i;
@@ -238,10 +232,11 @@ static char	**divide_string(char const *s, char c, const int total_words, \
 char	**ft_split(char const *s, char c)
 {
 	char		**result;
-	const int	total_words = count_words(s, c);
+	int			total_words;
 
 	if (!s)
 		return (NULL);
+	total_words = count_words(s, c);
 	result = (char **)malloc(sizeof(char *) * (total_words + 1));
 	if (!result)
 		return (NULL);

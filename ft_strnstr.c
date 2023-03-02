@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:13:52 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:40:39 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:04:05 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	// La función itera sobre la cadena 'haystack' mientras haya 
 	// caracteres en ella y no se haya llegado al final de la cadena 
 	// o se haya superado el límite especificado por 'len'.
-	// 	'if (ft_strncmp(haystack, needle, needle_len) == 0)'
+	// 'if (ft_strncmp(haystack, needle, needle_len) == 0)'
 	// 	Dentro del bucle, la función compara una subcadena de 
 	// 	longitud 'needle_len' al inicio de la cadena 'haystack' 
 	// 	con la subcadena 'needle', utilizando 'ft_strncmp'. 
