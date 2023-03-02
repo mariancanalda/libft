@@ -6,17 +6,17 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:42:07 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 12:54:23 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/02 06:53:11 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
 	 * strrchr = "string reverse search for character"
 	 * 
-	 * It returns a pointer to the last occurrence 
-	 * of the character 'c' in the string 's'.
-	 * Devuelve un puntero a la última aparición 
-	 * del carácter 'c' en la cadena 's'.
+	 * It returns a pointer to the last occurrence of the 
+	 * character 'c' in the string 's'.
+	 * Devuelve un puntero a la última aparición del carácter 
+	 * 'c' en la cadena 's'.
 	 * 
 	 * @param s The string to search.
 	 * La cadena a buscar.

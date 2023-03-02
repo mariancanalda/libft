@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 00:38:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 23:47:20 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/01 14:28:02 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,26 +51,31 @@ static int	ft_get_len(int n)
 	// longitud necesaria de la cadena para representar 
 	// un número entero en formato de cadena de caracteres.
 
-	// Se inicializa la variable 'len' a cero. 
+	// 'len = 0' Se inicializa la variable 'len' a cero. 
 
-	// Se comprueba si 'n' es igual a cero. Si es así, 
-	// la longitud de la cadena es 1 y la función devuelve 1. 
-	// El número tendría un solo dígito que es el cero. 
+	// 'if (n < 0) len++' Se comprueba si 'n' es igual a cero. 
+	// Si es así, la longitud de la cadena es 1 y la función 
+	// devuelve 1. El número tendría un solo dígito que es 
+	// el cero. 
 
-	// Se comprueba si 'n' es menor que cero. Si es así,se
-	// incrementa el valor de 'len' en 1 para tener en cuenta ese 
-	// carácter adicional en la longitud de la cadena. 
+	// 'if (n < 0)len++' Se comprueba si 'n' es menor que cero. 
+	// Si es así,se incrementa el valor de 'len' en 1 para 
+	// tener en cuenta ese carácter adicional en la longitud 
+	// de la cadena. 
 
-	// Mientras 'n' no sea cero, entra en un bucle while . 
-	// En cada iteración, se divide 'n' por 10 para eliminar 
-	// el último dígito del número y se incrementa 'len' para 
-	// contar ese dígito. El bucle continúa hasta que 'n' 
-	// se convierte en cero (todos los dígitos del número 
-	// original han sido procesados).
+	// 'while (n)' Mientras 'n' no sea cero, entra en un bucle 
+	// while . 
+		// 'n /= 10; len++' En cada iteración, se divide 'n' 
+		// por 10 para eliminar el último dígito del número 
+		// y se incrementa 'len' para contar ese dígito. 
 
-	// Devuelve len (la cantidad de dígitos del número 
-	// entero original, teniendo en cuenta el signo 
-	// si es que era negativo.)
+		// El bucle continúa hasta que 'n' se convierte en 
+		// cero (todos los dígitos del número original han 
+		// sido procesados).
+
+	// 'return (len);' Devuelve len (la cantidad de dígitos 
+	// del número entero original, teniendo en cuenta el 
+	// signo si es que era negativo.)
 
 char	*ft_itoa(int n)
 {
@@ -99,23 +104,23 @@ char	*ft_itoa(int n)
 }
 
 	// Se declaran tres variables: str, len y sign.
-		// 'str' almacenará la cadena resultante de la conversión 
-		// del número entero a una cadena.
-		// 'len' almacenará la longitud de la cadena necesaria 
+		// 'char *str' almacenará la cadena resultante de la 
+		// conversión del número entero a una cadena.
+		// 'int	len' almacenará la longitud de la cadena necesaria 
 		// para almacenar el número entero. 
-		// 'sign' almacenará el signo del número entero 'n'. 
-		// Si 'n' es negativo, 'sign' tendrá el valor de 1, 
-		// en caso contrario tendrá el valor de 0.
+		// 'int	sign' almacenará el signo del número entero 'n'. 
 
-	// (n < 0) evalúa si el valor de 'n' es menor que cero, 
-	// si es así, se le asigna el valor 1 (verdadero) a 'sign', 
-	// lo que significa que el número es negativo. 
+	// 'sign = (n < 0)' Si el valor de 'n' es menor que cero, se 
+	// le asigna el valor 1 (verdadero) a 'sign', lo que 
+	// significa que el número es negativo. 
 
-	// Se llama a 'ft_get_len' para obtener el número de 
-	// carácteres necesarios para representar el número.
+	// 'len = ft_get_len(n)' Se llama a 'ft_get_len' para obtener 
+	// el número de carácteres necesarios para representar 
+	// el número.
 
-	// Se usa 'ft_calloc' para reservar un bloque de memoria del 
-	// tamaño adecuado para contener la cadena que se va a generar.  
+	// 'str = ft_calloc(len + 1, sizeof(char))' Se usa 'ft_calloc' 
+	// para reservar un bloque de memoria del tamaño adecuado para 
+	// contener la cadena que se va a generar.  
 		// Así se asegura de que el bloque de memoria se inicialice 
 		// a cero, lo que garantiza que la cadena terminará con un 
 		// carácter nulo. 
@@ -127,45 +132,52 @@ char	*ft_itoa(int n)
 			// 'sizeof(char)' es el tamaño de cada elemento en bytes 
 			// (igual a 1 en C).
 
-	// ft_calloc(len + 1, sizeof(char)) está reservando en memoria 
-	// un bloque de len + 1 elementos de tamaño sizeof(char) 
-	// bytes cada uno.
+			// ft_calloc(len + 1, sizeof(char)) está reservando en memoria 
+			// un bloque de len + 1 elementos de tamaño sizeof(char) 
+			// bytes cada uno.
 
-	// El primer 'if' comprueba si la llamada a 'calloc' 
-	// ha fallado (no se ha podido asignar suficiente memoria 
-	// para la cadena).
+	// 	'if (str == NULL) return (NULL)' El primer 'if' comprueba 
+	// si la llamada a 'calloc' ha fallado (no se ha podido asignar 
+	// suficiente memoria para la cadena).
 		// Si esto ocurre, la función 'ft_itoa' devuelve un 
 		// puntero nulo indicando que ha habido un error.
-	// El segundo 'if' comprueba si el número es negativo 
-	// (sign es true). 
+
+	// 'if (sign) str[0] = '-'' El segundo 'if' comprueba si el número 
+	// es negativo (sign es true). 
 		// Si es así, se coloca un signo menos (-) en la primera 
 		// posición de la cadena 'str'.
-	// El tercer 'if' comprueba si el número es cero. 
+
+	// 'if (n == 0) str[0] = '0'' El tercer 'if' comprueba si el número 
+	// es cero. 
 		// Si es así, se coloca un cero (0) en la primera posición
 		// de la cadena str.
+
 	// Estos tres condicionales establecen el valor inicial de 
 	// la cadena 'str' antes de comenzar a convertir el número 'n' 
 	// en una cadena de caracteres.
 
-	// 6) El bucle 'while' se ejecuta mientras 'n' sea diferente de cero. 
-
-		// En cada iteración, se obtiene el último dígito del número y 
-		// se le suma el valor del caracter '0' en ASCII
-
-		// Si 'n' es negativo, se toma el valor absoluto 
-		// de 'n' para obtener el dígito correspondiente. 
-		// En ese caso, en lugar de sumar '0' se resta '0' 
-		// para obtener el dígito en complemento a 10.
-
-		// Luego se divide 'n' por 10 para pasar al siguiente
-		// dígito.
+	// 'while (n)' El bucle 'while' se ejecuta mientras 'n' sea diferente 
+	// de cero. 
+		// Si 'n' es mayor que cero, 'if (n > 0) str[--len] = '0' + n % 10' 
+		// En cada iteración, se toma el último dígito del número 'n' 
+		// (resto de la división de 'n' entre 10 (n % 10)), lo convierte
+		//  en un carácter (se le suma el valor del caracter '0' en ASCII) 
+		//  y lo asigna a la última posición en la cadena 'str'.
 			// El índice --len se utiliza para escribir los dígitos
 			// en orden inverso, ya que se comienza a escribir 
 			// desde el final de la cadena. Por ejemplo, 
 			// si el número es 123, los dígitos se escribirán 
 			// en la cadena en el orden 3, 2, 1.
 
-	// 7) La función devuelve la cadena de caracteres representando 
+		// Si 'n' es negativo,'str[--len] = '0' - n % 10', se toma el 
+		// valor absoluto de 'n' para obtener el dígito correspondiente. 
+		// En ese caso, en lugar de sumar '0' se resta '0' 
+		// para obtener el dígito en complemento a 10.
+
+		// 'n /= 10' Se divide 'n' por 10 para pasar al siguiente
+		// dígito.
+
+	// return (str) La función devuelve la cadena de caracteres representando 
 	// el número entero.
 
 // int	main(void)
@@ -180,13 +192,21 @@ char	*ft_itoa(int n)
 // 	return (0);
 // }
 
-	// Se declaran dos variables: 'n' n es el número que se desea convertir 
-	// y 'str' donde se almacenará la cadena resultante de la conversión.
+	// Se declara dos variables: 
+		// 'n' n es el número que se desea convertir.
+		// 'str' donde se almacenará la cadena resultante de la conversión.
+
 	// Se inicializa 'n' a 1234. 
-	// Se llama a la función 'ft_itoa' para convertir 'n' en una cadena 
-	// de caracteres. El resultado se almacena en la variable 'str'.
-	// Se imprime por pantalla un mensaje que muestra el valor original 
-	// de 'n' y su representación en cadena obtenida con 'ft_itoa'. 
+
+	// 'str = ft_itoa(n)' Se llama a la función 'ft_itoa' para convertir 
+	// 'n' en una cadena de caracteres. El resultado se almacena en la 
+	// variable 'str'.
+
+	// Se imprime un mensaje que muestra el valor original de 'n' 
+	// y su representación en cadena obtenida con 'ft_itoa'. 
+
 	// Se libera la memoria asignada a la cadena 'str' usando la función 
-	// 'free', y el 'main' devuelve el valor 0 para indicar que la 
-	// ejecución del programa ha finalizado correctamente.
+	// 'free'
+
+	// El 'main' devuelve el valor 0 para indicar que la ejecución del 
+	// programa ha finalizado correctamente.

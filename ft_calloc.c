@@ -6,17 +6,15 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:41:41 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 22:32:49 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:59:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
 	 * calloc = "clear allocation"
 	 * 
-	 * It allocates memory for a given size and sets all the
-	 * bytes to 0.
-	 * Asigna memoria para un tamaño determinado y pone todos
-	 * los bytes a 0.
+	 * It allocates memory for a given size and sets all the bytes to 0.
+	 * Asigna memoria para un tamaño determinado y pone todos los bytes a 0.
 	 * 
 	 * @param count The number of elements to allocate.
 	 * El número de elementos a asignar.

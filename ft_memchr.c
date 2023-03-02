@@ -6,15 +6,15 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:40:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/28 17:59:58 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/01 14:33:43 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
 	 * 'memchr' = "memory character"
 	 * 
-	 * The function ft_memchr() locates the first occurrence of 'c' (converted
-	 *  to an 'unsigned char') in string 's'.
+	 * The function ft_memchr() locates the first occurrence of 'c' 
+	 * (converted to an 'unsigned char') in string 's'.
 	 * * La función ft_memchr() localiza la primera aparición de 'c' 
 	 * (convertido a un 'char sin signo') en la cadena 's'.
 	 * 
@@ -66,29 +66,29 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		// 'size_t i': Se utiliza como contador. Se inicializa en 
 		// cero y se incrementa en cada iteración del bucle. 
 
-	// La función convierte el puntero 's' a un puntero const 
-	// unsigned char (que garantiza que se manejarán valores de 
-	// 0 a 255, sin problemas de signo) y lo asigna a 'str'. 
+	// 'str = (const unsigned char *)s' Se convierte el puntero 's' 
+	// a un puntero const unsigned char (que garantiza que se manejarán 
+	// valores de 0 a 255 sin problemas de signo) y lo asigna a 'str'. 
 
 	// Se inicializa la variable 'i' en cero y se inicia 
 	// un bucle while que itera desde 'i = 0' hasta 'i < n'.
 
-		// En cada iteración, la función comprueba si el carácter 
-		// en la posición 'i' de 'str' es igual al carácter sin 
-		// signo 'c'. 
-			// Si es así, la función devuelve un puntero de 
-			// tipo void * que apunta a la dirección de 
-			// memoria &str[i] (lugar donde se encontró la 
-			// primera ocurrencia del carácter 'c' en la 
-			// memoria apuntada por 's'). Al convertir el 
+		// if (str[i] == (unsigned char)c) En cada iteración, 
+		// se comprueba si el carácter en la posición 'i' de 'str' 
+		// es igual al carácter sin signo 'c'. 
+			// 'return ((void *)&str[i])' Si es así, la función 
+			// devuelve un puntero de tipo void * que apunta a 
+			// la dirección de memoria &str[i] (lugar donde se 
+			// encontró la primera ocurrencia del carácter 'c' 
+			// en la memoria apuntada por 's'). Al convertir el 
 			// puntero a void *, se puede asignar este 
 			// puntero a cualquier tipo de puntero en C. 
 
-			// Si no, la función incrementa 'i' y continúa 
+			// 'i++' Si no, la función incrementa 'i' y continúa 
 			// el bucle.Si el bucle se completa sin encontrar 
-			// una coincidencia, la función devuelve NULL, 
-			// lo que indica que el carácter 'c' no se encontró 
-			// en la cadena 's'.
+			// una coincidencia.
+				// return (NULL) La función devuelve NULL, porque 
+				// no se encontró el carácter 'c' en la cadena 's'.
 
 // int	main(void)
 // {

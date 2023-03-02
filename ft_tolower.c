@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 18:40:56 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/28 18:37:24 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/02 08:07:17 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 /**
  * If the character is uppercase, add 32 to it
+ * Convierte una letra mayúscula a su correspondiente letra minúscula. 
  * 
  * @param c The character to be converted.
  * 
@@ -27,6 +28,14 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+
+	// La función toma un carácter como argumento y devuelve 
+	// un entero. Si el carácter está entre 'A' y 'Z' 
+	// (es decir, es una letra mayúscula), se agrega 32 al 
+	// valor de su código ASCII, lo que lo convierte en su 
+	// correspondiente letra minúscula.
+	// Se devuelve el valor del carácter convertido o sin
+	// cambios.
 
 // int	main(void)
 // {
@@ -75,3 +84,15 @@ int	ft_tolower(int c)
 // 	}
 // 	return (0);
 // }
+
+	// La función principal prueba la función ft_tolower con 
+	// diferentes caracteres para asegurarse de que funciona 
+	// correctamente.
+	// Se inicializa un carácter de prueba 'input' y se llama a la 
+	// función ft_tolower para convertirlo a su correspondiente 
+	// letra minúscula.
+	// Se comprueba si la salida es la letra minúscula 
+	// esperada ('a' para 'A', 'z' para 'Z', etc.). 
+	// Si es así, se imprime un mensaje de éxito. 
+	// Si no, se imprime un mensaje de error.
+	// Se realizan pruebas similares para 'Z', 'a' y '1'.

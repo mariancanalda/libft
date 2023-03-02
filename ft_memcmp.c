@@ -6,23 +6,22 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:43:32 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/28 18:44:13 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/01 15:24:10 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
 	 * memcmp = "memory compare" 
 	 * 
-	 * The function ft_memcmp() compares the first n bytes 
-	 * of memory area str1 and memory area str2
-	 * La función ft_memcmp() compara los primeros n bytes 
-	 * del área de memoria str1 y el área de memoria str2
+	 * The function ft_memcmp() compares the first 'n' bytes of memory 
+	 * area 'str1' and memory area 'str2'
+	 * La función ft_memcmp() compara los primeros 'n' bytes del área de 
+	 * memoria 'str1' y el área de memoria 'str2'
 	 * 
 	 * @param dst This is the destination string.
 	 * Es la cadena de destino.
 	 * 
-	 * @param str This is the pointer to the block 
-	 * of memory to fill.
+	 * @param str This is the pointer to the block of memory to fill.
 	 * Este es el puntero al bloque de memoria a rellenar.
 	 * 
 	 * @param n The number of bytes to compare.
@@ -54,43 +53,58 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 }
 
 	// Esta función compara los primeros "n" bytes de las áreas de 
-	// memoria apuntadas por "dst" y "str". 
+	// memoria apuntadas por "dst" y "str". Y devuelve un número 
+	// entero que indica la relación entre esos primeros "n" bytes 
+	// de las áreas de memoria. 
+		// La función devuelve un valor negativo si el primer byte 
+		// que difiere en "dst" es menor que el byte correspondiente 
+		// en "str".
 
-	// La función devuelve un número entero que indica la relación 
-	// entre los primeros "n" bytes de las áreas de memoria. 
-	
-	// La función devuelve un valor negativo si el primer byte 
-	// que difiere en "dst" es menor que el byte correspondiente 
-	// en "str", devuelve un valor positivo si el primer byte 
-			// que difiere en "dst" es mayor que el byte 
-			// correspondiente en "str" y devuelve cero 
-			// si las áreas de memoria son iguales.
+		// Devuelve un valor positivo si el primer byte que difiere 
+		// en "dst" es mayor que el byte correspondiente en "str".
 
-			// Convierto los punteros "dst" y "str" en 
-			// punteros a "unsigned char" utilizando el operador 
-			// de casting para poder comparar los bytes 
-			// individuales de las áreas de memoria. 
+		// Y devuelve cero si las áreas de memoria son iguales.
 
-			// Realizo un bucle "while" que se ejecuta 
-			// mientras "n" sea mayor que cero. 
-			// En cada iteración, se comprueba si 
-			// los bytes apuntados por "dst2" y "str2" 
-			// son iguales. Si no lo son, se calcula 
-			// la diferencia entre los dos bytes y 
-			// se devuelve ese valor.
+	// Se declaran dos punteros a caracteres sin signo (unsigned char) 
+	// que se utilizarán para recorrer las regiones de memoria 
+	// de dst y str.
 
-			// Si los bytes son iguales, 
-			// los punteros "dst2" y "str2" 
-			// se incrementan para apuntar al 
-			// siguiente byte y "n" se decrementa 
-			// para indicar que se han comparado 
-			// "n" bytes. 
+	// 'dst2 = (unsigned char *)dst' 'str2 = (unsigned char *)str'
+	// Se asignan los punteros de los parámetros de entrada a los 
+	// punteros de los caracteres sin signo (dst2 y str2). 
+	// Este casteo garantiza que los valores en las posiciones 
+	// de memoria se traten como bytes sin signo (necesario para 
+	// poder comparar los valores de los bytes de memoria de manera 
+	// segura).
 
-			// Si después de recorrer los primeros "n"
-			// bytes de las áreas de memoria los bytes 
-			// son iguales, la función devuelve cero 
-			// para indicar que las áreas de memoria 
-			// son iguales.
+	// 'if (n)' Si 'n' es igual a cero, la función no realizará ninguna 
+	// comparación y devolverá cero inmediatamente. Si 'n' es mayor 
+	// que cero, la función continuará con la comparación de bytes 
+	// de memoria.
+		// 'while (n--)' n se decrementa en cada iteración del bucle. 
+		// Es decir, Si el valor de n es igual a 5, la primera 
+		// iteración del bucle while compararía los bytes en las 
+		// posiciones 0 de ambas regiones de memoria, y luego 
+		// decrementaría el valor de 'n' a 4. La segunda iteración 
+		// compararía los bytes en las posiciones 1, y decrementaría 
+		// 'n' a 3, y así hasta que 'n' alcanza el valor de 0 y el 
+		// bucle se detiene.
+
+		// 'if (*dst2++ != *str2++)'.
+		// En cada iteración, se comprueba si los bytes apuntados 
+		// por "dst2" y "str2" son iguales. 
+		// 	'return (*(--dst2) - *(--str2))'.
+		// 	Si no lo son, se calcula la diferencia entre los 
+		// 	dos bytes y se devuelve ese valor.
+
+		// 	Si los bytes son iguales, los punteros 'dst2' y 'str2' 
+		// 	se incrementan para apuntar al siguiente byte y 'n' se 
+		// 	decrementa para indicar que se han comparado 'n' bytes. 
+
+		// 'return (0)' Si después de recorrer los primeros 'n' bytes 
+		// de las áreas de memoria los bytes son iguales, la función 
+		// devuelve cero para indicar que las áreas de memoria son 
+		// iguales.
 
 // int	main(void)
 // {
@@ -105,31 +119,21 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 // 	return (0);
 // }
 
-			// 1) Declaro dos arreglos de caracteres, 'dst' y 
-			// 'str', cada uno con espacio para 6 caracteres. 
-			// Estos arreglos se utilizarán para almacenar dos 
-			// cadenas de caracteres idénticas. Y una variable 
-			// entera 'n' que se utilizará como el número de 
-			// bytes que se compararán en la función
-			// 'ft_memcmp'.
+	// Se declaran dos arrays de caracteres, 'dst' y 'str', cada uno 
+	// con espacio para 6 caracteres. Se utilizarán para almacenar dos 
+	// cadenas de caracteres. Y una variable entera 'n' que se utilizará 
+	// como el número de bytes que se compararán en 'ft_memcmp'.
 
-			// 2) Utilizo la función 'ft_strlcpy' para copiar la 
-			// cadena "Hello" en el arreglo 'dst' con un tamaño
-			// máximo de 6 bytes.
+	// Con 'ft_strlcpy' se copiar la cadena "Hello" en el arreglo 'dst' 
+	// con un tamaño máximo de 6 bytes. Y para copiar la cadena "Hello" 
+	// en el arreglo 'str' con un tamaño máximo de 6 bytes.
 
-			// 3) Utilizo la función 'ft_strlcpy' para copiar la 
-			// cadena "Hello" en el arreglo 'str' con un tamaño 
-			// máximo de 6 bytes.
+	// Se asigna un valor de 5 a la variable n: solo se compararán los 
+	// primeros 5 bytes de los arreglos 'dst' y 'str'.
 
-			// 4) Asigno un valor de 5 a la variable n. 
-			// Esto significa que solo se compararán los primeros 
-			// 5 bytes de los arreglos 'dst' y 'str'.
+	// Se llama a 'ft_memcmp' con los argumentos 'dst', 'str' y 'n' y
+	// se imprime el resultado de la función utilizando 'printf'. 
 
-			// 5) Se llama a la función 'ft_memcmp' con los argumentos 
-			// 'dst', 'str' y 'n'. Se imprime el resultado de la 
-			// función en la salida estándar utilizando 'printf'. 
-
-			// 6) El resultado se muestra como un número entero, 
-			// que indica la diferencia entre los bytes que se 
-			// compararon. En este caso, como los arreglos son 
-			// iguales, la función 'ft_memcmp' devuelve 0.
+	// El resultado se muestra como un número entero, que indica 
+	// la diferencia entre los bytes que se compararon. En este caso, 
+	// como los arreglos son iguales, la función devuelve 0.
