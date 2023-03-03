@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:00:30 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 20:29:57 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:27:49 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * isascii = "is ascii"
+	 * 'isascii' = "is ascii"
 	 * 
 	 * If the integer passed to the function is between 0 and 127, 
 	 * return 1, otherwise return 0.

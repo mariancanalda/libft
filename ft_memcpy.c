@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 12:12:50 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:28:32 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * memcpy = "memory copy"
+	 * 'memcpy' = "memory copy"
 	 * 
 	 * Copy 'n' bytes from memory area 'src' to memory area 'dst'.
 	 * Copia 'n' bytes del área de memoria 'src' al área 

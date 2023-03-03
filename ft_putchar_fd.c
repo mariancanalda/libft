@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:31:50 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:52:31 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:29:11 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * putchar = "put character"
+	 * 'putchar' = "put character"
 	 * 
 	 * Write the character 'c' to the file descriptor 'fd'.
 	 * Escribe el carácter 'c' en un archivo  de destino especificado 

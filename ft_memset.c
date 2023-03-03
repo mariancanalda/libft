@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:18:43 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:52:47 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:28:55 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * memset = "memory set"
+	 * 'memset' = "memory set"
 	 * 
 	 * Takes a pointer to a memory area, a byte value, and a size, 
 	 * and fills the memory area with the given byte value.

@@ -6,18 +6,23 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 07:58:17 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/28 18:33:45 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 18:20:56 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 /**
  * Adds a new element to the beginning of a linked list.
+ * Añade un nuevo elemento al principio de una lista 
+ * enlazada.
  * 
  * @param lst A pointer to a pointer to a linked list.
- * @param new the new element to add to the list
+ * Un puntero a un puntero a una lista enlazada.
+ * 
+ * @param new the new element to add to the list.
+ * El nuevo elemento a añadir a la lista.
  */
+
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

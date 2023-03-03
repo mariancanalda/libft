@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:45:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:46:02 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:33:19 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * striteri = "String iterator"
+	 * 'striteri' = "String iterator"
 	* 
 	 * Iterate through the string s, passing the index and the address 
 	 * of each character to the function f

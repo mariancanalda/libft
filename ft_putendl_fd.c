@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:22:53 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:52:09 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:29:18 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * putendl = "put endline to file descriptor".
+	 * 'putendl' = "put endline to file descriptor".
 	 * 
 	 * Write the string 's' to the file descriptor 'fd', followed 
 	 * by a newline.

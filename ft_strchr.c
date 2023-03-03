@@ -6,11 +6,13 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:05:18 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:45:03 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:33:06 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
+	 * 'strchr' = "string character"
+	 * 
 	 * Locates the first occurrence of'c' (converted to a char) 
 	 * in the string pointed to by 's'.
 	 * Localiza la primera aparición de 'c' (convertida a un char) 
@@ -95,10 +97,12 @@ char	*ft_strchr(const char *s, int c)
 
 	// Se define una cadena 'str' 
 
-	// Se llama a 'ft_strchr' para buscar el carácter 'l' en la cadena. 
-	// 	Si se encuentra el carácter, se imprime su posición 
-	// 	en la cadena. 
-	// 	Si no se encuentra el carácter, se imprime un mensaje
-	// 	indicando que no se ha encontrado.
+	// res = ft_strchr(str, 'l')
+	// Se llama a 'ft_strchr' para buscar el carácter 'l' en la cadena.
+		// 	if (res == NULL) Si no se encuentra el carácter,
+		// se imprime un mensaje indicando que no se ha encontrado.
+
+		// 	Si se encuentra el carácter, se imprime su posición 
+		// 	en la cadena. 
 
 	// Devuelve 0, lo que indica que el programa ha terminado correctamente.

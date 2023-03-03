@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/28 18:02:12 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:26:59 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * atoi = "ascii to integer".
+	 * 'atoi' = "ascii to integer".
 	 * 
 	 * It takes a string, and returns the integer value of that string.
 	 * Toma una cadena y devuelve el valor entero de esa cadena.

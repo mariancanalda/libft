@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 00:38:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/01 14:28:02 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:28:08 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * itoa = "integer to ASCII"
+	 * 'itoa' = "integer to ASCII"
 	 * 
 	 * The itoa() function coverts the integer 'n' into a character string.
 	 * La función itoa() convierte el número entero 'n' en una cadena 

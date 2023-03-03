@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:44:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 20:28:57 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:27:34 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * isalnum = "is alphanumeric"
+	 * 'isalnum' = "is alphanumeric"
 	 * 
 	 * If the character is a letter or a number, return 1, 
 	 * otherwise return 0.

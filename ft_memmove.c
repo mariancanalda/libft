@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 13:20:16 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 08:03:52 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:28:40 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * memmove = "memory move"
+	 * 'memmove' = "memory move"
 	 * 
 	 * This code is an implementation of the 'memmove' function that 
 	 * copies a block of memory from a source address to a destination 

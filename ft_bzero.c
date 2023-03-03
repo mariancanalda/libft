@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 13:17:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/01 12:56:14 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:27:17 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * bzero = "zeroing a byte string".
+	 * 'bzero' = "zeroing a byte string".
 	 * 
 	 * It sets the first 'n' bytes of the memory area pointed 
 	 * to by 'str' to zero.

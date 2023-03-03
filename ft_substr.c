@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 17:51:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:54:42 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 18:13:35 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,13 @@
  * length of the string minus the start index. 
  * Allocate memory for the substring, copy the substring 
  * into the allocated memory, and return the substring.
+ * 
  * El código proporciona una función llamada ft_substr que toma una 
  * cadena s y devuelve una subcadena que comienza en la posición 
  * start y tiene una longitud máxima de len. La función reserva 
  * la memoria necesaria para la nueva cadena usando malloc, y 
  * luego copia la subcadena correspondiente de s en la nueva 
  * cadena utilizando la función ft_strlcpy.
-
- *
  * 
  * @param s The string to be split.
  * @param start the index of the first character to include 

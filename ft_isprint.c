@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:59:33 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/01 13:34:12 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:28:04 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * "isprint" = "is printable"
+	 * 'isprint' = "is printable"
 	 * 
 	 * If the character is between 32 and 127, return 1, 
 	 * otherwise return 0.

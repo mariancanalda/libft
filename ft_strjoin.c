@@ -6,11 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 20:20:36 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:54:06 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:52:34 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
+	 * 'strjoin' = 'string join'
 	 * It takes two strings and returns a new string that is 
 	 * the concatenation of the two strings
 	 * La función ft_strjoin une dos cadenas de caracteres en una sola 

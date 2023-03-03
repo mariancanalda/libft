@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:34:11 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:39:43 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:29:26 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * putnbr_fd = "put number file descriptor"
+	 * 'putnbr_fd' = "put number file descriptor"
 	 * 
 	 * Write the integer 'n' to the file descriptor fd.
 	 * Se encarga de imprimir cualquier número entero de 32 bits 

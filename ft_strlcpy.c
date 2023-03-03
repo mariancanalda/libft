@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:49:46 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 15:02:53 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:35:44 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-	
+
 	// Se inicializa el contador 'i' a cero. 
 
 	// 'if (dstsize == 0) return (ft_strlen(src))' 
@@ -58,24 +58,31 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		// 	la función simplemente devuelve la longitud de 
 		// 	la cadena de origen.
 
-		// 	Si 'dstsize' no es cero, la función itera sobre 
+		// 	'while (src[i] && i < dstsize - 1)'
+		// Si 'dstsize' no es cero, la función itera sobre 
 		// 	la cadena de origen 'src' hasta que llega al final 
 		// 	de la cadena o hasta que 'i' llega a 'dstsize - 1', 
 		// 	lo que significa que no hay suficiente espacio 
 		// 	en el búfer de destino para copiar la cadena 
 		// 	completa. 
 
-		// 	En cada iteración, la función copia el carácter 
-		// 	actual de src en la posición correspondiente en 
-		// 	dst y aumenta el contador 'i'.
+		// 	'dst[i] = src[i] i++;'
+		// En cada iteración, realiza dos acciones: 
+			// Copia el valor del elemento i-ésimo de
+			// 'src' en el elemento i-ésimo de 'dst' 
+			// mientras se desplaza por ambos arrays 
+			// usando el mismo índice 'i'. 
+			// Ambos arreglos deben ser del mismo tamaño 
+			// para que esta acción sea válida. 
 
-	// Después de la iteración, la función establece el 
+	// 'dst[i] = '\0''Después de la iteración, la función establece el 
 	// carácter nulo final en la posición 'i' de 'dst' y 
-	// devuelve la longitud de src. La función 'ft_strlcpy' 
+	// devuelve la longitud de src. 
+
+	// 'return (ft_strlen(src))'La función 'ft_strlcpy' 
 	// garantiza que el búfer de destino esté siempre 
 	// terminado con un carácter nulo, independientemente 
 	// de si se copió la cadena completa o no. 
-
 	// Esto es útil para evitar errores de acceso a memoria 
 	// fuera de los límites del búfer de destino.
 

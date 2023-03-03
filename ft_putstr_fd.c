@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:44:34 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 07:36:52 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:29:33 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * putstr_fd = "put string to file descriptor"
+	 * 'putstr_fd' = "put string to file descriptor"
 	 * 
 	 * Writes the string 's' to the file descriptor 'fd'.
 	 * Escribe la cadena 's' en el descriptor de fichero 'fd'.

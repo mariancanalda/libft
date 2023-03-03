@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 20:33:40 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:27:56 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * isdigit = "is digit"
+	 * 'isdigit' = "is digit"
 	 * 
 	 * If the character is a digit, return 1, otherwise return 0.
 	 * Si el carácter es un dígito, devuelve 1, en caso contrario devuelve 0.

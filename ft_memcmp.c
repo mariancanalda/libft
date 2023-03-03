@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:43:32 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/01 15:24:10 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:28:16 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * memcmp = "memory compare" 
+	 * 'memcmp' = "memory compare" 
 	 * 
 	 * The function ft_memcmp() compares the first 'n' bytes of memory 
 	 * area 'str1' and memory area 'str2'

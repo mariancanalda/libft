@@ -6,21 +6,27 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 07:57:10 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 15:22:11 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:24:15 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
-
 /**
- * Create a new list node with the given content
+ * Create a new list node with the given content.
+ * Crea un nuevo nodo de lista con el contenido dado.
  * 
- * @param content the content of the new element
+ * @param content the content of the new element.
+ * El contenido del nuevo elemento.
  * 
  * @return A pointer to a new t_list element.
- */
+ * Devuelve un puntero a un nuevo elemento de t_list.
+ * 
+ * * Required libraries. Librerías necesarias:
+ * #include <stdlib.h>
+ * #include <stdio.h>
+
+ **/
+
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

@@ -6,12 +6,12 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:22:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/02/27 20:29:33 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:27:41 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * isalpha = "is alphabetic"
+	 * 'isalpha' = "is alphabetic"
 	 * 
 	 * The function ft_isalpha() returns 1 if the character passed 
 	 * as an argument is an alphabetical character, and 0 if it is not.

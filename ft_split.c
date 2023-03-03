@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 22:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 12:34:54 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 13:49:45 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,9 +152,9 @@ void	free_split(char **split)
 	// 'while (split[i])' Dentro de while, se recorre la matriz 
 	// de cadenas de caracteres verificando cada elemento de la matriz 
 	// si es nulo o no.
-		//  Si no es nulo, se libera la memoria asignada al elemento 
-		// mediante free().  Luego, incrementa la variable "i" para 
-		// pasar a la siguiente cadena de caracteres.
+		// 'free(split[i])' Si no es nulo, se libera la memoria asignada 
+		// al elemento mediante free().  Luego, incrementa la variable 
+		// "i" para pasar a la siguiente cadena de caracteres.
 
 	//  Después de liberar la memoria de cada elemento de la matriz, se 
 	// libera la memoria asignada a la matriz en sí mediante la función 

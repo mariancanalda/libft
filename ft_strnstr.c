@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:13:52 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/02 15:04:05 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:15:44 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	// 	longitud 'needle_len' al inicio de la cadena 'haystack' 
 	// 	con la subcadena 'needle', utilizando 'ft_strncmp'. 
 
-	// 		Si las subcadenas son iguales, la función devuelve 
-	// 		un puntero al inicio de la subcadena dentro 
-	// 		de haystack.
-	// 		Si la función sale del bucle sin encontrar la 
-	// 		subcadena needle, devuelve NULL.
+	// 	"match = (char *)haystack return (match)"
+		// Si las subcadenas son iguales, la función 
+		// devuelve un puntero al inicio de la subcadena 
+		// dentro de haystack.
+
+	// 	Si la función sale del bucle sin encontrar la 
+	// 	subcadena needle, devuelve NULL.
 
 // int	main(void)
 // {
