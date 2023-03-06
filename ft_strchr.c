@@ -6,30 +6,24 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:05:18 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:33:06 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:41 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'strchr' = "string character"
+	 * 'strchr' = "string character".
 	 * 
 	 * Locates the first occurrence of'c' (converted to a char) 
 	 * in the string pointed to by 's'.
-	 * Localiza la primera aparición de 'c' (convertida a un char) 
-	 * en la cadena apuntada por 's'.
 	 * 
 	 * @param s The string to search. 
-	 * La cadena a buscar.
 	 * 
 	 * @param c The character to search for.
-	 * El carácter a buscar.
 	 * 
 	 * @return A pointer to the first occurrence of the character 
 	 * c in the string s.
-	 * Devuelve un puntero a la primera aparición del carácter 
-	 * c en la cadena s.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 */
 
@@ -51,31 +45,31 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-	// Se declara una variable 'ch' que almacena el carácter buscado 
-	// convertido a unsigned char. 
+	// A variable 'ch' is declared which stores the searched character 
+	// converted to unsigned char. 
 
 	// 'while (*s != '\0')'
-	// Se utiliza un bucle while para iterar sobre cada carácter de la 
-	// cadena 's' mientras no se llegue al final de la cadena 
-	// (el carácter nulo '\0'). 
+	// A while loop is used to iterate over each character in the 
+	// string 's' as long as it does not reach the end of the string 
+	// (the null character '\0'). 
 	// 	'if (*s == ch)'
-	// 	Dentro del bucle, se compara cada carácter con 'ch'. 
+	// 	Inside the loop, each character is compared with 'ch'. 
 	// 		'return ((char *)s)'
-	// 		Si se encuentra una coincidencia, se devuelve un puntero 
-	// 		al carácter encontrado, lo que indica que se ha encontrado 
-	// 		el carácter buscado en la cadena.
+	// 		If a match is found, a pointer to the found character 
+	// 		is returned, indicating that the searched character 
+	// 		has been found in the string.
 
-	// 'if (ch == '\0')''
-	// Si se llega al final de la cadena y no se ha encontrado ch, 
-	// se verifica si 'ch' es el carácter nulo '\0'. 
+	// 'if (ch == '\0')'
+	// If the end of the string is reached and ch was not found, 
+	// it is checked if 'ch' is the null character '\0'. 
 	// 	'return ((char *)s)'
-	// 	Si es así, se devuelve un puntero al final 
-	// 	de la cadena, lo que indica que se ha llegado al final 
-	// 	de la cadena sin encontrar el carácter buscado. 
+	// 	If so, a pointer to the end of the string is returned, 
+	// 	indicating that the end of the string without finding 
+	// 	the searched character. 
 
-	// 	'return (NULL)' Si 'ch' no es el carácter nulo, 
-	// 	se devuelve un puntero nulo, lo que indica que 
-	// 	no se ha encontrado el carácter en la cadena.
+	// 	'return (NULL)' If 'ch' is not the null character, 
+	// 	a null pointer is returned, which indicates that 
+	// 	the character was not found in the string.
 
 // int	main(void)
 // {
@@ -95,14 +89,14 @@ char	*ft_strchr(const char *s, int c)
 // 	return (0);
 // }
 
-	// Se define una cadena 'str' 
+	// A string 'str' is defined 
 
 	// res = ft_strchr(str, 'l')
-	// Se llama a 'ft_strchr' para buscar el carácter 'l' en la cadena.
-		// 	if (res == NULL) Si no se encuentra el carácter,
-		// se imprime un mensaje indicando que no se ha encontrado.
+	// 'ft_strchr' is called to search for the character 'l' in the string.
+	// 		if (res == NULL) If the character is not found,
+	// 		a message is printed indicating that it was not found.
 
-		// 	Si se encuentra el carácter, se imprime su posición 
-		// 	en la cadena. 
+	// 		If the character is found, its position in the string 
+	// 		is printed. 
 
-	// Devuelve 0, lo que indica que el programa ha terminado correctamente.
+	// Returns 0, indicating that the program has terminated successfully.

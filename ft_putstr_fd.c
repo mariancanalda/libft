@@ -6,21 +6,20 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:44:34 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:29:33 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:39 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'putstr_fd' = "put string to file descriptor"
+	 * 'putstr_fd' = "put string to file descriptor".
 	 * 
 	 * Writes the string 's' to the file descriptor 'fd'.
-	 * Escribe la cadena 's' en el descriptor de fichero 'fd'.
 	 * 
-	 * @param s The string to output. La cadena a imprimir.
+	 * @param s The string to output.
 	 * 
-	 * @param fd file descriptor. Descriptor de archivo.
+	 * @param fd file descriptor.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <unistd.h>
 	 * #include <fcntl.h>
 	 **/
@@ -39,14 +38,15 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-	// 'while (s[i])' Se utiliza un bucle while para recorrer la cadena 
-	// de caracteres caracter por caracter. 
+	// 'while (s[i])' A while loop is used to loop through 
+	// the string character by character. 
 
-		// 'write(fd, &s[i], 1)'  
-		// En cada iteración, se escribe el carácter actual en el 
-		// descriptor de archivo fd usando la función 'write', 
-		// y se incrementa el contador 'i'. Al final de la función, 
-		// se habrá escrito la cadena completa en el archivo especificado.
+	// 	'write(fd, &s[i], 1)'  
+	// 	At each iteration, the current character is written 
+	// 	to the file descriptor fd using the 'write' function, 
+	// 	and the counter 'i' is incremented. At the end of the 
+	// 	function, the entire string will have been written 
+	// 	to the specified file.
 
 // int	main(void)
 // {
@@ -60,12 +60,12 @@ void	ft_putstr_fd(char *s, int fd)
 // 	return (0);
 // }
 
-	// En la función main, se crea el archivo "test.txt" con 
-	// permisos de escritura para el usuario y de lectura para 
-	// todos los demás. 
+	// In the main function, the "test.txt" file is created with 
+	// permissions write for the user and read for all others. 
+	// all others. 
 
-	// Se llama a la función ft_putstr_fd para escribir la cadena 
-	// "Hello, world" en el archivo recién creado, se cierra el archivo.
+	// The function ft_putstr_fd is called to write the string 
+	// "Hello, world" in the newly created file, close the file.
 
-	// espués de ejecutar el programa, se creará el archivo "test.txt" 
-	// y contendrá la cadena "Hello, world".
+	// After running the program, the file "test.txt" will be 
+	// created and contain the string "Hello, world".

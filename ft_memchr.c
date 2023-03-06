@@ -6,31 +6,25 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 15:40:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/01 14:33:43 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:19 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'memchr' = "memory character"
+	 * 'memchr' = "memory character".
 	 * 
 	 * The function ft_memchr() locates the first occurrence of 'c' 
 	 * (converted to an 'unsigned char') in string 's'.
-	 * * La función ft_memchr() localiza la primera aparición de 'c' 
-	 * (convertido a un 'char sin signo') en la cadena 's'.
 	 * 
-	 * @param s The string to search. Cadena a buscar.
-	 * @param c The character to search for. Carácter a buscar.
-	 * @param n The number of bytes to be searched. Número de 
-	 * bytes a buscar.
+	 * @param s The string to search.
+	 * @param c The character to search for.
+	 * @param n The number of bytes to be searched. 
 	 * 
 	 * @return A pointer to the first occurrence of the 
 	 * character 'c' in the first 'n' bytes of the string 
 	 * pointed to, by the argument'str'.
-	 * @return devuelve un puntero a la primera aparición 
-	 * del carácter 'c' en los primeros 'n' bytes de la 
-	 * cadena apuntada por el argumento 'str'.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <string.h>
 	 **/
@@ -53,42 +47,45 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-	//Se declaran dos variables:
+	// Two variables are declared:
 
-		// 'const unsigned char *str' que se utiliza para almacenar la 
-		// dirección de memoria del primer byte del bloque de memoria al 
-		// que apunta el puntero 's' de entrada. 
-			// Es importante utilizar un puntero a caracteres sin signo 
-			// para evitar problemas con caracteres de signo negativo. 
-			// Además, se declara como 'const' porque no se modificará 
-			// la memoria a la que apunta.
+	// 	'const unsigned char *str' which is used to store the 
+	// 	memory address of the first byte of the memory block 
+	// 	pointed to by the input pointer 's'. 
+	// 		It is important to use a pointer to unsigned characters 
+	// 		to avoid problems with negative signed characters. 
+	// 		Also, it is declared as 'const' because the memory
+	// 		the memory it points to will not be modified.
 
-		// 'size_t i': Se utiliza como contador. Se inicializa en 
-		// cero y se incrementa en cada iteración del bucle. 
+	// 	'size_t i': It is used as a counter. It is initialized to 
+	// 	zero and is incremented at each iteration of the loop. 
 
-	// 'str = (const unsigned char *)s' Se convierte el puntero 's' 
-	// a un puntero const unsigned char (que garantiza que se manejarán 
-	// valores de 0 a 255 sin problemas de signo) y lo asigna a 'str'. 
+	// 'str = (const unsigned char *)s' Converts the pointer 's' to a 
+	// const unsigned char pointer (which guarantees that values from 0 
+	// to 255 will be handled without sign problems) and assigns it 
+	// to 'str'. 
 
-	// Se inicializa la variable 'i' en cero y se inicia 
-	// un bucle while que itera desde 'i = 0' hasta 'i < n'.
+	// We initialize the variable 'i' to zero and start a while loop 
+	// that iterates from a while loop that iterates from 'i = 0' 
+	// to 'i < n'.
 
-		// if (str[i] == (unsigned char)c) En cada iteración, 
-		// se comprueba si el carácter en la posición 'i' de 'str' 
-		// es igual al carácter sin signo 'c'. 
-			// 'return ((void *)&str[i])' Si es así, la función 
-			// devuelve un puntero de tipo void * que apunta a 
-			// la dirección de memoria &str[i] (lugar donde se 
-			// encontró la primera ocurrencia del carácter 'c' 
-			// en la memoria apuntada por 's'). Al convertir el 
-			// puntero a void *, se puede asignar este 
-			// puntero a cualquier tipo de puntero en C. 
+	// if (str[i] == (unsigned char)c) At each iteration, 
+	// 	it checks if the character at position 'i' of 'str' 
+	// 	is equal to the unsigned character 'c'. 
+	// 		'return ((void *)&str[i])' If so, the function 
+	// 		function returns a void * pointer pointing to 
+	// 		the memory address &str[i] (place where the first 
+	// 		occurrence of the character 'c' was found in memory 
+	// 		was found in the memory pointed to by 's'). 
+	// 		By converting the pointer to void *, you can assign 
+	// 		this pointer to any pointer type in C. 
 
-			// 'i++' Si no, la función incrementa 'i' y continúa 
-			// el bucle.Si el bucle se completa sin encontrar 
-			// una coincidencia.
-				// return (NULL) La función devuelve NULL, porque 
-				// no se encontró el carácter 'c' en la cadena 's'.
+	// 		'i++' Otherwise, the function increments 'i' and 
+	// 		continues the loop. 
+	// 		If the loop completes without finding a match. 
+	// 		a match.
+	// 			return (NULL) The function returns NULL because 
+	// 			the character 'c' was not found in the string 's'.
 
 // int	main(void)
 // {
@@ -106,35 +103,36 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	return (0);
 // }
 
-	// Se definen tres variables:
-	// 	'str': un array de caracteres con capacidad para 15 caracteres.
-	// 	'c': un carácter que se va a buscar en str.
-	// 	'result': un puntero a un carácter que apuntará a la 
-	// 	posición en la cadena str donde se encuentre c.
+	// Three variables are defined:
+	// 	'str': an array of characters with a capacity of 15 characters.
+	// 	c': a character to be searched for in str.
+	// 	result': a pointer to a character that will point to the position 
+	// 	in the string str where c is found.
 
-	// Se copia la cadena "Hello, World!" en el array 'str' utilizando 
-	// 'ft_strlcpy' que copia una cadena de origen en una cadena 
-	// de destino sin que se produzca un desbordamiento de búfer. 
-	// 'sizeof(str)' especifica el tamaño máximo del arreglo de 
-	// destino, asegurando que no se escriba más allá del espacio 
-	// asignado para él. 
-		// El resultado de 'ft_strlcpy' es el tamaño de la cadena 
-		// de origen que se copió. Será 13, que es la longitud de 
-		// "Hello, World!" (incluyendo el carácter nulo final).
+	// The string "Hello, World!" is copied into the array 'str' using 
+	// 'ft_strlcpy' which copies a source string to a destination string 
+	// without destination string without causing a buffer overflow. 
 
-	// Se define 'c' como 'o'. Lo que se desea buscar en la cadena.
+	// 'sizeof(str)' specifies the maximum size of the destination array, 
+	// ensuring that it is not written beyond the space allotted for it. 
+	// 	The result of 'ft_strlcpy' is the size of the source string 
+	// 	that was copied.  It will be 13, which is the length of 
+	// 	"Hello, World!" (including the final null character).
 
-	// Se llama a la función 'ft_memchr' pasando como argumentos 
-	// la cadena 'str', el carácter 'c', y la longitud de la cadena 
-	// (calculada con ft_strlcpy(NULL, str, 0)).
-				// Al pasar NULL como argumento 'dst' y 0 como argumento 
-				// 'size', 'ft_strlcpy' realiza ninguna operación de copia 
-				// y devuelve la longitud de la cadena fuente 
-				// ("Hello, World!")
+	// 'c' is defined as 'o'. What you want to search for in the string.
 
-	// El programa verifica si el resultado es NULL, en cuyo caso se 
-	// imprime un mensaje indicando que el carácter no se encontró. 
-	// De lo contrario, se imprime un mensaje indicando la 
-	// posición donde se encontró el carácter, que se calcula 
-	// restando el puntero devuelto por la función de la dirección 
-	// de inicio de la cadena 'str'.
+	// Call the function 'ft_memchr' with the following arguments 
+	// the string 'str', the character 'c', and the length of the 
+	// string (calculated with ft_strlcpy(NULL, str, 0)).
+	// 			By passing NULL as argument 'dst' and 0 as
+	// 			argument 'size', 'ft_strlcpy' performs no copy 
+	// 			operation and returns the length of the source 
+	// 			string ("Hello, World!").
+
+	// The program checks to see if the result is NULL, 
+	// in which case a message is a message is printed indicating that 
+	// the character was not found. 
+
+	// Otherwise, a message is printed indicating the position where the 
+	// character was found, which is calculated by subtracting the pointer 
+	// returned by the function from the starting address of the string 'str'.

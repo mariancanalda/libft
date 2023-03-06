@@ -6,34 +6,26 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 12:38:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 12:19:25 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 23:29:28 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * strlcat = "string length concatenate"
+	 * strlcat = "string length concatenate".
 	 * 
 	 * Appends the NUL-terminated string src to the end of dst. 
 	 * It will append at most dstsize - strlen(dst) - 1 bytes, 
 	 * NUL-terminating the result.
-	 * Concatena dos cadenas de caracteres, 'src' y'dst', y 
-	 * devuelve el tamaño total de la cadena resultante, 
-	 * con una restricción en el tamaño máximo permitido
-	 * para la cadena de destino 'dst'.
 	 * 
 	 * @param dst This is the destination string.
-	 * Es la cadena de destino.
 	 * 
 	* @param src The string to be appended.
-	 * La cadena a añadir.
 	 * 
 	 * @param dstsize The size of the destination buffer.
-	 * El tamaño del búfer de destino.
 	 * 
 	 * @return The length of the string it tried to create.
-	 * Devuelve la longitud de la cadena que intentó crear.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <string.h>
 	 */
@@ -66,50 +58,53 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (len + ft_strlen(src));
 }
-	// Se determina la longitud de la cadena de destino.
-	// 'i = 0' Se inicializa i en 0
-	// 'while (dst[i] != '\0')' 
-	// Se recorre el array hasta encontrar el carácter nulo.
-	// 'i++' En cada iteración se incrementa el valor de 'i'.
-	// 'len = i' Se asigna a 'len' el valor de 'i'.
-	// (la cantidad de caracteres que hay hasta el carácter nulo).
+	// The length of the target string is determined.
+	// 'i = 0' Initialize i to 0
+	// 'while (dst[i] != '0')' 
+	// The array is traversed until the null character 
+	// is found.
+	// 'i++' At each iteration the value of 'i' is 
+	// incremented.
+	// 'len = i' The value of 'i' is assigned to 'len'.
+	// (the number of characters up to the null character).
 
-	// La condición 'if (dstsize <= len)' verifica si el tamaño 
-	// máximo permitido para la cadena de destino (dstsize) 
-	// es menor o igual al tamaño actual de la cadena 'dst'. 
+	// The 'if (dstsize <= len)' condition checks if the maximum 
+	// allowed size for the target string (dstsize) is less than 
+	// or equal to the current size of the string 'dst'. 
 
-		// 	'return (dstsize + ft_strlen(src))'
-		// Si se cumple, significa que la cadena 'dst' ya 
-		// 	está llena hasta su capacidad máxima y no hay 
-		// 	espacio para agregar más caracteres de la cadena 
-		// 'src'. la función devuelve el tamaño de la cadena 
-		// 	truncada de 'dst' más el tamaño de 'src'.
+	// 		'return (dstsize + ft_strlen(src))'
+	// 		If this is true, it means that the string 'dst' is already
+	// 		filled to its maximum capacity and there is no 
+	// 		space to add more characters from the string 'src'. 
+	// 		The function returns the size of the 
+	// 		truncated string of 'dst' plus the size of 'src'.
 
-	// 'while (src[j] != '\0' && i < dstsize - 1)''
-	// La condición del ciclo while tiene dos partes: 
-	// la primera parte 'src[j] != '\0''' verifica que no se 
-	// haya llegado al final de la cadena 'src', y la segunda parte 
-	// 'i < dstsize - 1' verifica que aún hay espacio en el 
-	// búfer de 'dst' para agregar más caracteres (se reserva un 
-	// espacio para el caracter nulo al final de 'dst').
+	// 'while (src[j] != '\0' && i < dstsize - 1)'
+	// The while loop condition has two parts: 
+	// the first part 'src[j] != '\0' checks the end of the 
+	// string 'src' has not been reached, and the second part 
+	// 'i < dstsize - 1' checks that there is still space in the 
+	// buffer to add more characters (a space is reserved for the 
+	// null character at the end of 'dst').
 
-		// dst[i] = src[j] asigna el valor del carácter de 'src' 
-		// que se encuentra en la posición 'j' a la posición 'i' 
-		// de 'dst'. Luego, 'i' se incrementa en 1 para indicar 
-		// que se ha copiado un carácter a 'dst', y 'j' también 
-		// se incrementa en 1 para que en la siguiente iteración 
-		// se copie el siguiente carácter de 'src'.
+	// 	dst[i] = src[j] sets the value of the character in 'src' 
+	// 	at position 'j' to position 'i' of 'dst'. 
+	// 	Then, 'i' is incremented by 1 to indicate 
+	// 	that a character has been copied to 'dst', and 'j' is also 
+	// 	incremented by 1 so that in the next iteration the next character
+	// 	is copied from 'src'.
 
-		// Luego incrementan los índices 'i' y 'j' para que en 
-		// la siguiente iteración se copie el siguiente carácter.
+	// 	Then the indices 'i' and 'j' are incremented so that on the 
+	// 	next iteration the next character is copied.
 
-	// 'dst[i] = '\0'' se utiliza para asegurarse de que la cadena 
-	// de destino tenga un terminador nulo al final después de haber 
-	// concatenado la cadena de origen.
+	// dst[i] = 'j' is used to ensure that the target string
+	// has a null terminator at the end after concatenating 
+	// the source string. 
 
-	// 'return (len + ft_strlen(src))' devuelve el tamaño total de la 
-	// cadena resultante, que es la longitud de la cadena de destino 
-	// original'len' más la longitud de la cadena de origen 'src'.
+	// 'return (len + ft_strlen(src))' returns the total size of 
+	// the resulting string, which is the length of the original 
+	// destination string 'len' plus the length of the source 
+	// string 'src'.
 
 // int	main(void)
 // {
@@ -127,44 +122,42 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // 	return (0);
 // }
 
-	// char *src Se declara un puntero a una cadena de caracteres 
-	// llamado 'src'.
+	// char *src A pointer to a string named 'src' is declared. 
+	// named 'src'.
 
-	// char dst[20] Se declara un arreglo de caracteres llamado 
-	// 'dst', que tiene una longitud de 20 caracteres.
+	// char dst[20] An array of characters named 'dst', 
+	// which is 20 characters long, is declared.
 
-	// size_t dstsize Se declara una variable de tipo size_t 
-	// llamada 'dstsize'.
+	// size_t dstsize A variable of type size_t 
+	// called 'dstsize'.
 
-	// size_t concatenated_length Se declara una variable 
-	// de tipo size_t llamada 'concatenated_length'.
+	// size_t concatenated_length A size_t variable named 
+	// 'concatenated_length' is declared. 
 
-	// src = "World!" Se asigna la dirección de la cadena 
-	// de caracteres "World!" al puntero 'src'.
+	// src = "World!" the address of the string "World!" 
+	// is assigned to the 'src' pointer.
 
-	// ft_strlcpy (dst, "Hello, ", sizeof(dst)) Se copia la 
-	// cadena de caracteres "Hello, " al arreglo 'dst' utilizando 
-	// la función 'ft_strlcpy()'. El tercer argumento es sizeof(dst), 
-	// que especifica el tamaño máximo de la cadena de caracteres 
-	// que puede ser copiada.
+	// 'ft_strlcpy (dst, "Hello, ", sizeof(dst))' Copies the string "Hello, " 
+	// to the array 'dst' using the 'ft_strlcpy()' function. The third 
+	// argument is sizeof(dst), which specifies the maximum size of 
+	// the string that can be copied. 
 
-	// dstsize = sizeof(dst) Se asigna el tamaño de 'dst' a 
-	// la variable dstsize.
+	// 'dstsize = sizeof(dst)' The size of 'dst' is assigned to the 
+	// variable dstsize. 
 
-	// concatenated_length = ft_strlcat(dst, src, dstsize); 
-	// Se concatena la cadena de caracteres 'src' al final de 'dst' 
-	// utilizando la función ft_strlcat(), y se asigna la longitud 
-	// resultante de la cadena concatenada a la variable 
-	// 'concatenated_length'. El tercer argumento es 'dstsize', 
-	// que especifica el tamaño máximo de la cadena concatenada.
+	// 'concatenated_length = ft_strlcat(dst, src, dstsize)' 
+	// The character string 'src' is concatenated to the end of 'dst' 
+	// using the ft_strlcat() function, and the resulting length of 
+	// the concatenated string is assigned to the variable 
+	// concatenated_length'.
 
-	// printf("Concatenated string: %s\n", dst);
-	// Se imprime en la consola la cadena de caracteres resultante 
-	// de la concatenación.
+	// printf("Concatenated string: %size", dst);
+	// The string resulting of the concatenation is 
+	// printed on the console.
 
 	// printf("Length of concatenated string: %ld\n", 
-	// concatenated_length) Se imprime en la consola la longitud
-	// de la cadena concatenada.
+	// concatenated_length) The length of the concatenated string 
+	// is printed to the console.
 
-	// return (0) Se indica que el programa ha terminado 
-	// correctamente y se devuelve el valor 0.
+	// return (0) Indicates that the program has finished 
+	// successfully and the value 0 is returned.

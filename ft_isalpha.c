@@ -6,25 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:22:40 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:27:41 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 19:41:52 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'isalpha' = "is alphabetic"
+	 * 'isalpha' = "is alphabetic".
 	 * 
 	 * The function ft_isalpha() returns 1 if the character passed 
 	 * as an argument is an alphabetical character, and 0 if it is not.
-	 * La función ft_isalpha() devuelve 1 si el carácter pasado 
-	 * como argumento es un carácter alfabético, y 0 si no lo es
 	 * 
 	 * @param c The character to be checked.
-	 * El carácter a comprobar.
 	 * 
 	 * @return 1 if the character is a letter, 0 if not.
-	 * Devuelve 1 si el carácter es una letra, 0 si no lo es.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <ctype.h>
 	 **/
@@ -39,10 +35,11 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-	// Con una estructura de control if-else, se verifica si
-	//  el carácter está en el rango de los caracteres alfabéticos 
-	//  (A a Z y a a z). Si está en este rango, se devuelve 1. 
-	// De lo contrario, se devuelve 0.
+	// With an if-else control structure, we check whether 
+	// the character is in the range of alphabetic characters 
+	// (A to Z and a to z). 
+	// 	If it is in this range, 1 is returned. 
+	// 	Otherwise, 0 is returned.
 
 // int	main(void)
 // {
@@ -61,11 +58,13 @@ int	ft_isalpha(int c)
 // 	return (0);
 // }
 
-	// Se pide al usuario que ingrese un carácter y luego usa 
-	// la función ft_isalpha para determinar si es una letra o no. 
-	// Si el carácter es una letra, se imprimirá un 
-	// mensaje que indica que es una letra, de lo contrario, 
-	// se imprimirá un mensaje que indica que no es una letra. 
+	// The user is prompted to enter a character and then uses 
+	// the 'ft_isalpha' function to determine if it is a letter
+	// or not. 
+	// 	If the character is a letter, it will print out a 
+	// 	message will be printed indicating that it is a letter, 
+	// 	otherwise a message will be printed indicating that it 
+	// 	is not a letter. 
 
-	// Luego, el programa devuelve 0, lo que indica que se 
-	// ejecutó correctamente.
+	// The program then returns 0, indicating that it 
+	// was executed correctly. 

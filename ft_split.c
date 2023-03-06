@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 22:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:49:45 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:42:16 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 	 * It takes a string and a character, and returns an array of strings, 
 	 * each of which is a word from the original string, separated 
 	 * by the character.
-	 * Toma una cadena y un carácter, y devuelve una matriz de cadenas, 
-	 * cada una de las cuales es una palabra de la cadena original, separada 
-	 * por el carácter.
 	 * 
 	 * @param s The string to be split. 
-	 * La cadena a dividir.
 	 * 
 	 * @param c the character to split the string by
-	 * El carácter por el que dividir la cadena.
 	 * 
 	 *  @return A pointer to a pointer to a char.
-	 * Devuelve un puntero a un puntero a un char.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdlib.h>
 	 * #include <unistd.h>
 	 * #include <stdio.h>
@@ -55,31 +49,34 @@ static int	count_words(char const *s, char c)
 	return (count);
 }
 
-	// La función count_words toma dos argumentos: una cadena de caracteres 
-	// (char const *s) y un carácter 'c'. La función cuenta el número de 
-	// palabras en la cadena 's' que están separadas por el carácter 'c' 
-	// y devuelve el recuento. 
+	// The count_words function takes two arguments: a character 
+	// string (char const *s) and a character 'c'. The function 
+	// counts the number of words in the string 's' that are 
+	// separated by the 'c' character and returns the count.  
 
-	// Se define como estática porque su alcance está limitado al archivo 
-	// donde se encuentra definida, y no puede ser utilizada en otros 
-	// archivos del programa.
+	// It is defined as static because its scope is limited to 
+	// the file where it is defined, and cannot be used in other 
+	// program files. 
 
-	// count = 0 Se inicializa la variable 'count' a 0. 
+	// count = 0 The variable 'count' is initialized to 0. 
 
-	// while (*s) Se recorre la cadena 's' mientras no se llegue al final 
-	// (mientras el carácter apuntado por el puntero 's' no sea '\0'). 
-			// if (*s == c) En cada iteración del bucle 'while', verifica 
-			// si el carácter apuntado por 's' es el delimitador 'c'. 
-			// s++ Si es así, se incrementa 's' para apuntar al 
-			// siguiente carácter. 
-			// Si no es así, significa que se ha encontrado una palabra, 
-			// por lo que se incrementa el contador 'count' (count++) y 
-			// se recorre la palabra (s++;) hasta llegar al final de la 
-			// misma o hasta encontrar el delimitador 'c'. 
-			// (while (*s && *s != c))
+	// while (*s) The string 's' is traversed as long as the end 
+	// is not reached (as long as the character pointed by the 
+	// pointer 's' is not 's'). 
+	// 		if (*s == c) At each iteration of the 'while' loop, 
+	// 		it checks if the character pointed to by 's' is the 
+	// 		delimiter 'c'. 
+	// 		's++' If so, 's' is incremented to point to the 
+	// 		next character. 
+	// 		If not, it means that a word has been found, 
+	// 		so the counter 'count' is incremented (count++) and 
+	// 		the word is traversed (s++;) until the end of the word 
+	// 		is reached or the delimiter is or until the delimiter 
+	// 		'c' is found. 
+	// 		(while (*s && *s != c))
 
-	// Finalmente, se devuelve el valor de 'count', que corresponde al número 
-	// de palabras encontradas en la cadena 's'.
+	// Finally, the value of 'count' is returned, which corresponds to 
+	// the number of words found in the string 'c'. 
 
 static char	*get_word(char const *s, char c)
 {
@@ -96,28 +93,29 @@ static char	*get_word(char const *s, char c)
 	return (word);
 }
 
-	// La función 'get_word' devuelve una subcadena de 's' que comienza 
-	// en el primer carácter que no es un delimitador y termina en el 
-	// siguiente delimitador o en el final de la cadena. 
+	// The 'get_word' function returns a substring of 's' starting 
+	// at the first character that is not a delimiter and ends at 
+	// the next delimiter or at the end of the string. 
 
-	// La función comienza utilizando un bucle 'while (s[len] && s[len] != c)' 
-	// para contar el número de caracteres en la subcadena, deteniéndose
-	// se llega al final de la cadena 's' o cuando se encuentra el carácter 'c'.
-		// El bucle incrementa la variable 'len' en cada iteración 
-		// mientras s[len] no sea igual a c.  
+	// The function starts using a 'while (s[len] && s[len] != c)' 
+	// loop to count the number of characters in the substring, 
+	// stopping when the end of the string 's' is reached or when 
+	// the character 'c' is encountered.
+	// 	The loop increments the variable 'len' on each iteration 
+	// 	as long as s[len] is not equal to c.  
 
-	// 'word = (char *)malloc(sizeof(char) * (len + 1))' se utiliza 
-	// para asignar memoria dinámica en C para una cadena de caracteres 
-	// que tiene una longitud de len más un carácter nulo, utilizando 
-	// 'malloc'. Si la asignación falla devuelve nulo. El resultado de 
-	// 'malloc' se almacena en 'word', que es un puntero que apunta al 
-	// inicio del bloque de memoria asignado.
+	// 'word = (char *)malloc(sizeof(char) * (len + 1))' is used 
+	// to allocate dynamic memory in C for a character string that 
+	// has a length of len plus a null character, using 
+	// 'malloc'. If the allocation fails it returns null. The result of 
+	// 'malloc' is stored in 'word', which is a pointer pointing to the 
+	// start of the allocated block of memory. 
 
-	// Utiliza 'ft_strlcpy' (que copia una cadena de un tamaño máximo dado) 
-	// para copiar los caracteres correspondientes de 's' a la nueva 
-	// subcadena. 
+	// Uses 'ft_strlcpy' (which copies a string of a given maximum size) 
+	// to copy the corresponding characters from 's' to the new 
+	// substring. 
 
-	// Por último, devuelve la subcadena recién creada.
+	// Finally, it returns the newly created substring.
 
 void	free_split(char **split)
 {
@@ -135,33 +133,31 @@ void	free_split(char **split)
 	}
 }
 
-	// La función free_split es útil cuando se trabaja con matrices 
-	// de cadenas de caracteres asignadas dinámicamente en C y se desea 
-	// liberar la memoria asignada a la matriz y a sus elementos una 
-	// vez que ya no son necesarios.
+	// The free_split function is useful when you are working with 
+	// dynamically allocated arrays of strings in C and you want to 
+	// free the memory allocated to the array and its elements once 
+	// they are no longer needed. 
 
-	// Se inicializa una variable entera 'i' con valor cero. 
+	// An integer variable 'i' is initialized to zero. 
 
-	// 'if (split)' verifica que el puntero de entrada no sea nulo
-	// (si realmente apunta a una matriz de cadenas de caracteres asignada 
-	// previamente). 
-		// 	Si es nulo, no hay nada que liberar y se sale de la función. 
-		// 	Si no es nulo, la función entra en un bucle "while" que recorre 
-		// 	cada cadena de caracteres en la matriz de cadenas
+	// 'if (split)' checks that the input pointer is not null
+	// (if it actually points to a previously allocated array of strings). 
 
-	// 'while (split[i])' Dentro de while, se recorre la matriz 
-	// de cadenas de caracteres verificando cada elemento de la matriz 
-	// si es nulo o no.
-		// 'free(split[i])' Si no es nulo, se libera la memoria asignada 
-		// al elemento mediante free().  Luego, incrementa la variable 
-		// "i" para pasar a la siguiente cadena de caracteres.
+	// 		If it is null, there is nothing to free and the function exits. 
+	// 		If it is not null, the function enters a while loop that loops 
+	// 		through each character string in the string array.
 
-	//  Después de liberar la memoria de cada elemento de la matriz, se 
-	// libera la memoria asignada a la matriz en sí mediante la función 
-	// free().
+	// 'while (split[i])' Inside while, it loops through the array of strings, 
+	// checking each element of the array to see whether it is null or not.
+	// 	'free(split[i])' If it is not null, the memory allocated to 
+	// 	the eelement is freed by free().  
+	// 	Then, it increments the variable 'i' to move to the next string.
 
-	// El tipo de retorno es "void", lo que significa que la función 
-	// no devuelve ningún valor.
+	//  After freeing the memory of each element in the array, the memory 
+	//  allocated to the array itself is freed by the free() function. 
+
+	// The return type is "void", which means that the function 
+	// does not return any value.
 
 static char	**divide_string(char const *s, char c, int total_words, \
 						char **result)
@@ -189,45 +185,47 @@ static char	**divide_string(char const *s, char c, int total_words, \
 	return (result);
 }
 
-	// Recibe cuatro argumentos: 
-		// un puntero a una cadena de caracteres (char const *s)
-		// un carácter (char c)
-		// un número entero (const int total_words)
-		// un puntero a un arreglo de punteros a caracteres (char **result).
+	// It receives four arguments: 
+	// 	a pointer to a string (const char *s)
+	// 	a character (char c)
+	// 	an integer (const int total_words)
+	// 	a pointer to an array of character pointers (char **result).
 
-	// Tiene como objetivo dividir la cadena 's' en varias subcadenas 
-	// utilizando el carácter 'c' como separador, y almacenar cada 
-	// subcadena en una posición del array 'result'.
+	// Its purpose is to split the string 's' into several substrings 
+	// using the character 'c' as a separator, and store each substring 
+	// in an substring in a position of the array 'result'.
 
-	// 'while (*s && i < total_words)' La función itera sobre la cadena 's' 
-	// hasta que se hayan dividido todas las palabras especificadas 
-	// en 'total_words'.
+	// 'while (*s && i < total_words)' The function iterates over 
+	// string 's' until all the words specified in 'total_words' 
+	// have been split.
 
-		// if (*s == c) En cada iteración, verifica si el carácter actual 
-		// apuntado por 's' es igual a 'c'.
-			// s++; Si es 'c'', avanza al siguiente carácter de la cadena 's'. 
+	// 	if (*s == c) At each iteration, checks if the current 
+	// 	character pointed to by 's' is equal to 'c'. 
+	// 		s++; If it is 'c', it advances to the next 
+	// 		character in the string 's'.
 
-			// result[i] = get_word(s, c); Si no es 'c', llama a la función 
-			// 'get_word' para obtener la subcadena que va desde el carácter 
-			// actual apuntado por 's' hasta el siguiente carácter igual a 
-			// 'c', y la almacena en la posición 'i' del arreglo result. 
+	// 		result[i] = get_word(s, c); If it is not 'c', call the 
+	// 		function 'get_word' to get the substring from the
+	// 		current character pointed to by 's' up to the next 
+	// 		character equal to 'c', and stores it at position 'i' 
+	// 		of the result array. 
 
-			// if (!result[i]) se utiliza para verificar si la asignación
-			// de result[i] tuvo éxito. 
-				// Si 'get_word' devuelve un puntero nulo, lo que indica un 
-				// error, la función 'divide_string' libera la memoria 
-				// asignada a 'result' llamando a la función 'free_split' 
-				// y devuelve un puntero nulo.
+	// 		if (!result[i]) is used to check if the assignment of 
+	// 		result[i] was successful.
+	// 			If 'get_word' returns a null pointer, which indicates 
+	// 			an error, the function 'divide_string' frees the memory 
+	// 			allocated to 'result' by calling the function 'free_split' 
+	// 			and returns a null pointer. 
 
-			// while (*s && *s != c) La función avanza 's++' hasta el 
-			// siguiente carácter igual a 'c' o hasta el final de la cadena 
-			// 's', y aumenta 'i' en uno.
+	// 		while (*s && *s != c) The function advances 's++' to the next 
+	// 		character equal to 'c' or to the end of the string 's', and 
+	// 		increments 'i' by one.
 
-		// El ciclo termina cuando se han encontrado 'total_words' subcadenas o 
-		//se ha llegado al final de la cadena 's'.
+	// 	The loop ends when 'total_words' substrings have been encountered, 
+	// 	or the end of the string 's' has been reached.
 
-	// 'return (result)' La función devuelve un puntero al arreglo 'result', 
-	// que contiene las subcadenas obtenidas a partir de 's'.
+	// 'return (result)' The function returns a pointer to the array 'result', 
+	// which contains the substrings obtained from 's'.
 
 char	**ft_split(char const *s, char c)
 {
@@ -244,44 +242,42 @@ char	**ft_split(char const *s, char c)
 	result = divide_string(s, c, total_words, result);
 	return (result);
 }
-	// Toma una cadena de caracteres "s" y un carácter "c" como entrada, 
-	// y devuelve una matriz de cadenas de caracteres que representa 
-	// las palabras en la cadena original separadas por el carácter "c".
+	// Takes a string of characters "s" and a character "c" as input, 
+	// and returns an array of strings representing the words in the 
+	// original string separated by the "c" character.
 
-	// 'const int	total_words = count_words(s, c)' 
-	// llama a 'count_words' (que cuenta el número total de 
-	// palabras en la cadena de entrada "s") para poder asignar 
-	// correctamente la memoria necesaria para la matriz de 
-	// cadenas de caracteres que se devolverá. 
-		// Esta variable se declara como 'const' porque su valor 
-		// no se espera que cambie. De esta manera, se garantiza 
-		// que el valor almacenado en "total_words" no se modificará 
-		// accidentalmente en otras partes del código y se mantiene 
-		// constante en todo momento.
+	// 'const int total_words = count_words(s, c)' 
+	// calls 'count_words' (which counts the total number of 
+	// words in the input string 's') in order to correctly allocate 
+	// the memory needed for the string array to be returned. 
+	// 	This variable is declared as 'const' because its value
+	// 	is not expected to change. In this way, it is guaranteed 
+	// 	that the value stored in "total_words" will not be 
+	// 	accidentally in other parts of the code and remains 
+	// 	constant at all times. 
 
-	// Si "s" es nulo, la función devuelve "NULL" de inmediato.
+	// If "s" is null, the function returns "NULL" immediately.
 
 	// 'result = (char **)malloc(sizeof(char *) * (total_words + 1))'
-	// Se reserva memoria para la matriz de cadenas de caracteres 
-	// llamando a la función 'malloc'. 
-		// La cantidad de memoria necesaria se calcula
-		//  multiplicando el tamaño de un puntero a un 
-		//  carácter por el número total de palabras más uno 
-		//  (para dejar espacio para un puntero nulo al 
-		//  final de la matriz).
+	// Memory is allocated for the array of character strings 
+	// by calling the 'malloc' function. 
+	// 	The amount of memory required is calculated by 
+	// 	multiplying the size of a pointer to a character 
+	// 	by the total number of words plus one (to leave room 
+	// 	for a null pointer at the end of the array). 
 
-	// Si la asignación de memoria falla, devuelve "NULL". 
+	// If the memory allocation fails, it returns "NULL". 
 
-	// Si no falla, la última posición de la matriz se 
-	// inicializa con un puntero nulo y se llama a 'divide_string' 
-	// para dividir la cadena 's' en palabras utilizando 
-	// el carácter 'c'. 
-		// Esta función es responsable de asignar memoria 
-		// para cada cadena de caracteres en la matriz 
-		// y copiar los caracteres de la cadena original 
-		// en cada cadena de caracteres.
+	// If it does not fail, the last position of the array is 
+	// initialized with a null pointer and 'divide_string' is 
+	// called to divide the string 's' into words using the 
+	// the character 'c'. 
+	// 	This function is responsible for allocating memory 
+	// 	for each character string in the array 
+	// 	and copying the characters of the original string 
+	// 	into each character string.
 
-	//  "ft_split" devuelve la matriz de cadenas de caracteres resultante.
+	// "ft_split" returns the resulting string array.
 
 // int	main(void)
 // {
@@ -304,27 +300,26 @@ char	**ft_split(char const *s, char c)
 // 	return (0);
 // }
 
-	// La función 'ft_split' devuelve un puntero a una matriz 
-	// de cadenas de caracteres, donde cada cadena de caracteres 
-	// es una subcadena de la cadena original delimitada 
-	// por el delimitador.
+	// The 'ft_split' function returns a pointer to an array 
+	// of character strings, where each string of characters 
+	// is a substring of the original string delimited by 
+	// the delimiter.
 
 	//  words = ft_split("Hello,this,is,an,example", ',')
-	// El programa comienza llamando a la función 'ft_split' 
-	// con una cadena de caracteres y un delimitador como argumentos. 
+	// The program starts by calling the function 'ft_split' 
+	// with a string and a delimiter as arguments. 
 
 	// 	while (words[i])
 	// 			printf("%s\n", words[i]);
 	// 			i++;
-	// La función main recorre la matriz de cadenas de caracteres 
-	// resultante e imprime cada cadena en la consola utilizando 
-	// la función printf. 
-			// Si la matriz de cadenas de caracteres es nula, 
-			//  lo que significa que no se pudo separar la 
-			//  cadena de entrada, se imprimirá un mensaje 
-			//  de error y se devolverá un valor diferente 
-			// de  0 para indicar que el programa ha fallado.
+	// The main function goes through the resulting array of 
+	// character strings and prints each string to the console 
+	// using the printf function.  
+	// 		If the string array is null, which means that the 
+	// 		input string could not be separated, an error message 
+	// 		will be printed and a value other than 0 will be 
+	// 		returned to indicate that the program has failed.
 
-	// Llama a 'free_split para liberar la memoria asignada 
-	// a la matriz de cadenas de caracteres y devuelve 0 para 
-	// indicar que el programa ha terminado con éxito. 
+	// Call 'free_split' to free the memory allocated to the array 
+	// of strings and returns 0 to indicate that the program has 
+	// terminated successfully. 

@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 16:42:07 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:15:58 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/06 07:44:25 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 	 * 
 	 * It returns a pointer to the last occurrence of the 
 	 * character 'c' in the string 's'.
-	 * Devuelve un puntero a la última aparición del carácter 
-	 * 'c' en la cadena 's'.
 	 * 
 	 * @param s The string to search.
-	 * La cadena a buscar.
 	 * 
 	 * @param c The character to be located.
-	 * El caracter a localizar.
 	 * 
 	 * @return A pointer to the last occurrence 
 	 * of the character 'c' in the string 's'.
-	 * Devuelve un puntero a la última aparición 
-	 * del carácter 'c' en la cadena ''s'.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <string.h>
 	 * #include <stdlib.h>
@@ -58,67 +52,47 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-	// 'if (c > 256) c %= 256' Si el valor del carácter 'c' 
-	// es mayor que 256, se reduce su valor módulo 256. 
-	// Esto se hace porque en ASCII, los caracteres se 
-	// representan con valores enteros entre 0 y 127, 
-	// por lo que se ajusta el valor del carácter a 
-	// este rango.
-		// Por ejemplo, si 'c' tiene un valor de 300, 
-		// al aplicar esta expresión ("asignar a 'c' el 
-		// resultado de dividir 'c' entre 256 y tomar 
-		// el resto como valor") obtendríamos un valor 
-		// de 44, ya que 300 módulo 256 es igual a 44.
-		// De esta manera, el valor de 'c' quedaría dentro 
-		// del rango válido de 0 a 255.
+	// if (c > 256) c %= 256' If the value of the character 'c' is 
+	// greater than 256, its value is reduced by modulo 256. 
+	// This is done because in ASCII, characters are represented by 
+	// integer values between 0 and 127, so the value of the character 
+	// is set to this range. 
 
-	// 'while (s[i] != '\0') i++'' Se recorre la cadena de 
-	// caracteres 's' hasta encontrar el final de la cadena, 
-	// que se representa con el carácter nulo '\0'. Se va 
-	// incrementando el valor de i en cada iteración.
+	// "while (s[i] != '\0') i++" The string 's' is traversed until
+	// the end of the string is found, which is represented by the 
+	// null character \0. The value of i is incremented at each 
+	// iteration.
 
-	// ''while (i >= 0) if (s[i] == c)'
-	// Se recorre la cadena de caracteres 's' de derecha 
-	// a izquierda, desde el final de la cadena hasta el 
-	// inicio, buscando el carácter 'c'. 
-		// Si se encuentra el carácter, la expresión 
-		// "return ((char *)s + i);" devuelve un puntero 
-		// a esa posición de la cadena (convertida 
-		// a un puntero de caracteres mediante un casting 
-		// explícito).
-		// La expresión "(char *)s" convierte el puntero 
-		// 's' a un puntero a char, lo que significa que 
-		// se está tratando el arreglo al que apunta como 
-		// un conjunto de caracteres. Luego, se le suma 
-		// el valor de 'i', lo que desplaza el puntero 
-		// a la posición 'i' del arreglo.
-		// Si no se encuentra el carácter, se devuelve
-		//  NULL.
+	// 'while (i >= 0) if (s[i] == c)'
+	// The string 's' is traversed from right to left, from the 
+	// end of the string to the beginning, looking for the 
+	// character 'c'. 
+	// 	If the character is found, the expression 
+	// 	"return ((char *)s + i);" returns a pointer 
+	// 	to that position in the string (converted 
+	// 	to a character pointer by explicit casting). 
 
-		// i--; En cada iteración, se va decrementando el 
-		// valor de i y se evalúa si este ha llegado a 
-		// ser menor que 0, en cuyo caso se interrumpe 
-		// el bucle.
+	// 	The expression "(char *)s" converts the pointer 
+	// 	's' to a pointer to char, which means that 
+	// 	you are treating the array it points to as a 
+	// 	an array of characters. Then, you add 
+	// 	the value of 'i' is added, which moves the pointer 
+	// 	to position 'i' in the array.
+	// 	If the character is not found, it returns
+	// 	 NULL IS RETURNED.
 
-		// Se comprueba si la variable 'i' ha disminuido
-		// hasta un valor menor que cero. Si la condición 
-		// es verdadera, el bucle se interrumpe y la 
-		// ejecución del código salta a la siguiente 
-		// línea después del bucle: 'return (NULL)'.
-			// La razón por la que esta línea de código 
-			// se incluye en la función es para evitar 
-			// que el bucle se ejecute indefinidamente, 
-			// si no se encuentra "c" en la cadena 
-			// de caracteres. Si el índice "i" llega 
-			// a ser menor que cero, significa que el 
-			// bucle ha terminado de recorrer la cadena 
-			// de caracteres sin encontrar una coincidencia 
-			// para el carácter "c". Por lo tanto, se rompe 
-			// el bucle y la función devuelve NULL para indicar 
-			// que no se ha encontrado el carácter buscado.
+	// 	i--; In each iteration, we decrement the 
+	// 	value of i is decremented and evaluated to see 
+	// 	if it has become less than 0, in which case 
+	// 	the loop is interrupted. 
 
-		//  Si si no se ha encontrado el carácter "c" en la 
-		// cadena 's', la función devuelve NULL.
+	// It is checked if the variable 'i' has decreased to a 
+	// value less than zero. If the condition is true, 
+	// the loop is interrupted and the code execution jumps
+	// to the next line after the loop: 'return (NULL)'.
+
+	// If the character "c" was not found in the string 's', 
+	// the function returns NULL. 
 
 // int	main(void)
 // {
@@ -141,18 +115,17 @@ char	*ft_strrchr(const char *s, int c)
 // 	return (0);
 // }
 
-	// Se declaran dos variables, 'str' y 'ptr', ambas de tipo 
-	// puntero a char.
+	// Two variables are declared, 'str' and 'ptr', both of type 
+	// pointer to char.
 
-	// Se inicializa la variable 'str' con la cadena de caracteres 
-	// "Hello, world!" utilizando la función 'ft_strlcpy'.
+	// The variable 'str' is initialized with the character string. 
+	// "Hello, world!" using the 'ft_strlcpy' function.
 
-	// Se llama la función'ft_strrchr' pasando como argumentos 
-	// la cadena 'str' y el carácter 'o'. Esta función devuelve 
-	// un puntero a la última ocurrencia del carácter 'o' en 
-	// la cadena, o NULL si el carácter no se encuentra.
+	// The function 'ft_strrchr' is called by passing as arguments 
+	// the string 'str' and the character 'o'. This function returns 
+	// a pointer to the last occurrence of the 'o' character in 
+	// the string, or NULL if the character is not found.
 
-	// Utilizo 'printf' para imprimir el resultado devuelto 
-	// por 'ft_strrchr'.
+	// I use 'printf' to print the result returned by 'ft_strrchr'. 
 
-	// Devuelve el valor 0.
+	// It returns the value 0

@@ -6,19 +6,17 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:45:57 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:33:19 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 23:13:06 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'striteri' = "String iterator"
-	* 
-	 * Iterate through the string s, passing the index and the address 
-	 * of each character to the function f
-	 * Itera a través de la cadena 's', pasando el índice y la dirección 
-	 * de cada carácter a la función 'f'
+	 * 'striteri' = "String iterator".
 	 * 
-	 * @param s The string to iterate through
+	 * Iterate through the string s, passing the index and the address 
+	 * of each character to the function f.
+	 * 
+	 * @param s The string to iterate through.
 	 * @param f The function to be applied to each character.
 	 * 
 	 * Required libraries. Librerías necesarias:
@@ -41,17 +39,17 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-	// Se utiliza para iterar a través de una cadena 's' y aplicar 
-	// una función 'f' a cada carácter en la cadena.
+	// It is used to iterate through a string 's' and apply 
+	// a function 'f' to each character in the string.
 
 	// 'while (s[i])'
-	// La función recorre cada carácter en la cadena s hasta llegar 
-	// al carácter nulo '\0'
-		// 	'f(i, &s[i])''
-		// Llama a la función 'f' con el índice del carácter y 
-		// la dirección de memoria del mismo. 
-		// 	Esta función se utiliza comúnmente para aplicar una 
-		// 	operación a cada carácter de una cadena de caracteres, 
+	// The function loops through each character in the string 's' 
+	// until it reaches the the null character '\0'.
+	// 		'f(i, &s[i])'
+	// 	Calls the function 'f' with the index of the character and 
+	// 	the memory address of the character. 
+	// 	This function is commonly used to apply a 
+	// 	peration to each character in a character string.
 
 // void	print_and_upper(unsigned int index, char *c)
 // {
@@ -60,10 +58,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // 		*c = *c - 32;
 // }
 
-	// La función 'print_and_upper' se utiliza como la función 
-	// de iteración 'f'. Esta función imprime el índice y el carácter 
-	// del elemento actual, y si el carácter es una letra minúscula, 
-	// lo convierte en mayúscula. 
+	// The function 'print_and_upper' is used as the iteration 
+	// function 'f'. This function prints the index and character 
+	// of the current element, and if the character is a lowercase 
+	// letter, it converts it to uppercase. 
 
 // int	main(void)
 // {
@@ -77,31 +75,33 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // 	free(copy);
 // 	return (0);
 // }
-	// Se declara un puntero de tipo char llamado 's'.
-	// Se declara un puntero de tipo char llamado 'copy'.
+
+	// A pointer of type char named 's' is declared.
+	// A char pointer named 'copy' is declared.
 
 	// s = "hello, world"
-	// Asigna la dirección de memoria de la cadena literal 
-	// "hello, world" al puntero s.
+	// Allocates the memory address of the string literal 
+	// "hello, world" to the pointer s.
 
 	// copy = ft_strdup(s)
-	// Utiliza la función 'ft_strdup' para crear una copia de la 
-	// cadena 's' y asigna la dirección de memoria de la nueva 
-	// cadena al puntero copy.
+	// Uses the function 'ft_strdup' to create a copy of the 
+	// string 's' and assigns the memory address of the new string
+	// to the string to the copy pointer.
 
 	// ft_striteri(copy, &print_and_upper)
-	// Llama a la función 'ft_striteri' con los argumentos 'copy'
-	// (cadena copiada) y &print_and_upper (puntero a una función 
-	// que se aplicará a cada carácter de la cadena).
+	// Call the function 'ft_striteri' with the arguments 
+	// 'copy' (copied string) and &print_and_upper (a pointer to 
+	// a function to be applied to each character in the string).
 
-	// printf("Result: %s\n", copy)
-	// Imprime el resultado de la función en la salida estándar,
-	// que debería ser la cadena copiada con cada carácter convertido 
-	// a mayúscula.
+	// printf("Result: %sname", copy)
+	// Prints the result of the function to standard output,
+	// which should be the copied string with each character 
+	// converted to uppercase. 
 
 	// free(copy);
-	// Libera la memoria asignada a la cadena copiada utilizando 
-	// la función 'free'.
+	// frees the memory allocated to the copied string using
+	// the 'free' function.
 
 	// return (0);
-	// Devuelve 0 para indicar que el programa se ejecutó correctamente.
+	// Returns 0 to indicate that the program was executed 
+	// successfully.

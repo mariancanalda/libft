@@ -6,33 +6,26 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 13:00:15 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:28:32 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:26 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'memcpy' = "memory copy"
+	 * 'memcpy' = "memory copy".
 	 * 
 	 * Copy 'n' bytes from memory area 'src' to memory area 'dst'.
-	 * Copia 'n' bytes del área de memoria 'src' al área 
-	 * de memoria 'dst'.
 	 * 
 	 * @param dst This is the pointer to the destination array 
 	 * where the content is to be copied, type-casted to a pointer 
 	 * of type void*.
-	 * Este es el puntero a la matriz de destino donde se va a 
-	 * copiar el contenido, casteado (type-casted) a un puntero 
-	 * de tipo void*.
 	 * 
-	 * @param src The source string. La cadena origen.
+	 * @param src The source string.
 	 *
 	 *  @param n The number of bytes to copy.
-	 * El número de bytes a copiar.
 	 * 
 	 * @return a pointer to the destination.
-	 * Número de bytes a copiar.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <stdlib.h>
 	 * #include <string.h>
@@ -61,55 +54,44 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-	// La función 'ft_memcpy' devuelve un puntero genérico (tipo void *) 
-	// y toma tres argumentos: un puntero al área de memoria de destino, 
-	// un puntero al área de memoria de origen, y un tamaño en bytes.
+	// The function 'ft_memcpy' returns a generic pointer (void type *) 
+	// and takes three arguments: a pointer to the destination memory area, 
+	// a pointer to the source memory area, and a size in bytes.
 
-	// Se declaran dos punteros de tipo unsigned char 'd' y 's'. 
+	// Two pointers of type unsigned char 'd' and 's' are declared. 
 
 	// 'd = (unsigned char *)dst s = (unsigned char *)src'.
-	// Se asigna los valores de los argumentos 'dst' y 'src' a los 
-	// punteros 'd' y 's'. 
-		// 	Se castean los punteros genéricos (void *) a punteros de tipo 
-		// 	unsigned char, ya que los punteros de tipo unsigned char se 
-		// 	utilizan para acceder a la memoria 'byte por byte'.
+	// The values of the arguments 'dst' and 'src' are assigned to 
+	// the pointers 'd' and 's' pointers. 
+			// The generic pointers (void *) are casted to pointers of type 
+			// unsigned char, since unsigned char pointers are used to access 
+			// the memory by used to access memory on a byte-by-byte basis.
 
-	// while (dst == src || !n) Se comprueba si los punteros de origen 
-	// y destino son iguales o si el tamaño es cero ( no hay bytes que 
-	// copiar). Esta comprobación se realiza para evitar problemas de 
-	// solapamiento de memoria cuando la memoria de origen y destino 
-	// son la misma.
-		// 	Si se cumple alguna de estas condiciones, devuelve 
-		// 	'dst' (la dirección de memoria original) sin hacer ninguna 
-		// copia. 
+	// while (dst == src || !n) Check if the source and destination pointers 
+	// are equal or if the size is zero (no bytes to copy). 
+			// This check is performed to avoid memory overlapping problems 
+			// when the source and destination memory are the same. 
 
-	// 'while (n > 0)' Mientras 'n' sea mayor que cero, se realiza la 
-	// copia de memoria byte por byte con un bucle while que se ejecuta.
-		// '*d++ = *s++' En cada iteración, se copia el byte apuntado 
-		// por 's' al byte apuntado por 'd', y se incrementan los 
-		// punteros 's' y 'd' para apuntar al siguiente byte.
+			// If either of these conditions is met, it returns 
+			// 'dst' (the original memory address) without making a copy.
 
-		// 'n--' Además, se decrementa 'n' en 1 para indicar que se ha 
-		// copiado un byte.
-			//  Por ejemplo, supongamos que 'n' es igual a 5 
-			//  y que se deben copiar 5 bytes de la memoria 
-			//  de origen a la memoria de destino. En la 
-			//  primera iteración del bucle, se copia el 
-			//  primer byte y se decrementa n en 1, por 
-			//  lo que 'n' ahora es 4. En la segunda iteración, 
-			//  se copia el segundo byte y se decrementa 'n' en 1, 
-			//  por lo que 'n' ahora es 3. Este proceso continúa 
-			//  hasta que se han copiado los 5 bytes, y 'n' se 
-			//  convierte en 0.
+	// 'while (n > 0)' As long as 'n' is greater than zero, memory copy is 
+	// performed byte by byte with a while loop being executed.
+	// 	'*d++ = *s++' At each iteration, the byte pointed to  
+	// 	by 's' is copied to the byte pointed to by 'd', and 
+	// 	the pointers 's' and 'd' are incremented to point to 
+	// 	the next byte.
 
-			// Decrementar 'n' en 1 en cada iteración del bucle while 
-			// garantizo que se copien exactamente 'n' bytes desde 
-			// la memoria de origen a la memoria de destino, y que los 
-			// punteros de origen y destino apuntan al siguiente byte 
-			// en cada iteración.
+		// 'n--' In addition, 'n' is decremented by 1 to indicate that a 
+		// byte has been copied.
+		// 	Decreasing 'n' by 1 in each iteration of the while loop 
+		// 	loop, guarantees that exactly 'n' bytes are copied from 
+		// 	the source memory to the destination memory, 
+		// 	and that the source and destination pointers point to 
+		// 	the next byte in each iteration.
 
-	// Se devuelve un puntero al área de memoria de destino 'dst'. 
-	// Esto indica que la copia de memoria ha sido completada.
+	// A pointer to the destination memory area 'dst' is returned. 
+	// This indicates that the memory copy has been completed.
 
 // void	print_elements(char *array, int size)
 // {
@@ -121,26 +103,26 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // 	printf ("\n");
 // }
 
-	// La función 'print_elements' es útil para visualizar 
-	// el contenido de un array en la consola.  
-	// Después de copiar la cadena de caracteres en el array 
-	// de destino 'dst', se llama a 'print_elements' para 
-	// comprobar que la copia de la cadena se ha realizado 
-	// correctamente 
+	// The 'print_elements' function is useful for displaying the contents 
+	// of an array on the console.  
+	// After copying the character string into the target array 'dst', 
+	// 'print_elements' is called to check that the copy of the string 
+	// has been done correctly. 
 
-	// La función 'print_elements' recorre la cadena de 
-	// caracteres 'array' y los imprime en la consola. 
-	// El parámetro 'size' es la longitud de la cadena.
+	// The 'print_elements' function goes through the string 'array' 
+	// and prints them to the console. 
 
-	// while (size-- > 0) En el bucle while, se va decrementando 
-	// la variable 'size' en cada iteración. 
+	// The 'size' parameter is the length of the string.
 
-	// 'printf ("%c, ", *array++)' Mientras 'size' sea 
-	// mayor que 0, se imprime el valor del caracter al que 
-	// apunta el puntero 'array' y se avanza al siguiente 
-	// caracter del array con el operador de incremento (++). 
-		// Además, después de imprimir cada caracter se añade 
-		// una coma y un espacio para separar los elementos.
+	// while (size-- > 0) In the while loop, the 'size' variable is 
+	// decremented for each iteration. 
+
+	// 'printf ("%c, ", *array++)' As long as 'size' is greater than 0,
+	//  the value of the character pointed to by the 'array' pointer 
+	//  points to and advances to the next character in the array with 
+	//  the increment operator (++). 
+	// 	In addition, after printing each character, a comma and a 
+	// 	space to separate the elements.
 
 // int	main(void)
 // {
@@ -153,14 +135,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // 	return (0);
 // }
 
-	// Se declaran dos arrays de caracteres 'dst' y 'src', 
-	// cada uno con una longitud de 7 elementos.
+	// Two character arrays 'dst' and 'src' are declared, 
+	// each with a length of 7 elements.
 
 	// 'ft_memcpy(dst, src, ft_strlcpy(src, "abcdef", sizeof(src)))'
-	// Se llama a la función 'ft_memcpy' para copiar los bytes 
-	// de 'src' en 'dst', utilizando 'ft_strlcpy' para calcular el tamaño 
-	// de la cadena que se va a copiar.
+	// The function 'ft_memcpy' is called to copy the bytes 
+	// from 'src' into 'dst', using 'ft_strlcpy' to calculate the 
+	// size of the string to be copied.
 
 	// 'printf("ft_memcpy dst: %s\n", dst)'
-	// Se llama a la función 'printf' para imprimir el contenido de 'dst' 
-	// utilizando el especificador de formato %s. 
+	// The 'printf' function is called to print the contents of 'dst'
+	// using the format specifier %s. 

@@ -6,26 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:44:42 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:27:34 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 19:41:42 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'isalnum' = "is alphanumeric"
+	 * 'isalnum' = "is alphanumeric".
 	 * 
 	 * If the character is a letter or a number, return 1, 
 	 * otherwise return 0.
-	 * Si el carácter es una letra o un número, devuelve 1, 
-	 * en caso contrario devuelve 0.
 	 * 
 	 * @param c The character to be checked. 
-	 * El carácter a comprobar.
 	 * 
 	 * @return 1 if the character is alphanumeric, 0 if not.
-	 * Devuelve 1 si el carácter es alfanumérico, 
-	 * 0 en caso contrario.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 **/
 
@@ -39,11 +34,13 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-	// Con una estructura de control if-else, se verifica si el 
-	// valor entero 'c' está dentro del rango de caracteres 
-	// alfanuméricos (letras mayúsculas, letras minúsculas 
-	// y números). Si es así, devuelve 1 ("verdadero" o "true"). 
-	// Si no es así, devuelve 0 ("falso" o "false")
+	// With an if-else control structure, it is checked whether 
+	// the integer value 'c' is within the range of alphanumeric 
+	// characters (uppercase letters, lowercase letters). 
+	// alphanumeric characters (uppercase letters, lowercase 
+	// letters and numbers). 
+	// 	If so, it returns 1 ("true"). 
+	// 	If not, it returns 0 ("false" or "false").
 
 // int	main(void)
 // {
@@ -58,10 +55,15 @@ int	ft_isalnum(int c)
 // 	return (0);
 // }
 
-	// El programa pide al usuario que introduzca un carácter 
-	// mediante la función 'scanf()', y almacena este valor 
-	// en la variable 'input'. Luego, la función 'ft_isalnum()' 
-	// se utiliza para verificar si el carácter introducido 
-	// es alfanumérico o no.
-	// Se utiliza un condicional para imprimir un mensaje 
-	// que indica si el carácter introducido es alfanumérico o no.
+	// The program prompts the user to enter a character 
+	// using the 'scanf()' function, and stores this value 
+	// in the variable 'input'. 
+
+	// Then, the function 'ft_isalnum()' is used to check whether 
+	// the character entered is alphanumeric or not. 
+
+	// A conditional is used to print a message indicating whether 
+	// the character entered is alphanumeric or not.
+
+	// The program then returns 0, indicating that it 
+	// was executed correctly.

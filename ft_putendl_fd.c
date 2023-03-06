@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:22:53 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:29:18 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 21:54:30 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 	 * 
 	 * Write the string 's' to the file descriptor 'fd', followed 
 	 * by a newline.
-	 * Escribe la cadena 's' en el descriptor de fichero 'fd', 
-	 * seguida de una nueva línea.
 	 * 
-	 * @param s The string to output. La cadena a imprimir.
+	 * @param s The string to output.
 	 * 
-	 * @param fd file descriptor. Descriptor de fichero.
+	 * @param fd file descriptor.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <unistd.h>
 	 * #include <fcntl.h>
 	 **/
@@ -42,26 +40,22 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 
-	// La función comienza inicializando una variable 'i' a 0, 
-	// que se usará como índice para recorrer la cadena de 
-	// caracteres 's' que se desea imprimir. 
+	// The function starts by initializing a variable 'i' to 0, 
+	// which will be used as an index to traverse the string 's' 
+	// to be printed. 
 
-	// while (s[i]) Se utiliza un bucle 'while' que se ejecuta 
-	// mientras el carácter actual de 's' no sea el carácter 
-	// nulo '(\0)'. 
-		// En cada iteración del bucle, se escribe el carácter 
-		// correspondiente al índice 'i' en el archivo descripto 
-		// por 'fd' usando la función 'write()', y se incrementa 
-		// el índice 'i'.
+	// while (s[i]) A 'while' loop is used which is executed 
+	// as long as the current character of 's' is not the character 
+	// null character '(\0)'. 
+	// 	At each iteration of the loop, the character corresponding
+	// 	 to the index 'i' is written to the file described by 'fd' 
+	// 	 using the 'write()' function, and the index 'i' is 
+	// 	 incremented. 
 
-	// Después de que se haya escrito toda la cadena de 
-	// caracteres en el archivo descripto por 'fd', se escribe 
-	// un carácter de salto de línea '(\n)' en el mismo archivo 
-	// usando la función 'write()'. 
-		// Esto agrega una nueva línea al final de la cadena 
-		// de caracteres que se ha impreso, lo que hace que 
-		// la siguiente línea que se imprima en el archivo 
-		// se escriba en una línea nueva.
+	// After the entire string of characters has been written 
+	// to the file described by 'fd', a linefeed character 
+	// '(\n)' is written to the same file using the 'write()' 
+	// function. 
 
 // int	main(void)
 // {
@@ -75,33 +69,32 @@ void	ft_putendl_fd(char *s, int fd)
 // 	return (0);
 // }
 
-	// Se declara una variable 'fd' de tipo 'int', que se 
-	// utilizará para almacenar el descriptor de archivo del 
-	// archivo que se creará y un puntero a una cadena de 
-	// caracteres llamado 'str' y se inicializa 
-	// con la cadena de caracteres "Hello, world".
+	// A variable 'fd' of type 'int' is declared, which will be 
+	// used to store the file descriptor of the file to be created 
+	// and a pointer to a string called 'str' and is initialized 
+	// with the string "Hello, world".
 
 	// 'fd = open("test.txt", O_WRONLY | O_CREAT, 0644)'
-	// Se llama a la función 'open()' con tres argumentos: 
-		// 	El archivo que se va a crear ("test.txt").
-		// 	Una combinación de banderas para especificar 
-		// 	que se abrirá el archivo en modo de escritura 
-		// 	("O_WRONLY") y que se creará el archivo si 
-		// 	no existe ("O_CREAT").
-		// Un permiso para el archivo (0644).
+	// The function 'open()' is called with three arguments: 
+	// 		The file to be created ("test.txt").
+	// 		A combination of flags to specify that the 
+	// 		file is to be opened in write mode 
+	// 		("O_WRONLY") and that the file is to be created 
+	// 		if does not exist ("O_CREAT").
+	// 	A permission for the file (0644).
 
-	// 'ft_putendl_fd(str, fd)' Se llama a 'ft_putendl_fd()' 
-	// con dos argumentos: 
-		// La cadena de caracteres 'str'.
-		// El descriptor de archivo 'fd'. 
+	// 'ft_putendl_fd(str, fd)' 'ft_putendl_fd()' is called 
+	// with two arguments: 
+	// 	The string 'str'.
+	// 	The file descriptor 'fd'. 
 
-		// La función 'ft_putendl_fd()' escribe la cadena de 
-		// caracteres en el archivo especificado por el descriptor 
-		// de archivo y agrega un carácter de nueva línea ('\n') 
-		// al final de la cadena.
+	// 	The function 'ft_putendl_fd()' writes the string in 
+	// 	the file specified by the file descriptor and appends
+	// 	a newline character ('str') to the end of the string. 
+	// 	to the end of the string.
 
-	// Se cierra el descriptor de archivo llamando a la función 
-	// close().
+	// The file descriptor is closed by calling the function 
+	// close() function.
 
-	// La función main() devuelve 0 para indicar que el programa se 
-	// ha ejecutado correctamente.
+	// The main() function returns 0 to indicate that the program h
+	// as been successfully executed. 

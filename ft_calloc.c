@@ -6,28 +6,22 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 16:41:41 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:27:23 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 19:41:35 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'calloc' = "clear allocation"
+	 * 'calloc' = "clear allocation".
 	 * 
 	 * It allocates memory for a given size and sets all the bytes to 0.
-	 * Asigna memoria para un tamaño determinado y pone todos los bytes a 0.
 	 * 
 	 * @param count The number of elements to allocate.
-	 * El número de elementos a asignar.
 	 * 
 	 * @param size The size of the memory block, in bytes.
-	 * El tamaño del bloque de memoria, en bytes.
 	 * 
 	 * @return A pointer to the allocated memory.
-	 * La función devuelve un puntero a la memoria 
-	 * reservada, o NULL si no se pudo reservar suficiente 
-	 * memoria.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <stdlib.h>
 	 **/
@@ -52,40 +46,40 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
-	// Se declaran tres variables:
-	// 	void *ptr: Puntero que se utiliza para almacenar la 
-	// dirección de memoria del bloque de memoria a asignar.
-	// 	size_t total_size: Se utiliza para almacenar el tamaño 
-	// total de memoria que se debe asignar.
-	// 	size_t i: Contador en el bucle que inicializa 
-	// 	a cero el contenido del bloque de memoria asignado.
+	// Three variables are declared:
+		// void *ptr: Pointer used to store the memory 
+		// address of the memory block to allocate.
+		// size_t total_size: Used to store the total size 
+		// of memory to allocate.
+		// size_t i: Counter in the loop that initializes 
+		// the contents of the allocated memory block to zero.
 
-	// 'total_size = count * size;' calcula el tamaño 
-	// total de la memoria que se debe asignar para la matriz 
-	// requerida. 'total_size' almacena ese valor para su uso 
-	// posterior
+	// 'total_size = count * size;' calculates the total size 
+	// of memory to be allocated for the required array. 
+	// 	'total_size' stores that value for later use. 
 
-	// El tamaño total de la memoria se reserva haciendo 'malloc'. 
+	// The total memory size is reserved by doing 'malloc'. 
 
-		// Si 'malloc' devuelve NULL, la función 'ft_calloc' 
-		// devuelve NULL inmediatamente, indicando que no se pudo 
-		// reservar suficiente memoria.
+	// 	If 'malloc' returns NULL, the 'ft_calloc' function 
+	// 	returns NULL immediately, indicating that enough 
+	// 	memory could not be allocated.
 
-		// ptr = malloc(total_size); asigna dinámicamente un bloque 
-		// de memoria del tamaño especificado y devuelve un puntero 
-		// al inicio de la memoria asignada, que se almacena en 
-		// la variable ptr.
+	// 	'ptr = malloc(total_size)' dynamically allocates a
+	// 	block of memory of the specified size and returns 
+	// 	a pointer to the to the beginning of the allocated 
+	// 	memory, which is stored in the the variable ptr.
 
-	// Bucle while para inicializar los bytes de memoria asignados 
-	// por 'malloc' a cero. En cada iteración, el valor cero 
-	// se escribe en el byte correspondiente en la memoria apuntada 
-	// por 'ptr'.
+	// 'while' loop to initialize the memory bytes allocated 
+	// by 'malloc' to zero. At each iteration, the value zero 
+	// is written to the corresponding byte in memory pointed 
+	// by 'ptr'.
 
-		// Casteo de 'ptr' a unsigned char para asegurar que los 
-		// valores almacenados sean siempre positivos 
-		// (en el rango de 0 a 255). 
+	// 	Casting 'ptr' to unsigned char to ensure that 
+	// 	stored values are always positive. 
+	// 	(in the range 0 to 255). 
 
-	// La función devuelve un puntero al inicio de la memoria reservada.
+	// The function returns a pointer to the beginning of the 
+	// reserved memory.
 
 // int	main(void)
 // {
@@ -106,20 +100,21 @@ void	*ft_calloc(size_t count, size_t size)
 // 	return (0);
 // }
 
-	// 'count' es el número de elementos que se desean reservar 
-	// en el array (5), y 'size' es el tamaño en bytes de 
-	// cada elemento del array (el tamaño de un int, es 
-	// generalmente 4 bytes).
+	// 'count' is the number of elements you want to reserve 
+	// in the array (5), and 'size' is the size in bytes of 
+	// each element of the array (the size of an int, 
+	// usually 4 bytes).
 
-	// Se llama a 'f't_calloc' para reservar el espacio en memoria. 
-	// La función asigna la memoria y la inicializa a cero 
-	// (coloca el carácter nulo '\0' en todos los bytes). 
-	// El resultado de la función se almacena en el puntero ptr.
+	// 'ft_calloc' is called to reserve the memory space. 
+	// 	The function allocates the memory and initializes 
+	// 	it to zero (places the null character '0' 
+	// 	in all bytes). The result of the function is 
+	// 	stored in the 'ptr' pointer.
 
-	// Se verifica si la reserva de memoria fue exitosa. Si lo fue,
-	// se muestra la dirección de memoria reservada y se libera 
-	// la memoria utilizando la función free() antes de salir 
-	// del programa. 
+		// 	A check is made to see if the memory reservation 
+		// 	was successful. If it was successful, the reserved 
+		// 	memory address is displayed and the memory is freed 
+		// 	using the free() function before exiting the program. 
 
-	// Si no lo fue, se muestra un mensaje de error y 
-	// se devuelve un valor diferente de cero para indicar error. 
+		// 	If it was not, an error message is displayed and 
+		// 	a non-zero value is returned to indicate error. 

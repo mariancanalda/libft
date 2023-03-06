@@ -6,7 +6,7 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 10:07:22 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:26:59 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 17:18:22 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 	 * 'atoi' = "ascii to integer".
 	 * 
 	 * It takes a string, and returns the integer value of that string.
-	 * Toma una cadena y devuelve el valor entero de esa cadena.
 	 * 
 	 * @param str This is the string that we are converting to 
 	 * an integer.
-	 * Es la cadena que estamos convirtiendo en un entero.
 	 * 
 	 * @return the integer value of the string.
-	 * Devuelve el valor entero de la cadena.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <stdlib.h>
 	 * */		
@@ -57,50 +54,41 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-	// - 'result' almacena el resultado de la conversión de la cadena a un 
-	// número entero.
-	// - 'sign' almacena el signo del número entero que se está convirtiendo 
-	// (+ ó -). Se inicicializa en 1 (si es negativo -1)
-	// - 'i' se utilizará como índice para iterar sobre los caracteres 
-	// de la cadena. Se inicializa en 0 (primer carácter de la cadena)
+	// - 'result' stores the result of converting the string 
+	// to an integer. 
 
-	// // while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-	// 	|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-	// 		++i;
-	// Bucle para detectar espacios en blanco. Si el carácter actual 
-	// es uno de esos caracteres, se incrementa el valor de "i" para avanzar 
-	// al siguiente carácter en la cadena y seguir evaluando. La iteración 
-	// se  detiene cuando se encuentra un carácter que no es un espacio en 
-	// blanco y el valor final de "i" se utiliza para determinar la longitud 
-	// de la cadena resultante sin espacios en blanco.
+	// - 'sign' stores the sign (+ ó -) of the integer being 
+	// converted. It is initialized to 1 (if negative -1).
 
-	// If para determinar si el primer carácter es un signo `-` o `+` 
-	// y establecer la variable `sign` en consecuencia. 
+	// - 'i' will be used as an index to iterate over the characters
+	//of the string. Initializes to 0 (first character of the string).
 
-	// Bucle `while` para convertir 'str' en un valor numérico entero. 
-	// El bucle se repite mientras el caracter actual en la cadena 
-	// 'str[i]' sea un dígito numérico (número entero del 0 al 9).
+	// 'While' to detect blanks. 
+		// 	If the current character is one of these, the value 
+		// 	of "i" is incremented to advance to the next character 
+		// 	in the string and continue evaluating. 
 
-		// El valor numérico de cada carácter se calcula 
-		// restando el valor ASCII del carácter '0' al valor ASCII 
-		// del carácter actual en `str[i]`. 
-		// El valor numérico total se va construyendo multiplicando 
-		// el valor de `result` por 10 y sumándole el valor 
-		// numérico del carácter actual.
+		// 	The iteration stops when a non-whitespace character is 
+		// 	encountered, and the final value of "i" is used to determine 
+		// 	the the length of the resulting non-whitespace string. 
 
-		// Cuando el bucle se ejecuta por primera vez, el valor 
-		// de 'result' es 0 e 'i' está en la posición cero de la 
-		// cadena (primer caracter). Si el dígito numérico actual 
-		// es '1', se le debe sumar el valor de este dígito al 
-		// valor actual de "result". El valor de '1' en la tabla 
-		// ASCII es 49, por lo que el código resta 48 
-		// (el valor de '0' en la tabla ASCII) del valor de '1' 
-		// para obtener el valor numérico real de '1', que es 1. 
-		// Entonces, el código suma 1 al valor actual de "result", 
-		// lo que resulta en un nuevo valor de "result" de 1.
+	// 'If' to determine whether the first character is `-` or `+` 
+	// and set `sign` accordingly. 
 
-	// Después de que se han procesado todos los dígitos numéricos, 
-	// se devuelve el resultado multiplicado por el signo correspondiente.
+	// 'While' to convert 'str' to an integer numeric value. 
+		// The loop repeats for as long as the current character 
+		// in the string 'str[i]' is a numeric digit 
+		// (integer from 0 to 9).
+			// The numeric value of each character is calculated by 
+			// by subtracting the ASCII value of the character '0' 
+			// from the ASCII value of the current character 
+			// in 'str[i]' 
+			// The total numeric value is built up by multiplying 
+			// the value of 'result' by 10 and adding the numeric 
+			// value of the current character to it. 
+
+	// After all numeric digits have been processed, 'result' is 
+	// returned multiplied by the corresponding sign.
 
 // int	main(void)
 // {
@@ -113,9 +101,14 @@ int	ft_atoi(const char *str)
 // 	return (0);
 // }
 
-	// Puntero constante 'str' que apunta a la cadena de caracteres "42". 
-	// Se llama a la función 'ft_atoi' pasándole como argumento 
-	// el puntero 'str'. El valor de retorno de la función se almacena 
-	// en la variable 'value'. Se imprime el valor de 'value' utilizando 
-	//  y se devuelve el valor '0' para indicar que el programa ha 
-	// finalizado correctamente.
+	// Constant pointer 'str' pointing to the string "42". 
+
+	// The function 'ft_atoi' is called with the the pointer 'str' 
+	// as argument.
+
+	// The return value of the function is stored in 'value'. 
+
+	// 'value' is printed using 'printf'.
+
+	// '0' is returned to indicate that the program has finished 
+	// successfully.

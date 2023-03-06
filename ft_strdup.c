@@ -6,25 +6,21 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:33:10 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:33:12 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:43 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * 'strdup' = "string duplicate"
+ * 'strdup' = "string duplicate".
  * 
  * It duplicates a string.
- * Duplica una cadena de caracteres en una nueva ubicación de memoria.
  * 
  * @param s1 The string to be copied.
- * La cadena a copiar.
  * 
  * @return A pointer to a new string that is a 
  * duplicate of the string s1.
- * Devuelve un puntero a una nueva cadena que es un 
- * duplicado de la cadena s1.
  * 
- * Required libraries. Librerías necesarias:
+ * Required libraries:
  * #include <stdio.h>
  * #include <stdlib.h>
  * #include <string.h>
@@ -45,31 +41,31 @@ char	*ft_strdup(const char *s1)
 	return (result);
 }
 
-		// Recibe como argumento un puntero a una cadena 
-		// de caracteres 's1'.
+	// Receives as argument a pointer to a string 's1'. 
+	// character string 's1' as an argument.
 
-		// len = ft_strlen(s1) llama a la función 'ft_strlen' 
-		// para determinar la longitud de la cadena de entrada 
-		// 's1', y asigna el valor de retorno a la variable 'len'.
+	// 	len = ft_strlen(s1) calls 'ft_strlen' function to 
+	// 	determine the length of the input string 's1', and 
+	// 	assigns the return value to the variable 'len'.
 
-		// 'result = (char *)malloc((len + 1) * sizeof(char))'
-		// Reserva un bloque de memoria del tamaño suficiente para 
-		// contener la cadena 's1' más un byte adicional para el caracter 
-		// nulo al final de la cadena. 
-		// 	El tipo de datos se convierte a un puntero de 
-		// 	tipo char, ya que malloc devuelve un puntero de 
-		// 	tipo void. 
+	// 	'result = (char *)malloc((len + 1) * sizeof(char))'
+	// 	Reserves a block of memory large enough to contain 
+	// 	the string 's1' plus an additional byte for null 
+	// 	character at the end of the string. 
+	// 		The data type is converted to a pointer of 
+	// 		type char, since malloc returns a pointer of
+	// 		void type. 
 
-		// 'if (result == NULL) return (NULL)'	Si malloc devuelve un 
-		// puntero nulo, lo que significa que no se pudo reservar 
-		// la memoria solicitada, la función devuelve un puntero nulo.
+	// 	'if (result == NULL) return (NULL)' If malloc returns a 
+	// 	null pointer, which means that the requested memory could 
+	// 	not be allocated, the function returns a null pointer.
 
-		// ft_memcpy(result, s1, len + 1) copia la cadena de entrada 's1' 
-		// en la memoria asignada a 'result', incluyendo el caracter 
-		// nulo final.  
+	// 	ft_memcpy(result, s1, len + 1) copies the input string 's1' 
+	// 	 into the memory allocated to 'result', including the final 
+	// 	 null character.  
 
-		// 'return (result)' Devuelve el puntero result, que apunta a la 
-		// copia de la cadena de entrada s1 que se ha creado.
+	// 	'return (result)' Returns the result pointer, which points 
+	// 	to the copy of the input string s1 that has been created.
 
 // int	main(void)
 // {
@@ -88,16 +84,14 @@ char	*ft_strdup(const char *s1)
 // 	return (0);
 // }
 
-	// Se define una cadena de caracteres 's1'. 
+	// A string 's1' is defined. 
 
-	// Se llama a la función 'ft_strdup' para crear una copia de
-	// la cadena 's1'. 
-	// 	Si la asignación de memoria con 'malloc' falla, la función
-	// 	'ft_strdup' devuelve NULL. Se imprime un mensaje de error 
-	// 	y se termina el programa con un valor de retorno diferente 
-	// 	de cero. 
+	// The function 'ft_strdup' is called to create a copy of
+	// the string 's1'. 
+	// 	If the memory allocation with 'malloc' fails, the function
+	// 	'ft_strdup' returns NULL. An error message is printed 
+	// 	and the program is terminated with a non-zero return value. 
 
-	// 	Si la asignación de memoria tiene éxito, se imprime la copia
-	// 	de la cadena 's1', se libera la memoria asignada por 'malloc' 
-	// 	utilizando 'free', y el programa termina con un valor de 
-	// 	retorno de cero.
+	// 	If the memory allocation succeeds, the copy of the string 's1' 
+	// 	is printed, the memory allocated by 'malloc' is freed using 
+	// 	'free', and the program terminates with a return value of zero. 

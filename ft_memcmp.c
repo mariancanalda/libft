@@ -6,31 +6,25 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:43:32 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:28:16 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:23 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'memcmp' = "memory compare" 
+	 * 'memcmp' = "memory compare". 
 	 * 
 	 * The function ft_memcmp() compares the first 'n' bytes of memory 
 	 * area 'str1' and memory area 'str2'
-	 * La función ft_memcmp() compara los primeros 'n' bytes del área de 
-	 * memoria 'str1' y el área de memoria 'str2'
 	 * 
 	 * @param dst This is the destination string.
-	 * Es la cadena de destino.
 	 * 
 	 * @param str This is the pointer to the block of memory to fill.
-	 * Este es el puntero al bloque de memoria a rellenar.
 	 * 
 	 * @param n The number of bytes to compare.
-	 * Número de bytes a comparar.
 	 * 
 	 * @return The difference between the two strings.
-	 * Devuelve la diferencia entre ambas cadenas.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <stdlib.h>
 	 * #include <string.h>
@@ -52,59 +46,56 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 	return (0);
 }
 
-	// Esta función compara los primeros "n" bytes de las áreas de 
-	// memoria apuntadas por "dst" y "str". Y devuelve un número 
-	// entero que indica la relación entre esos primeros "n" bytes 
-	// de las áreas de memoria. 
-		// La función devuelve un valor negativo si el primer byte 
-		// que difiere en "dst" es menor que el byte correspondiente 
-		// en "str".
+	// This function compares the first "n" bytes of the memory areas 
+	// pointed to by "dst" and "str". And returns an integer indicating 
+	// the ratio between those first "n" bytes of the memory areas. 
 
-		// Devuelve un valor positivo si el primer byte que difiere 
-		// en "dst" es mayor que el byte correspondiente en "str".
+	// 	The function returns a negative value if the first byte 
+	// 	that differs in "dst" is smaller than the corresponding 
+	// 	byte in "str". 
 
-		// Y devuelve cero si las áreas de memoria son iguales.
+	// 	It returns a positive value if the first differing byte  
+	// 	in "dst" is greater than the corresponding byte in "str".
 
-	// Se declaran dos punteros a caracteres sin signo (unsigned char) 
-	// que se utilizarán para recorrer las regiones de memoria 
-	// de dst y str.
+	// 	And returns zero if the memory areas are equal.
 
-	// 'dst2 = (unsigned char *)dst' 'str2 = (unsigned char *)str'
-	// Se asignan los punteros de los parámetros de entrada a los 
-	// punteros de los caracteres sin signo (dst2 y str2). 
-	// Este casteo garantiza que los valores en las posiciones 
-	// de memoria se traten como bytes sin signo (necesario para 
-	// poder comparar los valores de los bytes de memoria de manera 
-	// segura).
+	// Two pointers to unsigned chars are declared. 
+	// that will be used to traverse the memory regions of 'dst' 
+	// and 'str'.
 
-	// 'if (n)' Si 'n' es igual a cero, la función no realizará ninguna 
-	// comparación y devolverá cero inmediatamente. Si 'n' es mayor 
-	// que cero, la función continuará con la comparación de bytes 
-	// de memoria.
-		// 'while (n--)' n se decrementa en cada iteración del bucle. 
-		// Es decir, Si el valor de n es igual a 5, la primera 
-		// iteración del bucle while compararía los bytes en las 
-		// posiciones 0 de ambas regiones de memoria, y luego 
-		// decrementaría el valor de 'n' a 4. La segunda iteración 
-		// compararía los bytes en las posiciones 1, y decrementaría 
-		// 'n' a 3, y así hasta que 'n' alcanza el valor de 0 y el 
-		// bucle se detiene.
+	// 'dst2 = (unsigned char *)dst' 'str2 = (unsigned char *)str'.
+	// The input parameter pointers are mapped to the unsigned 
+	// character pointers (dst2 and str2). This mapping ensures 
+	// that the values in the memory locations are treated as 
+	// unsigned bytes (necessary to be able to compare the values 
+	// of the memory bytes in a safely).
+
+	// If 'if (n)' If 'n' is equal to zero, the function will not perform 
+	// any comparison and will return zero immediately. If 'n' is greater 
+	// than zero, the function will continue with the byte comparison.
+
+	// 	'while (n--)' n is decremented at each iteration of the loop. 
+	// 	In other words, if the value of n is equal to 5, the first 
+	// 	iteration of the while loop would compare the bytes in the 
+	// 	0 positions of both memory regions, and then decrement the 
+	// 	value of 'n' to 4. The second iteration of the while loop would 
+	// 	compare the bytes in locations 1, and decrement 'n' to 3, 
+	// 	and so on until 'n' reaches the value of 0 and the loop stops. 
 
 		// 'if (*dst2++ != *str2++)'.
-		// En cada iteración, se comprueba si los bytes apuntados 
-		// por "dst2" y "str2" son iguales. 
+		// At each iteration, it checks if the bytes pointed to by "dst2" 
+		// and "str2" are equal. 
 		// 	'return (*(--dst2) - *(--str2))'.
-		// 	Si no lo son, se calcula la diferencia entre los 
-		// 	dos bytes y se devuelve ese valor.
+		// 	If they are not, tthe difference between the two bytes 
+		// 	is calculated and returned.
 
-		// 	Si los bytes son iguales, los punteros 'dst2' y 'str2' 
-		// 	se incrementan para apuntar al siguiente byte y 'n' se 
-		// 	decrementa para indicar que se han comparado 'n' bytes. 
+		// 	If the bytes are equal, the pointers 'dst2' and 'str2' 
+		// 	are incremented to point to the next byte and 'n' is 
+		// 	decremented to indicate that 'n' bytes have been compared. 
 
-		// 'return (0)' Si después de recorrer los primeros 'n' bytes 
-		// de las áreas de memoria los bytes son iguales, la función 
-		// devuelve cero para indicar que las áreas de memoria son 
-		// iguales.
+	// 	'return (0)' If after traversing the first 'n' bytes of the 
+	// 	memory areas are equal, the function returns zero to indicate 
+	// 	that the memory areas are equal. 
 
 // int	main(void)
 // {
@@ -119,21 +110,21 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 // 	return (0);
 // }
 
-	// Se declaran dos arrays de caracteres, 'dst' y 'str', cada uno 
-	// con espacio para 6 caracteres. Se utilizarán para almacenar dos 
-	// cadenas de caracteres. Y una variable entera 'n' que se utilizará 
-	// como el número de bytes que se compararán en 'ft_memcmp'.
+	// Two character arrays are declared, 'dst' and 'str', 
+	// each with space for 6 characters. They will be used to store two 
+	// character strings. And an integer variable 'n' which will be used 
+	// as the number of bytes to be compared in 'ft_memcmp'.
 
-	// Con 'ft_strlcpy' se copiar la cadena "Hello" en el arreglo 'dst' 
-	// con un tamaño máximo de 6 bytes. Y para copiar la cadena "Hello" 
-	// en el arreglo 'str' con un tamaño máximo de 6 bytes.
+	// With 'ft_strlcpy' the string "Hello" will be copied into the array 
+	// 'dst' with a maximum size of 6 bytes. And to copy the string "Hello" 
+	// into the array 'str' with a maximum size of 6 bytes.
 
-	// Se asigna un valor de 5 a la variable n: solo se compararán los 
-	// primeros 5 bytes de los arreglos 'dst' y 'str'.
+	// A value of 5 is assigned to the variable n: only the first 5 bytes 
+	// of the arrays 'dst' and 'str' will be compared.
 
-	// Se llama a 'ft_memcmp' con los argumentos 'dst', 'str' y 'n' y
-	// se imprime el resultado de la función utilizando 'printf'. 
+	// 'ft_memcmp' is called with the arguments 'dst', 'str' and 'n' and
+	// print the result of the function using 'printf'. 
 
-	// El resultado se muestra como un número entero, que indica 
-	// la diferencia entre los bytes que se compararon. En este caso, 
-	// como los arreglos son iguales, la función devuelve 0.
+	// The result is displayed as an integer, which indicates 
+	// the difference between the bytes that were compared. In this case, 
+	// since the arrays are equal, the function returns 0.

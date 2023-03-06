@@ -6,33 +6,25 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:18:43 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:28:55 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 22:56:29 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'memset' = "memory set"
+	 * 'memset' = "memory set".
 	 * 
 	 * Takes a pointer to a memory area, a byte value, and a size, 
 	 * and fills the memory area with the given byte value.
-	 * Toma un puntero a un área de memoria, un valor de byte y un 
-	 * tamaño, y rellena el área de memoria con el valor de byte dado.
 	 * 
 	 * @param b This is the pointer to the memory area to be filled.
-	 * Este es el puntero que apunta a la dirección del bloque de 
-	 * memoria.
 	 * 
 	 * @param c the character to fill the memory with.
-	 * El carácter con el que rellenar la memoria.
 	 * 
 	 * @param len The number of bytes to be set to the value 'c'.
-	 * El número de bytes que se fijarán al valor 'c'
-	 * (la longitud del bloque de memoria).
 	 * 
 	 * @return The address of the first byte of the memory area 'b'.
-	 * Devuelve la dirección del primer byte de la zona de memoria 'b'.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 **/
 
@@ -50,41 +42,32 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-	// Se declara un puntero 'p' que apunta a un carácter sin 
-	// signo (unsigned char). Este puntero se usará para recorrer el 
-	// bloque de memoria.
-	// 	En C se recomienda que las funciones que trabajan con bytes 
-	// 	individuales (como memset) utilicen punteros a unsigned char 
-	// 	para garantizar un comportamiento predecible y evitar problemas 
-	// 	de signo en las comparaciones.
+	// A pointer 'p' is declared that points to an unsigned char. 
+	// This pointer will be used to traverse the block of memory.
+	// 	In C it is recommended that functions that work with single  
+	// 	bytes (such as memset) use pointers to unsigned char to ensure 
+	// 	predictable behavior and avoid sign problems in comparisons. 
 
-	// p = b; Se asigna al puntero 'p' el valor de la dirección de 
-	// memoria apuntada por 'b'para poder escribir en esa dirección de 
-	// memoria.Se garantiza que se está escribiendo en la memoria 
-	// 	correcta. 
-	// 	Si no se hace esto, entonces el puntero 'p' apuntaría a una 
-	// 	dirección de memoria aleatoria y la escritura en esa dirección 
-	// 	podría causar errores. 
+	// p = b; The pointer 'p' is assigned the value of the memory address 
+	// pointed by 'b' to by 'b' is assigned to the pointer 'p' in order to
+	// be able to write to that memory address. 
+	// It is guaranteed that you are writing to the correct memory. 
+	// 	If this is not done, then the pointer 'p' would point to a random 
+	// 	memory address and writing to that address could cause errors. 
 
-	// 'while (len--) 
-	// Usamos un bucle while que se ejecutará hasta que len sea 
-	// igual a cero. 
-	// 	*p++ = (unsigned char)c'
-	// 	En cada iteración, se establece el valor de 'c' en el byte 
-	// actual apuntado por 'p'. 
-	// 		El casting a (unsigned char) se realiza para asegurarse de 
-	// 		que el valor de 'c' que se va a copiar en el puntero 'p' sea 
-	// 		un número positivo entre 0 y 255.
-	// 		Si c es una variable de tipo char, el rango de valores que 
-	// 		puede tomar depende de si es signed o unsigned. Si es 
-	// 		signed, el rango es de -128 a 127, mientras que si es 
-	// 		unsigned, el rango es de 0 a 255. Por lo tanto, al realizar 
-	// 		el casting a (unsigned char), se asegura de que el valor de
-	// 		'c' sea un número positivo entre 0 y 255, lo que es necesario 
-	// 		para que la función ft_memset funcione correctamente y no
-	// 		produzca resultados inesperados.
+	// while (len--) We use a while loop that will run until len equals zero. 
+	// 	'*p++ = (unsigned char)c'
+	// 	On each iteration, the value of 'c' is set to the current byte 
+	// 	pointed to by 'p'. 
+			// The casting to (unsigned char) is performed to ensure that 
+			// that the value of 'c' to be copied into the pointer 'p' is 
+			// a positive number between 0 and 255. 
+			// If 'c' is a char variable, the range of values it can take 
+			// depends on whether it is signed or unsigned. If it is 
+			// signed, the range is from -128 to 127, whereas if it is 
+			// unsigned, the range is from 0 to 255.
 
-	// Se devuelve el puntero a la zona de memoria.
+	// The pointer to the memory area is returned.
 
 // int	main(void)
 // {
@@ -95,21 +78,20 @@ void	*ft_memset(void *b, int c, size_t len)
 // 	return (0);
 // }
 
-	// El 'main' llama a la función 'ft_memset', que se encarga de 
-	// rellenar el arreglo 'str' con asteriscos. 
+	// The 'main' calls the 'ft_memset' function, which is
+	// responsible for filling the array 'str' with asterisks. 
 
-	// 'char str[42]' Se declara un arreglo de caracteres llamado 
-	// 'str' con una longitud de 42 elementos.
+	// 'char str[42]' A character array named 'str' with a length 
+	// of 42 elements.
 
 	// 'ft_memset(str, '*', sizeof(str));'
-	// 'str' es el arreglo que se quiere llenar con asteriscos, 
-	// el valor de asterisco se pasa como argumento 'c' y se 
-	// utiliza 'sizeof' para obtener el tamaño del arreglo 
-	// en bytes, que se pasa como argumento 'len'.
+	// 'str' is the array that you want to fill with asterisks, 
+	// the value of asterisk is passed as argument 'c' and 'sizeof' 
+	// is used to get the 'sizeof' is used to get the size of the 
+	// array in bytes, which is passed as argument 'len'.
 
-	// Después, 'printf' se utiliza para imprimir el contenido 
-	// de 'str' en la consola, que ahora debería estar lleno 
-	// de asteriscos. 
+	// Then, 'printf' is used to print the contents of 'str' to the 
+	// console, which should now be full of asterisks. 
 
-	// 5) Finalmente, devuelve 0 para indicar que el programa 
-	// terminó sin errores.
+	// It returns 0 to indicate that the program finished without 
+	// errors.

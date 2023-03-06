@@ -6,29 +6,23 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 20:20:36 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:52:34 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 23:29:25 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'strjoin' = 'string join'
+	 * 'strjoin' = 'string join'.
 	 * It takes two strings and returns a new string that is 
 	 * the concatenation of the two strings
-	 * La función ft_strjoin une dos cadenas de caracteres en una sola 
-	 * cadena, que es devuelta como resultado.
 	 * 
 	 * @param s1 The first string to be joined.
-	 * La primera cadena a unir.
 	 * 
 	 *  @param s2 the string to be appended to s1.
-	 *  La cadena que se añadirá a s1
 	 * 
 	 * @return A pointer to a new string that is the result of the 
 	 * concatenation of s1 and s2.
-	 * Devuelve un puntero a una nueva cadena que es el resultado de la 
-	 * concatenación de s1 y s2.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h>
 	 * #include <stdlib.h>
 	 * #include <string.h>
@@ -64,59 +58,62 @@ char	*ft_strjoin(char const *s1, char const *s2)
 }
 
 	// 'if (!s1 || !s2)'
-	// La función comprueba si s1 y s2 existen y no son NULL. 
+	// The function checks if s1 and s2 exist and are not NULL. 
 	// 'return (NULL)'
-	// Si una de las cadenas es NULL, la función devuelve NULL. 
+	// If one of the strings is NULL, the function returns NULL. 
 
 	// 'result = (char *)malloc(sizeof(char) * (ft_strlen(s1) 
 	// + ft_strlen(s2) + 1))'
-	// 	Sea signa a la variable 'result' un bloque de memoria dinámica 
-	// usando la función'malloc'. 
-	// 	Se reserva suficiente memoria para contener la concatenación de 
-	// dos cadenas de caracteres junto con el carácter nulo de terminación.
+	// 	Let the variable 'result' be signed to a block of 
+	// 	dynamic memory using the 'malloc' function. 
+	// 	Enough memory is reserved to contain the concatenation of 
+	// 	two character strings together with the terminating 
+	// 	null character.
 
-	// Para determinar el tamaño necesario para la memoria que 
-	// se va a asignar, se utiliza la función 'ft_strlen' para obtener 
-	// la longitud de cada cadena s1 y s2. 
-	// Luego se suma la longitud de ambas cadenas más 1 para tener 
-	// en cuenta el carácter nulo de terminación.
+	// To determine the size required for the memory to be 
+	// allocated, the 'ft_strlen' function is used to obtain 
+	// the length of each string s1 and s2. 
+	// Then the length of both strings plus 1 is added together
+	// to account for the null terminating character. 
 
-	// La expresión (char *) antes de la llamada a malloc es un tipo 
-	// de conversión que convierte el puntero devuelto por malloc 
-	// de tipo void * a un puntero de tipo char *. 
-	// Esto se hace porque el tipo de dato devuelto por malloc 
-	// es un puntero a void, lo que significa que puede apuntar 
-	// a cualquier tipo de dato. 
-	// Al convertirlo a un puntero de tipo char *, se indica que 
-	// la memoria reservada se utilizará para almacenar caracteres.
+	// The expression (char *) before the call to malloc is 
+	// a conversion type that converts the pointer returned by 
+	// malloc of type void * to a pointer of type char *. 
+	// This is done because the data type returned by malloc 
+	// is a pointer to void, which means that it can point to 
+	// any data type. 
+	// By converting it to a pointer of type char *, it is 
+	// indicated that reserved memory will be used to store 
+	// characters.
 
-	// 'if (!result) return (NULL)' Si la llamada a malloc falla, 
-	// devuelve NULL.
+	// 'if (!result) return (NULL)' If the call to malloc fails, 
+	// return NULL.
 
 	// 'while (s1[i]) result[i] = s1[i] i++'
-	// La función copia cada carácter de la cadena 's1' en la nueva 
-	// cadena 'result', 
-	// hasta que se encuentre el carácter nulo (\0).
-	// 	'i' se inicializa en 0 y se utiliza para copiar los caracteres 
-	// de la cadena 's1' en el resultado. Luego se incrementa 'i' hasta 
-	// que se alcanza el final de 's1'.
+	// The function copies each character of the string 's1' 
+	// into the new string 'result', until the null character 
+	// (\0) is found.
+	// 	'i' is initialized to 0 and is used to copy the 
+	// 	characters from string 's1' into the result. 
+	// 	Then 'i' is incremented until the end of 's1' 
+	// 	is reached.
 
 	// 'while (s2[j]) result[i + j] = s2[j] j++;'
-	// La función copia cada carácter de la cadena 's2' en la nueva 
-	// cadena 'result', a partir del índice 'i', que es el índice donde 
-	// termina la cadena 's1'.
-	// 	Se inicializa 'j' en 0 y se utiliza para copiar los 
-	// caracteres de la cadena 's2' en el resultado, comenzando en la 
-	// posición 'i' del resultado. 
-	// 	Luego se incrementa 'j' hasta que se alcanza el final 
-	// de 's2'.
+	// The function copies each character of the string 's2' into 
+	// the new string 'result', starting at index 'i', which is
+	//  the index where the string 's1' ends. 
+	// 	'j' is initialized to 0 and is used to copy the characters 
+	// 	from string 's2' into the result, starting at position 
+	// 	'i' of the result. 
+	// 	Then 'j' is incremented until the end 
+	// 	of 's2' is reached. 
 
-	// 'result[i + j] = '\0''
-	// La función agrega el carácter nulo (\0) al final de la 
-	// nueva cadena result, para indicar el final de la cadena.
+	// 'result[i + j] = '\0'.
+	// The function appends the null character (\0) to the end 
+	// of the new string result, to indicate the end of the string.
 
 	// return (result);
-	// La función devuelve la nueva cadena result.
+	// The function returns the new string result.
 
 // int main(void)
 // {
@@ -139,23 +136,23 @@ char	*ft_strjoin(char const *s1, char const *s2)
 //     return (0);
 // }
 
-	// *s1 = "Hello";
+	// *s1 = "Hello."
 	// *s2 = " World!";
-	// Se definen dos cadenas de caracteres s1 y s2. 
+	// Two strings s1 and s2 are defined. 
 
 	// *result = ft_strjoin(s1, s2);
-	// Se llama a 'ft_strjoin' con s1 y s2 como argumentos. 
+	// 'ft_strjoin' is called with s1 and s2 as arguments. 
 
 	// 	'if (!result) printf("Error: failed to allocate memory 
 	// 	for result.\n") return (1)'
-	// 	Si 'ft_strjoin' devuelve NULL, se imprime un mensaje 
-	// 	de error. 
+	// 	If 'ft_strjoin' returns NULL, an error message is printed. 
+	// 	error message is printed. 
 
 	// 	'printf("s1 = %s\n", s1)
 	// 	printf("s2 = %s\n", s2)
 	// 	printf("result = %s\n", result)'
-	// 	Si la función no devuelve NULL, se imprime cada cadena 
-	// 	y la cadena de resultado.
+	// 	If the function does not return NULL, it prints each string 
+	// 	and the result string.
 
-	// 'free(result)'' 
-	// Se libera la memoria asignada a la cadena de resultado.
+	// 'free(result)' 
+	// The memory allocated to the result string is freed.

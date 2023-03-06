@@ -6,22 +6,20 @@
 /*   By: macanald <macanald@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:42:54 by macanald          #+#    #+#             */
-/*   Updated: 2023/03/03 13:27:56 by macanald         ###   ########.fr       */
+/*   Updated: 2023/03/05 19:42:06 by macanald         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 	/**
-	 * 'isdigit' = "is digit"
+	 * 'isdigit' = "is digit".
 	 * 
 	 * If the character is a digit, return 1, otherwise return 0.
-	 * Si el carácter es un dígito, devuelve 1, en caso contrario devuelve 0.
 	 * 
-	 * @param c The character to be checked. El carácter a comprobar.
+	 * @param c The character to be checked.
 	 * 
 	 * @return 1 if the character is a digit, 0 if not.
-	 * Devuelve 1 si el carácter es un dígito, 0 en caso contrario.
 	 * 
-	 * Required libraries. Librerías necesarias:
+	 * Required libraries:
 	 * #include <stdio.h> 
 	 **/
 
@@ -34,11 +32,11 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-	// Con una estructura de control if-else, se verifica 
-	// si el valor del carácter está en el rango decimal del  
-	// '0' al '9', la función devuelve 1, lo que indica 
-	// que es un dígito decimal. Si no está en ese rango, 
-	// devuelve 0, lo que significa que no es un dígito decimal.
+	// With an if-else control structure, we check if the value 
+	// of the character is in the decimal range '0' to '9', 
+	// 	Returns 1, indicating that it is a decimal digit. 
+	// 	If it is not in that range, it returns 0, 
+	// 	which means it is not a decimal digit.
 
 // int	main(void)
 // {
@@ -56,9 +54,13 @@ int	ft_isdigit(int c)
 // 	return (0);
 // }
 
-	// Se declara una variable c de tipo char y se inicializa en '5'. 
-	// Se llama a la función ft_isdigit() pasando como argumento 
-	// el valor de c. La función ft_isdigit() verifica si el valor 
-	// pasado como argumento es un dígito decimal, devolviendo 1 
-	// si lo es y 0 si no lo es. El programa imprime el mensaje '5' 
-	// is a digit y devuelve 0 indicando que finalizó sin errores.
+	// A variable 'c' is declared and initialized to '5'. 
+
+	// ft_isdigit() is called with the value of 'c' as argument. 
+
+	// The function checks if the value passed as argument 
+	// is a decimal digit, returning 1 if it is. a
+	// And 0 if it is not. 
+
+	// The program prints the message "'5' is a digit" and 
+	// returns 0 indicating that it finished without errors.
